@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="IntegrationToggleWidgetTableViewCell" customModule="Breathe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="142.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGF-nB-gAF">
+                        <rect key="frame" x="8" y="0.0" width="304" height="128"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vSO-Co-2Ng">
+                                <rect key="frame" x="30" y="10" width="109" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="ISK-Xp-Zhs"/>
+                                    <constraint firstAttribute="height" constant="109" id="wsM-Dh-e9E"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Health " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reB-CX-elG">
+                                <rect key="frame" x="147" y="30" width="149" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gMo-L6-BQi">
+                                <rect key="frame" x="197" y="69.5" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="reB-CX-elG" firstAttribute="top" secondItem="kGF-nB-gAF" secondAttribute="top" constant="30" id="29C-dN-2Zu"/>
+                            <constraint firstItem="gMo-L6-BQi" firstAttribute="top" secondItem="reB-CX-elG" secondAttribute="bottom" constant="8" id="5O5-VM-Qkt"/>
+                            <constraint firstItem="vSO-Co-2Ng" firstAttribute="top" secondItem="kGF-nB-gAF" secondAttribute="top" constant="10" id="6I9-WI-EmJ"/>
+                            <constraint firstItem="vSO-Co-2Ng" firstAttribute="leading" secondItem="kGF-nB-gAF" secondAttribute="leading" constant="30" id="CBg-6f-0z3"/>
+                            <constraint firstAttribute="trailing" secondItem="reB-CX-elG" secondAttribute="trailing" constant="8" id="FNr-GB-0CO"/>
+                            <constraint firstAttribute="width" priority="999" constant="400" id="ITW-fS-ZWi"/>
+                            <constraint firstItem="gMo-L6-BQi" firstAttribute="centerX" secondItem="reB-CX-elG" secondAttribute="centerX" id="duT-UV-wAi"/>
+                            <constraint firstAttribute="bottom" secondItem="vSO-Co-2Ng" secondAttribute="bottom" constant="10" id="pVD-z4-fRp"/>
+                            <constraint firstAttribute="height" priority="999" constant="128" id="vGp-XN-xqF"/>
+                            <constraint firstItem="reB-CX-elG" firstAttribute="leading" secondItem="vSO-Co-2Ng" secondAttribute="trailing" constant="8" id="wpz-gC-Szq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kGF-nB-gAF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Kws-7v-WD9"/>
+                    <constraint firstAttribute="bottom" secondItem="kGF-nB-gAF" secondAttribute="bottom" constant="8" id="RbY-zX-u9e"/>
+                    <constraint firstItem="kGF-nB-gAF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bGr-lL-nEz"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kGF-nB-gAF" secondAttribute="trailing" constant="8" id="ePO-hm-m26"/>
+                    <constraint firstItem="kGF-nB-gAF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="s5s-rw-C0u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="background" destination="kGF-nB-gAF" id="wdT-TU-rxL"/>
+                <outlet property="widgetImage" destination="vSO-Co-2Ng" id="Odk-jZ-rhl"/>
+                <outlet property="widgetLabel" destination="reB-CX-elG" id="LuI-6T-S8r"/>
+                <outlet property="widgetSwitch" destination="gMo-L6-BQi" id="HhG-2L-1Jg"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="103.5"/>
+        </tableViewCell>
+    </objects>
+</document>

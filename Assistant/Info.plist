@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Breathe uses Health Integration to integrate your pranayama sessions to track your mindful minutes.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Breathe will look if you have done a session on an iPad and add it if it is not already in Health.</string>
 </dict>
 </plist>

@@ -8,12 +8,116 @@
 
 /* Begin PBXBuildFile section */
 		46E47B9B207E74A600D6BD32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47B9A207E74A600D6BD32 /* AppDelegate.swift */; };
-		46E47B9D207E74A600D6BD32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47B9C207E74A600D6BD32 /* ViewController.swift */; };
-		46E47BA0207E74A600D6BD32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E47B9E207E74A600D6BD32 /* Main.storyboard */; };
-		46E47BA2207E74A600D6BD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E47BA1207E74A600D6BD32 /* Assets.xcassets */; };
-		46E47BA5207E74A600D6BD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E47BA3207E74A600D6BD32 /* LaunchScreen.storyboard */; };
 		46E47BB0207E74A700D6BD32 /* AssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47BAF207E74A700D6BD32 /* AssistantTests.swift */; };
 		46E47BBB207E74A700D6BD32 /* AssistantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47BBA207E74A700D6BD32 /* AssistantUITests.swift */; };
+		46E47BDF207E761900D6BD32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E47BDE207E761900D6BD32 /* Main.storyboard */; };
+		46E47C85207E775100D6BD32 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C18207E774800D6BD32 /* UserInfo.swift */; };
+		46E47C86207E775100D6BD32 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C19207E774800D6BD32 /* Colours.swift */; };
+		46E47C87207E775100D6BD32 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C1A207E774800D6BD32 /* AppInfo.swift */; };
+		46E47C88207E775100D6BD32 /* Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C1B207E774800D6BD32 /* Convert.swift */; };
+		46E47C89207E775100D6BD32 /* ParseUserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C1C207E774800D6BD32 /* ParseUserInput.swift */; };
+		46E47C8A207E775100D6BD32 /* GlobalPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C1E207E774800D6BD32 /* GlobalPrompts.swift */; };
+		46E47C8B207E775100D6BD32 /* OnboardingPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C1F207E774800D6BD32 /* OnboardingPrompts.swift */; };
+		46E47C8C207E775100D6BD32 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C20207E774800D6BD32 /* Paths.swift */; };
+		46E47C8D207E775100D6BD32 /* CreateItemsForPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C21207E774800D6BD32 /* CreateItemsForPrompt.swift */; };
+		46E47C8E207E775100D6BD32 /* NotificationPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C22207E774800D6BD32 /* NotificationPrompts.swift */; };
+		46E47C8F207E775100D6BD32 /* OtherPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C23207E774800D6BD32 /* OtherPrompts.swift */; };
+		46E47C90207E775100D6BD32 /* HomePrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C24207E774900D6BD32 /* HomePrompt.swift */; };
+		46E47C91207E775100D6BD32 /* LearningPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C25207E774900D6BD32 /* LearningPrompts.swift */; };
+		46E47C92207E775100D6BD32 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C26207E774900D6BD32 /* Prompt.swift */; };
+		46E47C93207E775100D6BD32 /* CreatePromptFor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C27207E774900D6BD32 /* CreatePromptFor.swift */; };
+		46E47C94207E775100D6BD32 /* SessionPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C28207E774900D6BD32 /* SessionPrompts.swift */; };
+		46E47C95207E775100D6BD32 /* FindIntentOfWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C29207E774900D6BD32 /* FindIntentOfWords.swift */; };
+		46E47C96207E775100D6BD32 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C2A207E774900D6BD32 /* Subscription.swift */; };
+		46E47C97207E775100D6BD32 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C2C207E774900D6BD32 /* ChatManager.swift */; };
+		46E47C98207E775100D6BD32 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C2D207E774900D6BD32 /* SessionManager.swift */; };
+		46E47C99207E775100D6BD32 /* MessageBackgroundSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C2E207E774A00D6BD32 /* MessageBackgroundSmall.png */; };
+		46E47C9A207E775100D6BD32 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C2F207E774A00D6BD32 /* Info.plist */; };
+		46E47C9B207E775100D6BD32 /* ParseTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C30207E774A00D6BD32 /* ParseTime.swift */; };
+		46E47C9C207E775100D6BD32 /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C31207E774B00D6BD32 /* SubscriptionService.swift */; };
+		46E47C9D207E775100D6BD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C32207E774D00D6BD32 /* Assets.xcassets */; };
+		46E47C9E207E775100D6BD32 /* AnswerFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C33207E774D00D6BD32 /* AnswerFormats.swift */; };
+		46E47C9F207E775100D6BD32 /* EmptySustain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C35207E774D00D6BD32 /* EmptySustain.mp3 */; };
+		46E47CA0207E775100D6BD32 /* Inhale 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C36207E774D00D6BD32 /* Inhale 3.mp3 */; };
+		46E47CA1207E775100D6BD32 /* Inhale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C37207E774D00D6BD32 /* Inhale.mp3 */; };
+		46E47CA2207E775100D6BD32 /* Exhale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C38207E774D00D6BD32 /* Exhale.mp3 */; };
+		46E47CA3207E775100D6BD32 /* Full Sustain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C39207E774D00D6BD32 /* Full Sustain.mp3 */; };
+		46E47CA4207E775100D6BD32 /* Exhale 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C3A207E774D00D6BD32 /* Exhale 3.mp3 */; };
+		46E47CA5207E775100D6BD32 /* acceptHappyA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C3B207E774D00D6BD32 /* acceptHappyA.mp3 */; };
+		46E47CA6207E775100D6BD32 /* acceptHappyB.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C3C207E774D00D6BD32 /* acceptHappyB.mp3 */; };
+		46E47CA7207E775100D6BD32 /* Finished Ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C3D207E774D00D6BD32 /* Finished Ding.mp3 */; };
+		46E47CA8207E775100D6BD32 /* WordContextList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C3E207E774E00D6BD32 /* WordContextList.swift */; };
+		46E47CA9207E775100D6BD32 /* DailyNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C3F207E774E00D6BD32 /* DailyNotification.swift */; };
+		46E47CAA207E775100D6BD32 /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C40207E774E00D6BD32 /* PaidSubscription.swift */; };
+		46E47CAB207E775100D6BD32 /* UserSkillLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C42207E774F00D6BD32 /* UserSkillLevel.swift */; };
+		46E47CAC207E775100D6BD32 /* ReadingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C43207E774F00D6BD32 /* ReadingLevel.swift */; };
+		46E47CAD207E775100D6BD32 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C44207E774F00D6BD32 /* Constraints.swift */; };
+		46E47CAE207E775100D6BD32 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C45207E774F00D6BD32 /* ItemType.swift */; };
+		46E47CAF207E775100D6BD32 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C46207E774F00D6BD32 /* ViewControllers.swift */; };
+		46E47CB0207E775100D6BD32 /* PromptCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C47207E774F00D6BD32 /* PromptCategory.swift */; };
+		46E47CB1207E775100D6BD32 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C48207E774F00D6BD32 /* ButtonAction.swift */; };
+		46E47CB2207E775100D6BD32 /* SessionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C49207E774F00D6BD32 /* SessionType.swift */; };
+		46E47CB3207E775200D6BD32 /* WordContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C4A207E774F00D6BD32 /* WordContext.swift */; };
+		46E47CB4207E775200D6BD32 /* BreathParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C4B207E774F00D6BD32 /* BreathParts.swift */; };
+		46E47CB5207E775200D6BD32 /* PromptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C4C207E774F00D6BD32 /* PromptType.swift */; };
+		46E47CB6207E775200D6BD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C4D207E774F00D6BD32 /* LaunchScreen.storyboard */; };
+		46E47CB7207E775200D6BD32 /* TitleDividerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C50207E775000D6BD32 /* TitleDividerTableViewCell.swift */; };
+		46E47CB8207E775200D6BD32 /* ShowCommandsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C51207E775000D6BD32 /* ShowCommandsTableViewCell.xib */; };
+		46E47CB9207E775200D6BD32 /* HistoryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C52207E775100D6BD32 /* HistoryItemTableViewCell.swift */; };
+		46E47CBA207E775200D6BD32 /* SettingsButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C53207E775100D6BD32 /* SettingsButtonTableViewCell.xib */; };
+		46E47CBB207E775200D6BD32 /* ToggleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C54207E775100D6BD32 /* ToggleTableViewCell.xib */; };
+		46E47CBC207E775200D6BD32 /* IntegrationToggleWidgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C55207E775100D6BD32 /* IntegrationToggleWidgetTableViewCell.xib */; };
+		46E47CBD207E775200D6BD32 /* TitleDividerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C56207E775100D6BD32 /* TitleDividerTableViewCell.xib */; };
+		46E47CBE207E775200D6BD32 /* ShowKeyboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C57207E775100D6BD32 /* ShowKeyboardTableViewCell.swift */; };
+		46E47CBF207E775200D6BD32 /* WeekSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C58207E775100D6BD32 /* WeekSelectionTableViewCell.swift */; };
+		46E47CC0207E775200D6BD32 /* AssistantMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C59207E775100D6BD32 /* AssistantMessageTableViewCell.swift */; };
+		46E47CC1207E775200D6BD32 /* UserMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C5A207E775100D6BD32 /* UserMessageTableViewCell.xib */; };
+		46E47CC2207E775200D6BD32 /* WeekSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C5B207E775100D6BD32 /* WeekSelectionTableViewCell.xib */; };
+		46E47CC3207E775200D6BD32 /* ButtonCloudTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C5C207E775100D6BD32 /* ButtonCloudTableViewCell.xib */; };
+		46E47CC4207E775200D6BD32 /* CalendarMonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C5D207E775100D6BD32 /* CalendarMonthTableViewCell.swift */; };
+		46E47CC5207E775200D6BD32 /* ShowKeyboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C5E207E775100D6BD32 /* ShowKeyboardTableViewCell.xib */; };
+		46E47CC6207E775200D6BD32 /* PlayableSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C5F207E775100D6BD32 /* PlayableSessionTableViewCell.swift */; };
+		46E47CC7207E775200D6BD32 /* PendingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C60207E775100D6BD32 /* PendingItemCell.swift */; };
+		46E47CC8207E775200D6BD32 /* ShowCommandsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C61207E775100D6BD32 /* ShowCommandsTableViewCell.swift */; };
+		46E47CC9207E775200D6BD32 /* PendingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C62207E775100D6BD32 /* PendingItemCell.xib */; };
+		46E47CCA207E775200D6BD32 /* PlayableSessionWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C63207E775100D6BD32 /* PlayableSessionWidgetExtension.swift */; };
+		46E47CCB207E775200D6BD32 /* SettingsButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C64207E775100D6BD32 /* SettingsButtonTableViewCell.swift */; };
+		46E47CCC207E775200D6BD32 /* PlayableSessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C65207E775100D6BD32 /* PlayableSessionTableViewCell.xib */; };
+		46E47CCD207E775200D6BD32 /* AssistantMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C66207E775100D6BD32 /* AssistantMessageTableViewCell.xib */; };
+		46E47CCE207E775200D6BD32 /* UserMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C67207E775100D6BD32 /* UserMessageTableViewCell.swift */; };
+		46E47CCF207E775200D6BD32 /* PointsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C68207E775100D6BD32 /* PointsTableViewCell.xib */; };
+		46E47CD0207E775200D6BD32 /* IntegrationToggleWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C69207E775100D6BD32 /* IntegrationToggleWidgetTableViewCell.swift */; };
+		46E47CD1207E775200D6BD32 /* BreatheSessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C6A207E775100D6BD32 /* BreatheSessionTableViewCell.xib */; };
+		46E47CD2207E775200D6BD32 /* CalendarMonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C6B207E775100D6BD32 /* CalendarMonthTableViewCell.xib */; };
+		46E47CD3207E775200D6BD32 /* BreatheSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C6C207E775100D6BD32 /* BreatheSessionTableViewCell.swift */; };
+		46E47CD4207E775200D6BD32 /* HistoryItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47C6D207E775100D6BD32 /* HistoryItemTableViewCell.xib */; };
+		46E47CD5207E775200D6BD32 /* PointsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C6E207E775100D6BD32 /* PointsTableViewCell.swift */; };
+		46E47CD6207E775200D6BD32 /* ButtonCloudTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */; };
+		46E47CD7207E775200D6BD32 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */; };
+		46E47CD8207E775200D6BD32 /* ChildChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C71207E775100D6BD32 /* ChildChatViewController.swift */; };
+		46E47CD9207E775200D6BD32 /* AddItemsToHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C72207E775100D6BD32 /* AddItemsToHomeVCExtension.swift */; };
+		46E47CDA207E775200D6BD32 /* TappingSessionWidgetHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */; };
+		46E47CDB207E775200D6BD32 /* CommandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C74207E775100D6BD32 /* CommandsViewController.swift */; };
+		46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */; };
+		46E47CDD207E775200D6BD32 /* ChildHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C76207E775100D6BD32 /* ChildHomeViewController.swift */; };
+		46E47CDE207E775200D6BD32 /* GetCellForItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C77207E775100D6BD32 /* GetCellForItemType.swift */; };
+		46E47CDF207E775200D6BD32 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C78207E775100D6BD32 /* HistoryViewController.swift */; };
+		46E47CE0207E775200D6BD32 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C79207E775100D6BD32 /* PageViewController.swift */; };
+		46E47CE1207E775200D6BD32 /* AddItemsToChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C7B207E775100D6BD32 /* AddItemsToChatVCExtension.swift */; };
+		46E47CE2207E775200D6BD32 /* TappingSessionWidgetChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C7C207E775100D6BD32 /* TappingSessionWidgetChatVCExtension.swift */; };
+		46E47CE3207E775200D6BD32 /* ChatBarChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C7D207E775100D6BD32 /* ChatBarChatVCExtension.swift */; };
+		46E47CE4207E775200D6BD32 /* SoundChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C7E207E775100D6BD32 /* SoundChatVCExtension.swift */; };
+		46E47CE5207E775200D6BD32 /* TappingButtonCloudChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C7F207E775100D6BD32 /* TappingButtonCloudChatVCExtension.swift */; };
+		46E47CE6207E775200D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C80207E775100D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift */; };
+		46E47CE7207E775200D6BD32 /* TableViewChatVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C81207E775100D6BD32 /* TableViewChatVCExtension.swift */; };
+		46E47CE8207E775200D6BD32 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C82207E775100D6BD32 /* SettingsViewController.swift */; };
+		46E47CE9207E775200D6BD32 /* ActionTriage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C84207E775100D6BD32 /* ActionTriage.swift */; };
+		46E47CEF207E787000D6BD32 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */; };
+		46E47CF0207E787000D6BD32 /* HealthKitSetUpAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */; };
+		46E47CF1207E787000D6BD32 /* BreatheHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEC207E786F00D6BD32 /* BreatheHistory.xcdatamodeld */; };
+		46E47CF2207E787000D6BD32 /* PassableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEE207E787000D6BD32 /* PassableSession.swift */; };
+		46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */; };
+		46E47CF6207E793000D6BD32 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,17 +140,120 @@
 /* Begin PBXFileReference section */
 		46E47B97207E74A600D6BD32 /* Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E47B9A207E74A600D6BD32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46E47B9C207E74A600D6BD32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		46E47B9F207E74A600D6BD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		46E47BA1207E74A600D6BD32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		46E47BA4207E74A600D6BD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		46E47BA6207E74A600D6BD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E47BAB207E74A700D6BD32 /* AssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E47BAF207E74A700D6BD32 /* AssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantTests.swift; sourceTree = "<group>"; };
 		46E47BB1207E74A700D6BD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E47BB6207E74A700D6BD32 /* AssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E47BBA207E74A700D6BD32 /* AssistantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantUITests.swift; sourceTree = "<group>"; };
 		46E47BBC207E74A700D6BD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E47BDE207E761900D6BD32 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		46E47C18207E774800D6BD32 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		46E47C19207E774800D6BD32 /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		46E47C1A207E774800D6BD32 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		46E47C1B207E774800D6BD32 /* Convert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convert.swift; sourceTree = "<group>"; };
+		46E47C1C207E774800D6BD32 /* ParseUserInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUserInput.swift; sourceTree = "<group>"; };
+		46E47C1E207E774800D6BD32 /* GlobalPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPrompts.swift; sourceTree = "<group>"; };
+		46E47C1F207E774800D6BD32 /* OnboardingPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPrompts.swift; sourceTree = "<group>"; };
+		46E47C20207E774800D6BD32 /* Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
+		46E47C21207E774800D6BD32 /* CreateItemsForPrompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemsForPrompt.swift; sourceTree = "<group>"; };
+		46E47C22207E774800D6BD32 /* NotificationPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationPrompts.swift; sourceTree = "<group>"; };
+		46E47C23207E774800D6BD32 /* OtherPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherPrompts.swift; sourceTree = "<group>"; };
+		46E47C24207E774900D6BD32 /* HomePrompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePrompt.swift; sourceTree = "<group>"; };
+		46E47C25207E774900D6BD32 /* LearningPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningPrompts.swift; sourceTree = "<group>"; };
+		46E47C26207E774900D6BD32 /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		46E47C27207E774900D6BD32 /* CreatePromptFor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePromptFor.swift; sourceTree = "<group>"; };
+		46E47C28207E774900D6BD32 /* SessionPrompts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionPrompts.swift; sourceTree = "<group>"; };
+		46E47C29207E774900D6BD32 /* FindIntentOfWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindIntentOfWords.swift; sourceTree = "<group>"; };
+		46E47C2A207E774900D6BD32 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		46E47C2C207E774900D6BD32 /* ChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		46E47C2D207E774900D6BD32 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		46E47C2E207E774A00D6BD32 /* MessageBackgroundSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageBackgroundSmall.png; sourceTree = "<group>"; };
+		46E47C2F207E774A00D6BD32 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E47C30207E774A00D6BD32 /* ParseTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseTime.swift; sourceTree = "<group>"; };
+		46E47C31207E774B00D6BD32 /* SubscriptionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
+		46E47C32207E774D00D6BD32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46E47C33207E774D00D6BD32 /* AnswerFormats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerFormats.swift; sourceTree = "<group>"; };
+		46E47C35207E774D00D6BD32 /* EmptySustain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = EmptySustain.mp3; sourceTree = "<group>"; };
+		46E47C36207E774D00D6BD32 /* Inhale 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Inhale 3.mp3"; sourceTree = "<group>"; };
+		46E47C37207E774D00D6BD32 /* Inhale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Inhale.mp3; sourceTree = "<group>"; };
+		46E47C38207E774D00D6BD32 /* Exhale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Exhale.mp3; sourceTree = "<group>"; };
+		46E47C39207E774D00D6BD32 /* Full Sustain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Full Sustain.mp3"; sourceTree = "<group>"; };
+		46E47C3A207E774D00D6BD32 /* Exhale 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Exhale 3.mp3"; sourceTree = "<group>"; };
+		46E47C3B207E774D00D6BD32 /* acceptHappyA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acceptHappyA.mp3; sourceTree = "<group>"; };
+		46E47C3C207E774D00D6BD32 /* acceptHappyB.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = acceptHappyB.mp3; sourceTree = "<group>"; };
+		46E47C3D207E774D00D6BD32 /* Finished Ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Finished Ding.mp3"; sourceTree = "<group>"; };
+		46E47C3E207E774E00D6BD32 /* WordContextList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordContextList.swift; sourceTree = "<group>"; };
+		46E47C3F207E774E00D6BD32 /* DailyNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyNotification.swift; sourceTree = "<group>"; };
+		46E47C40207E774E00D6BD32 /* PaidSubscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
+		46E47C42207E774F00D6BD32 /* UserSkillLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSkillLevel.swift; sourceTree = "<group>"; };
+		46E47C43207E774F00D6BD32 /* ReadingLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingLevel.swift; sourceTree = "<group>"; };
+		46E47C44207E774F00D6BD32 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		46E47C45207E774F00D6BD32 /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		46E47C46207E774F00D6BD32 /* ViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		46E47C47207E774F00D6BD32 /* PromptCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptCategory.swift; sourceTree = "<group>"; };
+		46E47C48207E774F00D6BD32 /* ButtonAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
+		46E47C49207E774F00D6BD32 /* SessionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionType.swift; sourceTree = "<group>"; };
+		46E47C4A207E774F00D6BD32 /* WordContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordContext.swift; sourceTree = "<group>"; };
+		46E47C4B207E774F00D6BD32 /* BreathParts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathParts.swift; sourceTree = "<group>"; };
+		46E47C4C207E774F00D6BD32 /* PromptType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptType.swift; sourceTree = "<group>"; };
+		46E47C4D207E774F00D6BD32 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46E47C50207E775000D6BD32 /* TitleDividerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleDividerTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C51207E775000D6BD32 /* ShowCommandsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowCommandsTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C52207E775100D6BD32 /* HistoryItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryItemTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C53207E775100D6BD32 /* SettingsButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsButtonTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C54207E775100D6BD32 /* ToggleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToggleTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C55207E775100D6BD32 /* IntegrationToggleWidgetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegrationToggleWidgetTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C56207E775100D6BD32 /* TitleDividerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleDividerTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C57207E775100D6BD32 /* ShowKeyboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowKeyboardTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C58207E775100D6BD32 /* WeekSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C59207E775100D6BD32 /* AssistantMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantMessageTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C5A207E775100D6BD32 /* UserMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserMessageTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C5B207E775100D6BD32 /* WeekSelectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C5C207E775100D6BD32 /* ButtonCloudTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCloudTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C5D207E775100D6BD32 /* CalendarMonthTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C5E207E775100D6BD32 /* ShowKeyboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowKeyboardTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C5F207E775100D6BD32 /* PlayableSessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayableSessionTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C60207E775100D6BD32 /* PendingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingItemCell.swift; sourceTree = "<group>"; };
+		46E47C61207E775100D6BD32 /* ShowCommandsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCommandsTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C62207E775100D6BD32 /* PendingItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PendingItemCell.xib; sourceTree = "<group>"; };
+		46E47C63207E775100D6BD32 /* PlayableSessionWidgetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayableSessionWidgetExtension.swift; sourceTree = "<group>"; };
+		46E47C64207E775100D6BD32 /* SettingsButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsButtonTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C65207E775100D6BD32 /* PlayableSessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayableSessionTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C66207E775100D6BD32 /* AssistantMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssistantMessageTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C67207E775100D6BD32 /* UserMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C68207E775100D6BD32 /* PointsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PointsTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C69207E775100D6BD32 /* IntegrationToggleWidgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrationToggleWidgetTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C6A207E775100D6BD32 /* BreatheSessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreatheSessionTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C6B207E775100D6BD32 /* CalendarMonthTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarMonthTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C6C207E775100D6BD32 /* BreatheSessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheSessionTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C6D207E775100D6BD32 /* HistoryItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryItemTableViewCell.xib; sourceTree = "<group>"; };
+		46E47C6E207E775100D6BD32 /* PointsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointsTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCloudTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
+		46E47C71207E775100D6BD32 /* ChildChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildChatViewController.swift; sourceTree = "<group>"; };
+		46E47C72207E775100D6BD32 /* AddItemsToHomeVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemsToHomeVCExtension.swift; sourceTree = "<group>"; };
+		46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingSessionWidgetHomeVCExtension.swift; sourceTree = "<group>"; };
+		46E47C74207E775100D6BD32 /* CommandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandsViewController.swift; sourceTree = "<group>"; };
+		46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingButtonCloudButtonsHomeVCExtension.swift; sourceTree = "<group>"; };
+		46E47C76207E775100D6BD32 /* ChildHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildHomeViewController.swift; sourceTree = "<group>"; };
+		46E47C77207E775100D6BD32 /* GetCellForItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCellForItemType.swift; sourceTree = "<group>"; };
+		46E47C78207E775100D6BD32 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		46E47C79207E775100D6BD32 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		46E47C7B207E775100D6BD32 /* AddItemsToChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemsToChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C7C207E775100D6BD32 /* TappingSessionWidgetChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingSessionWidgetChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C7D207E775100D6BD32 /* ChatBarChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBarChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C7E207E775100D6BD32 /* SoundChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C7F207E775100D6BD32 /* TappingButtonCloudChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingButtonCloudChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C80207E775100D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayOfWeekSelectionWidgetChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C81207E775100D6BD32 /* TableViewChatVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewChatVCExtension.swift; sourceTree = "<group>"; };
+		46E47C82207E775100D6BD32 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		46E47C84207E775100D6BD32 /* ActionTriage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTriage.swift; sourceTree = "<group>"; };
+		46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetUpAssistant.swift; sourceTree = "<group>"; };
+		46E47CED207E786F00D6BD32 /* BreatheHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BreatheHistory.xcdatamodel; sourceTree = "<group>"; };
+		46E47CEE207E787000D6BD32 /* PassableSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassableSession.swift; sourceTree = "<group>"; };
+		46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +284,8 @@
 		46E47B8E207E74A600D6BD32 = {
 			isa = PBXGroup;
 			children = (
+				46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */,
+				46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */,
 				46E47B99207E74A600D6BD32 /* Assistant */,
 				46E47BAE207E74A700D6BD32 /* AssistantTests */,
 				46E47BB9207E74A700D6BD32 /* AssistantUITests */,
@@ -98,11 +307,31 @@
 			isa = PBXGroup;
 			children = (
 				46E47B9A207E74A600D6BD32 /* AppDelegate.swift */,
-				46E47B9C207E74A600D6BD32 /* ViewController.swift */,
-				46E47B9E207E74A600D6BD32 /* Main.storyboard */,
-				46E47BA1207E74A600D6BD32 /* Assets.xcassets */,
-				46E47BA3207E74A600D6BD32 /* LaunchScreen.storyboard */,
-				46E47BA6207E74A600D6BD32 /* Info.plist */,
+				46E47CEC207E786F00D6BD32 /* BreatheHistory.xcdatamodeld */,
+				46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */,
+				46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */,
+				46E47CEE207E787000D6BD32 /* PassableSession.swift */,
+				46E47BDE207E761900D6BD32 /* Main.storyboard */,
+				46E47C83207E775100D6BD32 /* Action Taken */,
+				46E47C33207E774D00D6BD32 /* AnswerFormats.swift */,
+				46E47C32207E774D00D6BD32 /* Assets.xcassets */,
+				46E47C3F207E774E00D6BD32 /* DailyNotification.swift */,
+				46E47C29207E774900D6BD32 /* FindIntentOfWords.swift */,
+				46E47C17207E774800D6BD32 /* Info */,
+				46E47C2F207E774A00D6BD32 /* Info.plist */,
+				46E47C4D207E774F00D6BD32 /* LaunchScreen.storyboard */,
+				46E47C2B207E774900D6BD32 /* Managers */,
+				46E47C2E207E774A00D6BD32 /* MessageBackgroundSmall.png */,
+				46E47C40207E774E00D6BD32 /* PaidSubscription.swift */,
+				46E47C30207E774A00D6BD32 /* ParseTime.swift */,
+				46E47C1C207E774800D6BD32 /* ParseUserInput.swift */,
+				46E47C1D207E774800D6BD32 /* Prompts */,
+				46E47C34207E774D00D6BD32 /* Sounds */,
+				46E47C2A207E774900D6BD32 /* Subscription.swift */,
+				46E47C31207E774B00D6BD32 /* SubscriptionService.swift */,
+				46E47C41207E774F00D6BD32 /* Types */,
+				46E47C4E207E775000D6BD32 /* Updated VCs */,
+				46E47C3E207E774E00D6BD32 /* WordContextList.swift */,
 			);
 			path = Assistant;
 			sourceTree = "<group>";
@@ -123,6 +352,160 @@
 				46E47BBC207E74A700D6BD32 /* Info.plist */,
 			);
 			path = AssistantUITests;
+			sourceTree = "<group>";
+		};
+		46E47C17207E774800D6BD32 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C18207E774800D6BD32 /* UserInfo.swift */,
+				46E47C19207E774800D6BD32 /* Colours.swift */,
+				46E47C1A207E774800D6BD32 /* AppInfo.swift */,
+				46E47C1B207E774800D6BD32 /* Convert.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		46E47C1D207E774800D6BD32 /* Prompts */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C1E207E774800D6BD32 /* GlobalPrompts.swift */,
+				46E47C1F207E774800D6BD32 /* OnboardingPrompts.swift */,
+				46E47C20207E774800D6BD32 /* Paths.swift */,
+				46E47C21207E774800D6BD32 /* CreateItemsForPrompt.swift */,
+				46E47C22207E774800D6BD32 /* NotificationPrompts.swift */,
+				46E47C23207E774800D6BD32 /* OtherPrompts.swift */,
+				46E47C24207E774900D6BD32 /* HomePrompt.swift */,
+				46E47C25207E774900D6BD32 /* LearningPrompts.swift */,
+				46E47C26207E774900D6BD32 /* Prompt.swift */,
+				46E47C27207E774900D6BD32 /* CreatePromptFor.swift */,
+				46E47C28207E774900D6BD32 /* SessionPrompts.swift */,
+			);
+			path = Prompts;
+			sourceTree = "<group>";
+		};
+		46E47C2B207E774900D6BD32 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C2C207E774900D6BD32 /* ChatManager.swift */,
+				46E47C2D207E774900D6BD32 /* SessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		46E47C34207E774D00D6BD32 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C35207E774D00D6BD32 /* EmptySustain.mp3 */,
+				46E47C36207E774D00D6BD32 /* Inhale 3.mp3 */,
+				46E47C37207E774D00D6BD32 /* Inhale.mp3 */,
+				46E47C38207E774D00D6BD32 /* Exhale.mp3 */,
+				46E47C39207E774D00D6BD32 /* Full Sustain.mp3 */,
+				46E47C3A207E774D00D6BD32 /* Exhale 3.mp3 */,
+				46E47C3B207E774D00D6BD32 /* acceptHappyA.mp3 */,
+				46E47C3C207E774D00D6BD32 /* acceptHappyB.mp3 */,
+				46E47C3D207E774D00D6BD32 /* Finished Ding.mp3 */,
+			);
+			name = Sounds;
+			path = ../../Breathe/Breathe/Sounds;
+			sourceTree = "<group>";
+		};
+		46E47C41207E774F00D6BD32 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C42207E774F00D6BD32 /* UserSkillLevel.swift */,
+				46E47C43207E774F00D6BD32 /* ReadingLevel.swift */,
+				46E47C44207E774F00D6BD32 /* Constraints.swift */,
+				46E47C45207E774F00D6BD32 /* ItemType.swift */,
+				46E47C46207E774F00D6BD32 /* ViewControllers.swift */,
+				46E47C47207E774F00D6BD32 /* PromptCategory.swift */,
+				46E47C48207E774F00D6BD32 /* ButtonAction.swift */,
+				46E47C49207E774F00D6BD32 /* SessionType.swift */,
+				46E47C4A207E774F00D6BD32 /* WordContext.swift */,
+				46E47C4B207E774F00D6BD32 /* BreathParts.swift */,
+				46E47C4C207E774F00D6BD32 /* PromptType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		46E47C4E207E775000D6BD32 /* Updated VCs */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C4F207E775000D6BD32 /* Cells */,
+				46E47C71207E775100D6BD32 /* ChildChatViewController.swift */,
+				46E47C72207E775100D6BD32 /* AddItemsToHomeVCExtension.swift */,
+				46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */,
+				46E47C74207E775100D6BD32 /* CommandsViewController.swift */,
+				46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */,
+				46E47C76207E775100D6BD32 /* ChildHomeViewController.swift */,
+				46E47C77207E775100D6BD32 /* GetCellForItemType.swift */,
+				46E47C78207E775100D6BD32 /* HistoryViewController.swift */,
+				46E47C79207E775100D6BD32 /* PageViewController.swift */,
+				46E47C7A207E775100D6BD32 /* ChatVCExtensions */,
+				46E47C82207E775100D6BD32 /* SettingsViewController.swift */,
+			);
+			path = "Updated VCs";
+			sourceTree = "<group>";
+		};
+		46E47C4F207E775000D6BD32 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C50207E775000D6BD32 /* TitleDividerTableViewCell.swift */,
+				46E47C51207E775000D6BD32 /* ShowCommandsTableViewCell.xib */,
+				46E47C52207E775100D6BD32 /* HistoryItemTableViewCell.swift */,
+				46E47C53207E775100D6BD32 /* SettingsButtonTableViewCell.xib */,
+				46E47C54207E775100D6BD32 /* ToggleTableViewCell.xib */,
+				46E47C55207E775100D6BD32 /* IntegrationToggleWidgetTableViewCell.xib */,
+				46E47C56207E775100D6BD32 /* TitleDividerTableViewCell.xib */,
+				46E47C57207E775100D6BD32 /* ShowKeyboardTableViewCell.swift */,
+				46E47C58207E775100D6BD32 /* WeekSelectionTableViewCell.swift */,
+				46E47C59207E775100D6BD32 /* AssistantMessageTableViewCell.swift */,
+				46E47C5A207E775100D6BD32 /* UserMessageTableViewCell.xib */,
+				46E47C5B207E775100D6BD32 /* WeekSelectionTableViewCell.xib */,
+				46E47C5C207E775100D6BD32 /* ButtonCloudTableViewCell.xib */,
+				46E47C5D207E775100D6BD32 /* CalendarMonthTableViewCell.swift */,
+				46E47C5E207E775100D6BD32 /* ShowKeyboardTableViewCell.xib */,
+				46E47C5F207E775100D6BD32 /* PlayableSessionTableViewCell.swift */,
+				46E47C60207E775100D6BD32 /* PendingItemCell.swift */,
+				46E47C61207E775100D6BD32 /* ShowCommandsTableViewCell.swift */,
+				46E47C62207E775100D6BD32 /* PendingItemCell.xib */,
+				46E47C63207E775100D6BD32 /* PlayableSessionWidgetExtension.swift */,
+				46E47C64207E775100D6BD32 /* SettingsButtonTableViewCell.swift */,
+				46E47C65207E775100D6BD32 /* PlayableSessionTableViewCell.xib */,
+				46E47C66207E775100D6BD32 /* AssistantMessageTableViewCell.xib */,
+				46E47C67207E775100D6BD32 /* UserMessageTableViewCell.swift */,
+				46E47C68207E775100D6BD32 /* PointsTableViewCell.xib */,
+				46E47C69207E775100D6BD32 /* IntegrationToggleWidgetTableViewCell.swift */,
+				46E47C6A207E775100D6BD32 /* BreatheSessionTableViewCell.xib */,
+				46E47C6B207E775100D6BD32 /* CalendarMonthTableViewCell.xib */,
+				46E47C6C207E775100D6BD32 /* BreatheSessionTableViewCell.swift */,
+				46E47C6D207E775100D6BD32 /* HistoryItemTableViewCell.xib */,
+				46E47C6E207E775100D6BD32 /* PointsTableViewCell.swift */,
+				46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */,
+				46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		46E47C7A207E775100D6BD32 /* ChatVCExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C7B207E775100D6BD32 /* AddItemsToChatVCExtension.swift */,
+				46E47C7C207E775100D6BD32 /* TappingSessionWidgetChatVCExtension.swift */,
+				46E47C7D207E775100D6BD32 /* ChatBarChatVCExtension.swift */,
+				46E47C7E207E775100D6BD32 /* SoundChatVCExtension.swift */,
+				46E47C7F207E775100D6BD32 /* TappingButtonCloudChatVCExtension.swift */,
+				46E47C80207E775100D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift */,
+				46E47C81207E775100D6BD32 /* TableViewChatVCExtension.swift */,
+			);
+			path = ChatVCExtensions;
+			sourceTree = "<group>";
+		};
+		46E47C83207E775100D6BD32 /* Action Taken */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C84207E775100D6BD32 /* ActionTriage.swift */,
+			);
+			path = "Action Taken";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +615,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E47BA5207E74A600D6BD32 /* LaunchScreen.storyboard in Resources */,
-				46E47BA2207E74A600D6BD32 /* Assets.xcassets in Resources */,
-				46E47BA0207E74A600D6BD32 /* Main.storyboard in Resources */,
+				46E47CBA207E775200D6BD32 /* SettingsButtonTableViewCell.xib in Resources */,
+				46E47CC3207E775200D6BD32 /* ButtonCloudTableViewCell.xib in Resources */,
+				46E47CA4207E775100D6BD32 /* Exhale 3.mp3 in Resources */,
+				46E47CA1207E775100D6BD32 /* Inhale.mp3 in Resources */,
+				46E47CCD207E775200D6BD32 /* AssistantMessageTableViewCell.xib in Resources */,
+				46E47CA0207E775100D6BD32 /* Inhale 3.mp3 in Resources */,
+				46E47CA5207E775100D6BD32 /* acceptHappyA.mp3 in Resources */,
+				46E47CBD207E775200D6BD32 /* TitleDividerTableViewCell.xib in Resources */,
+				46E47BDF207E761900D6BD32 /* Main.storyboard in Resources */,
+				46E47CCF207E775200D6BD32 /* PointsTableViewCell.xib in Resources */,
+				46E47C99207E775100D6BD32 /* MessageBackgroundSmall.png in Resources */,
+				46E47CA6207E775100D6BD32 /* acceptHappyB.mp3 in Resources */,
+				46E47C9D207E775100D6BD32 /* Assets.xcassets in Resources */,
+				46E47CA7207E775100D6BD32 /* Finished Ding.mp3 in Resources */,
+				46E47CD1207E775200D6BD32 /* BreatheSessionTableViewCell.xib in Resources */,
+				46E47CBC207E775200D6BD32 /* IntegrationToggleWidgetTableViewCell.xib in Resources */,
+				46E47CC1207E775200D6BD32 /* UserMessageTableViewCell.xib in Resources */,
+				46E47CD4207E775200D6BD32 /* HistoryItemTableViewCell.xib in Resources */,
+				46E47C9A207E775100D6BD32 /* Info.plist in Resources */,
+				46E47CC5207E775200D6BD32 /* ShowKeyboardTableViewCell.xib in Resources */,
+				46E47CC9207E775200D6BD32 /* PendingItemCell.xib in Resources */,
+				46E47CC2207E775200D6BD32 /* WeekSelectionTableViewCell.xib in Resources */,
+				46E47C9F207E775100D6BD32 /* EmptySustain.mp3 in Resources */,
+				46E47CCC207E775200D6BD32 /* PlayableSessionTableViewCell.xib in Resources */,
+				46E47CBB207E775200D6BD32 /* ToggleTableViewCell.xib in Resources */,
+				46E47CD2207E775200D6BD32 /* CalendarMonthTableViewCell.xib in Resources */,
+				46E47CB6207E775200D6BD32 /* LaunchScreen.storyboard in Resources */,
+				46E47CA3207E775100D6BD32 /* Full Sustain.mp3 in Resources */,
+				46E47CB8207E775200D6BD32 /* ShowCommandsTableViewCell.xib in Resources */,
+				46E47CA2207E775100D6BD32 /* Exhale.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +669,85 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E47B9D207E74A600D6BD32 /* ViewController.swift in Sources */,
+				46E47CAC207E775100D6BD32 /* ReadingLevel.swift in Sources */,
+				46E47CA9207E775100D6BD32 /* DailyNotification.swift in Sources */,
+				46E47CDA207E775200D6BD32 /* TappingSessionWidgetHomeVCExtension.swift in Sources */,
+				46E47CAF207E775100D6BD32 /* ViewControllers.swift in Sources */,
+				46E47CDB207E775200D6BD32 /* CommandsViewController.swift in Sources */,
+				46E47C8D207E775100D6BD32 /* CreateItemsForPrompt.swift in Sources */,
+				46E47CD9207E775200D6BD32 /* AddItemsToHomeVCExtension.swift in Sources */,
+				46E47C9C207E775100D6BD32 /* SubscriptionService.swift in Sources */,
+				46E47C91207E775100D6BD32 /* LearningPrompts.swift in Sources */,
+				46E47CC8207E775200D6BD32 /* ShowCommandsTableViewCell.swift in Sources */,
+				46E47C85207E775100D6BD32 /* UserInfo.swift in Sources */,
+				46E47C88207E775100D6BD32 /* Convert.swift in Sources */,
+				46E47C9B207E775100D6BD32 /* ParseTime.swift in Sources */,
+				46E47CD0207E775200D6BD32 /* IntegrationToggleWidgetTableViewCell.swift in Sources */,
+				46E47C96207E775100D6BD32 /* Subscription.swift in Sources */,
+				46E47CCB207E775200D6BD32 /* SettingsButtonTableViewCell.swift in Sources */,
+				46E47CF1207E787000D6BD32 /* BreatheHistory.xcdatamodeld in Sources */,
+				46E47CD6207E775200D6BD32 /* ButtonCloudTableViewCell.swift in Sources */,
+				46E47CE5207E775200D6BD32 /* TappingButtonCloudChatVCExtension.swift in Sources */,
+				46E47CD7207E775200D6BD32 /* ToggleTableViewCell.swift in Sources */,
+				46E47CC6207E775200D6BD32 /* PlayableSessionTableViewCell.swift in Sources */,
+				46E47CB4207E775200D6BD32 /* BreathParts.swift in Sources */,
+				46E47CE1207E775200D6BD32 /* AddItemsToChatVCExtension.swift in Sources */,
+				46E47CC7207E775200D6BD32 /* PendingItemCell.swift in Sources */,
+				46E47CB0207E775100D6BD32 /* PromptCategory.swift in Sources */,
+				46E47C92207E775100D6BD32 /* Prompt.swift in Sources */,
+				46E47CAB207E775100D6BD32 /* UserSkillLevel.swift in Sources */,
+				46E47CB3207E775200D6BD32 /* WordContext.swift in Sources */,
+				46E47CB1207E775100D6BD32 /* ButtonAction.swift in Sources */,
+				46E47CBF207E775200D6BD32 /* WeekSelectionTableViewCell.swift in Sources */,
+				46E47CF0207E787000D6BD32 /* HealthKitSetUpAssistant.swift in Sources */,
+				46E47C90207E775100D6BD32 /* HomePrompt.swift in Sources */,
+				46E47C94207E775100D6BD32 /* SessionPrompts.swift in Sources */,
+				46E47CE3207E775200D6BD32 /* ChatBarChatVCExtension.swift in Sources */,
+				46E47CD5207E775200D6BD32 /* PointsTableViewCell.swift in Sources */,
+				46E47C8B207E775100D6BD32 /* OnboardingPrompts.swift in Sources */,
+				46E47CC0207E775200D6BD32 /* AssistantMessageTableViewCell.swift in Sources */,
+				46E47C8C207E775100D6BD32 /* Paths.swift in Sources */,
+				46E47CDF207E775200D6BD32 /* HistoryViewController.swift in Sources */,
+				46E47CAA207E775100D6BD32 /* PaidSubscription.swift in Sources */,
+				46E47CF2207E787000D6BD32 /* PassableSession.swift in Sources */,
+				46E47C95207E775100D6BD32 /* FindIntentOfWords.swift in Sources */,
+				46E47C87207E775100D6BD32 /* AppInfo.swift in Sources */,
+				46E47CAE207E775100D6BD32 /* ItemType.swift in Sources */,
+				46E47CE4207E775200D6BD32 /* SoundChatVCExtension.swift in Sources */,
+				46E47C86207E775100D6BD32 /* Colours.swift in Sources */,
 				46E47B9B207E74A600D6BD32 /* AppDelegate.swift in Sources */,
+				46E47CC4207E775200D6BD32 /* CalendarMonthTableViewCell.swift in Sources */,
+				46E47C8F207E775100D6BD32 /* OtherPrompts.swift in Sources */,
+				46E47CA8207E775100D6BD32 /* WordContextList.swift in Sources */,
+				46E47CAD207E775100D6BD32 /* Constraints.swift in Sources */,
+				46E47CB5207E775200D6BD32 /* PromptType.swift in Sources */,
+				46E47CD3207E775200D6BD32 /* BreatheSessionTableViewCell.swift in Sources */,
+				46E47C97207E775100D6BD32 /* ChatManager.swift in Sources */,
+				46E47CF6207E793000D6BD32 /* Session+CoreDataClass.swift in Sources */,
+				46E47CE0207E775200D6BD32 /* PageViewController.swift in Sources */,
+				46E47CD8207E775200D6BD32 /* ChildChatViewController.swift in Sources */,
+				46E47CEF207E787000D6BD32 /* CoreDataStack.swift in Sources */,
+				46E47CDE207E775200D6BD32 /* GetCellForItemType.swift in Sources */,
+				46E47CE2207E775200D6BD32 /* TappingSessionWidgetChatVCExtension.swift in Sources */,
+				46E47C9E207E775100D6BD32 /* AnswerFormats.swift in Sources */,
+				46E47C8E207E775100D6BD32 /* NotificationPrompts.swift in Sources */,
+				46E47CB2207E775100D6BD32 /* SessionType.swift in Sources */,
+				46E47CDD207E775200D6BD32 /* ChildHomeViewController.swift in Sources */,
+				46E47CE6207E775200D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift in Sources */,
+				46E47CE7207E775200D6BD32 /* TableViewChatVCExtension.swift in Sources */,
+				46E47C93207E775100D6BD32 /* CreatePromptFor.swift in Sources */,
+				46E47C89207E775100D6BD32 /* ParseUserInput.swift in Sources */,
+				46E47CB7207E775200D6BD32 /* TitleDividerTableViewCell.swift in Sources */,
+				46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */,
+				46E47CCE207E775200D6BD32 /* UserMessageTableViewCell.swift in Sources */,
+				46E47CB9207E775200D6BD32 /* HistoryItemTableViewCell.swift in Sources */,
+				46E47CE9207E775200D6BD32 /* ActionTriage.swift in Sources */,
+				46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */,
+				46E47CBE207E775200D6BD32 /* ShowKeyboardTableViewCell.swift in Sources */,
+				46E47C8A207E775100D6BD32 /* GlobalPrompts.swift in Sources */,
+				46E47CCA207E775200D6BD32 /* PlayableSessionWidgetExtension.swift in Sources */,
+				46E47C98207E775100D6BD32 /* SessionManager.swift in Sources */,
+				46E47CE8207E775200D6BD32 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +781,6 @@
 			targetProxy = 46E47BB7207E74A700D6BD32 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		46E47B9E207E74A600D6BD32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46E47B9F207E74A600D6BD32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		46E47BA3207E74A600D6BD32 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46E47BA4207E74A600D6BD32 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		46E47BBD207E74A700D6BD32 /* Debug */ = {
@@ -558,6 +1026,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46E47CEC207E786F00D6BD32 /* BreatheHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46E47CED207E786F00D6BD32 /* BreatheHistory.xcdatamodel */,
+			);
+			currentVersion = 46E47CED207E786F00D6BD32 /* BreatheHistory.xcdatamodel */;
+			path = BreatheHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 46E47B8F207E74A600D6BD32 /* Project object */;
 }
