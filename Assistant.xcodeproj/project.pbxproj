@@ -95,7 +95,6 @@
 		46E47CD6207E775200D6BD32 /* ButtonCloudTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */; };
 		46E47CD7207E775200D6BD32 /* ToggleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */; };
 		46E47CD8207E775200D6BD32 /* ChildChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C71207E775100D6BD32 /* ChildChatViewController.swift */; };
-		46E47CD9207E775200D6BD32 /* AddItemsToHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C72207E775100D6BD32 /* AddItemsToHomeVCExtension.swift */; };
 		46E47CDA207E775200D6BD32 /* TappingSessionWidgetHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */; };
 		46E47CDB207E775200D6BD32 /* CommandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C74207E775100D6BD32 /* CommandsViewController.swift */; };
 		46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */; };
@@ -115,9 +114,9 @@
 		46E47CEF207E787000D6BD32 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */; };
 		46E47CF0207E787000D6BD32 /* HealthKitSetUpAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */; };
 		46E47CF1207E787000D6BD32 /* BreatheHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEC207E786F00D6BD32 /* BreatheHistory.xcdatamodeld */; };
-		46E47CF2207E787000D6BD32 /* PassableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CEE207E787000D6BD32 /* PassableSession.swift */; };
 		46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */; };
 		46E47CF6207E793000D6BD32 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */; };
+		46E47CFB207E7F5500D6BD32 /* BreatheActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,7 +230,6 @@
 		46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCloudTableViewCell.swift; sourceTree = "<group>"; };
 		46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTableViewCell.swift; sourceTree = "<group>"; };
 		46E47C71207E775100D6BD32 /* ChildChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildChatViewController.swift; sourceTree = "<group>"; };
-		46E47C72207E775100D6BD32 /* AddItemsToHomeVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemsToHomeVCExtension.swift; sourceTree = "<group>"; };
 		46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingSessionWidgetHomeVCExtension.swift; sourceTree = "<group>"; };
 		46E47C74207E775100D6BD32 /* CommandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandsViewController.swift; sourceTree = "<group>"; };
 		46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TappingButtonCloudButtonsHomeVCExtension.swift; sourceTree = "<group>"; };
@@ -251,9 +249,9 @@
 		46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetUpAssistant.swift; sourceTree = "<group>"; };
 		46E47CED207E786F00D6BD32 /* BreatheHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BreatheHistory.xcdatamodel; sourceTree = "<group>"; };
-		46E47CEE207E787000D6BD32 /* PassableSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassableSession.swift; sourceTree = "<group>"; };
 		46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,7 +308,8 @@
 				46E47CEC207E786F00D6BD32 /* BreatheHistory.xcdatamodeld */,
 				46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */,
 				46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */,
-				46E47CEE207E787000D6BD32 /* PassableSession.swift */,
+				46E47CF7207E7AC000D6BD32 /* VCs */,
+				46E47C4F207E775000D6BD32 /* Cells */,
 				46E47BDE207E761900D6BD32 /* Main.storyboard */,
 				46E47C83207E775100D6BD32 /* Action Taken */,
 				46E47C33207E774D00D6BD32 /* AnswerFormats.swift */,
@@ -430,18 +429,6 @@
 		46E47C4E207E775000D6BD32 /* Updated VCs */ = {
 			isa = PBXGroup;
 			children = (
-				46E47C4F207E775000D6BD32 /* Cells */,
-				46E47C71207E775100D6BD32 /* ChildChatViewController.swift */,
-				46E47C72207E775100D6BD32 /* AddItemsToHomeVCExtension.swift */,
-				46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */,
-				46E47C74207E775100D6BD32 /* CommandsViewController.swift */,
-				46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */,
-				46E47C76207E775100D6BD32 /* ChildHomeViewController.swift */,
-				46E47C77207E775100D6BD32 /* GetCellForItemType.swift */,
-				46E47C78207E775100D6BD32 /* HistoryViewController.swift */,
-				46E47C79207E775100D6BD32 /* PageViewController.swift */,
-				46E47C7A207E775100D6BD32 /* ChatVCExtensions */,
-				46E47C82207E775100D6BD32 /* SettingsViewController.swift */,
 			);
 			path = "Updated VCs";
 			sourceTree = "<group>";
@@ -504,8 +491,42 @@
 			isa = PBXGroup;
 			children = (
 				46E47C84207E775100D6BD32 /* ActionTriage.swift */,
+				46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */,
 			);
 			path = "Action Taken";
+			sourceTree = "<group>";
+		};
+		46E47CF7207E7AC000D6BD32 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C79207E775100D6BD32 /* PageViewController.swift */,
+				46E47C71207E775100D6BD32 /* ChildChatViewController.swift */,
+				46E47C7A207E775100D6BD32 /* ChatVCExtensions */,
+				46E47C76207E775100D6BD32 /* ChildHomeViewController.swift */,
+				46E47CF8207E7CA500D6BD32 /* HomeVCExtensions */,
+				46E47C74207E775100D6BD32 /* CommandsViewController.swift */,
+				46E47C78207E775100D6BD32 /* HistoryViewController.swift */,
+				46E47C82207E775100D6BD32 /* SettingsViewController.swift */,
+				46E47CF9207E7E4500D6BD32 /* HelperFiles */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		46E47CF8207E7CA500D6BD32 /* HomeVCExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */,
+				46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */,
+			);
+			path = HomeVCExtensions;
+			sourceTree = "<group>";
+		};
+		46E47CF9207E7E4500D6BD32 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C77207E775100D6BD32 /* GetCellForItemType.swift */,
+			);
+			path = HelperFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -675,7 +696,6 @@
 				46E47CAF207E775100D6BD32 /* ViewControllers.swift in Sources */,
 				46E47CDB207E775200D6BD32 /* CommandsViewController.swift in Sources */,
 				46E47C8D207E775100D6BD32 /* CreateItemsForPrompt.swift in Sources */,
-				46E47CD9207E775200D6BD32 /* AddItemsToHomeVCExtension.swift in Sources */,
 				46E47C9C207E775100D6BD32 /* SubscriptionService.swift in Sources */,
 				46E47C91207E775100D6BD32 /* LearningPrompts.swift in Sources */,
 				46E47CC8207E775200D6BD32 /* ShowCommandsTableViewCell.swift in Sources */,
@@ -709,11 +729,11 @@
 				46E47C8C207E775100D6BD32 /* Paths.swift in Sources */,
 				46E47CDF207E775200D6BD32 /* HistoryViewController.swift in Sources */,
 				46E47CAA207E775100D6BD32 /* PaidSubscription.swift in Sources */,
-				46E47CF2207E787000D6BD32 /* PassableSession.swift in Sources */,
 				46E47C95207E775100D6BD32 /* FindIntentOfWords.swift in Sources */,
 				46E47C87207E775100D6BD32 /* AppInfo.swift in Sources */,
 				46E47CAE207E775100D6BD32 /* ItemType.swift in Sources */,
 				46E47CE4207E775200D6BD32 /* SoundChatVCExtension.swift in Sources */,
+				46E47CFB207E7F5500D6BD32 /* BreatheActions.swift in Sources */,
 				46E47C86207E775100D6BD32 /* Colours.swift in Sources */,
 				46E47B9B207E74A600D6BD32 /* AppDelegate.swift in Sources */,
 				46E47CC4207E775200D6BD32 /* CalendarMonthTableViewCell.swift in Sources */,
