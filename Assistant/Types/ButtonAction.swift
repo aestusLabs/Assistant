@@ -8,104 +8,119 @@
 
 import Foundation
 enum ButtonAction {
-    case none
     
-    case showTestPrompt
-    
-    case iNeedHelp // for help global prompt
-    case keyboard
-    
-    case cancelAnswerChange // for when user expands user message back to buttons
-    case customAnswerEntry // for when user expands user message back to buttons
-
-    case showChangeNamePrompt
-    case showChangeReadingSpeed
-    case showHowExercisesWork // Help Prompt
-    case showHelpWithPosture // Help Prompt
-    
-    case  learnAboutCalmingBreath, learnAboutShiningSkullBreath, learnAboutBellowsBreath, learnAboutAltNostrilBreathing, learnAboutCountedBreath, learnAboutDeepBreathing
-    
-    case startDeepBreathingSession, startCountedBreathSession, startCalmingBreathSession, startAlternateNostrilBreathSession, startBellowsBreathSession, startShiningSkullSession
-    
-    case showBeginnerExercises, showIntermediateExercises, showAdvancedExercises
-
-    
-    case changeName
-    case showAllGlobalCommands
+    // Breathe Only
+    case breakLengthPerCycle
+    case emptySustain
+    case exhale
+    case fullSustain
+    case guidedPurposeOfSession
+    case guidedSelect
+    case inhale
+    case learnAboutAltNostrilBreathing
+    case learnAboutBellowsBreath
+    case learnAboutCalmingBreath
+    case learnAboutCountedBreath
+    case learnAboutDeepBreathing
+    case learnAboutExercises
     case learnAboutPosture
-    case startBeginnerSession
-    case settings, history
-    
-    case setName
+    case learnAboutShiningSkullBreath
+    case lengthInCycles
+    case lengthInSeconds
+    case numberOfBreathsPerCycle
+    case selectExercise
+    case selectedExercise
     case setFamiliarityWithPranayama
-    case newUserStart
-    case showLearnInDepthPranayamaExplanation
-    case showLearnInDepthBenefits
-    case showLearnMoreAboutPranayamaBenefits
-    case showHistory
-    case restartSession
-    case goToSettings, goToHistory, goToOnboarding
-    case showHowAppWorks
+    case showAdvancedExercises
+    case showBeginnerExercises
+    case showCalmExercises
+    case showEmptySustain
+    case showEnergyExercises
+    case showExhale
     case showExplainDifferenceBetweenBellowsAndShiningSkull
     case showExplainLayWhileExercises
     case showExplainWhatDotsAre
-    case selectedExercise
-    case selectExercise
-    case guidedSelect
-    case guidedPurposeOfSession
-    
-    case showCalmExercises, showFocusExercises, showEnergyExercises, showSleepExercises
-    case showPranayamaBasics
+    case showFocusExercises
+    case showFullSustain
+    case showHelpWithPosture // Help Prompt
+    case showHowExercisesWork // Help Prompt
     case showHowToBreathe
-    case useCurrentPromptAction
+    case showInhale
+    case showIntermediateExercises
+    case showLearnInDepthBenefits
+    case showLearnInDepthPranayamaExplanation
+    case showLearnMoreAboutPranayamaBenefits
+    case showPranayamaBasics
+    case showSleepExercises
+    case skillLevel
+    case startAlternateNostrilBreathSession
+    case startBeginnerSession
+    case startBellowsBreathSession
+    case startCalmingBreathSession
+    case startCountedBreathSession
+    case startDeepBreathingSession
+    case startShiningSkullSession
+    
+    
+    // General
+    case cancelAnswerChange
+    case cancelSetDailyNotification// for when user expands user message back to buttons
+    case changeName
     case colourThemeAction
     case colourThemeSpecificsAction
-    
-    case darkModeOn
-    case darkModeOff
-    
-    case showReadingSpeedWidget
-    case setReadingSpeed
-    case readingSpeedChange
-    case readingSpeedIncrease
-    case readingSpeedDecrease
-    //    case setInhale, setExhale
-    
-    case tweet, email, site
-    case rate, tellFriends
-    case learnAboutPurchase, purchase, restorePurchase
-    case learnHowAppWorks, learnAboutExercises
-    case darkMode, volume, skillLevel
-    
-    case inhale, exhale, fullSustain, emptySustain, lengthInSeconds, lengthInCycles
-    case numberOfBreathsPerCycle
-    case breakLengthPerCycle
-    
-    case seeMoreOfWhatICanDo
     case continueWhatYouWereDoing
-    
+    case customAnswerEntry // for when user expands user message back to buttons
+    case darkMode
+    case darkModeOff
+    case darkModeOn
+    case email
     case finishOnboarding
-    
-    case premiumButton
-    case subscribe
+    case givePermissionForNotifications
+    case goToEmilySite
+    case goToHistory
+    case goToIcons8
+    case goToOnboarding
+    case goToSettings
+    case history
+    case iNeedHelp // for help global prompt
+    case keyboard
+    case learnAboutPurchase
+    case learnHowAppWorks
     case learnMoreAboutSubscription
-    
-    
-    case turnOffNotifications
-    case turnOnNotifications
-    case cancelSetDailyNotificaiton
+    case newUserStart
+    case none
+    case onboarding
+    case premiumButton
+    case purchase
+    case rate
+    case readingSpeedChange
+    case readingSpeedDecrease
+    case readingSpeedIncrease
+    case refuseToGiveNotificationPermission
+    case restartSession
+    case restorePurchase
+    case seeMoreOfWhatICanDo
     case setDailyNotification
-    case showDailyNotificationChooseDays
+    case setName
     case setNotificationDays
     case setNotificationTime
-    case givePermissionForNotifications, refuseToGiveNotificationPermission
-    
-    case showInhale, showExhale, showFullSustain, showEmptySustain
-    
+    case setReadingSpeed
+    case settings
+    case showAllGlobalCommands
+    case showChangeNamePrompt
+    case showChangeReadingSpeed
+    case showDailyNotificationChooseDays
+    case showHistory
+    case showHowAppWorks
+    case showReadingSpeedWidget
+    case showTestPrompt
+    case site
+    case subscribe
+    case tellFriends
+    case turnOffNotifications
+    case turnOnNotifications
+    case tweet
+    case useCurrentPromptAction
     case varied // for when a prompt has multiple different types
-    // testing
-    case onboarding
-    
-    case goToIcons8
-    case goToEmilySite
+    case volume
 }

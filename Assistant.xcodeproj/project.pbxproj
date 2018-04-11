@@ -117,6 +117,7 @@
 		46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */; };
 		46E47CF6207E793000D6BD32 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */; };
 		46E47CFB207E7F5500D6BD32 /* BreatheActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */; };
+		46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFC207E946500D6BD32 /* AllAppsActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,7 @@
 		46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
 		46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheActions.swift; sourceTree = "<group>"; };
+		46E47CFC207E946500D6BD32 /* AllAppsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAppsActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,6 +493,7 @@
 			isa = PBXGroup;
 			children = (
 				46E47C84207E775100D6BD32 /* ActionTriage.swift */,
+				46E47CFC207E946500D6BD32 /* AllAppsActions.swift */,
 				46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */,
 			);
 			path = "Action Taken";
@@ -767,6 +770,7 @@
 				46E47C8A207E775100D6BD32 /* GlobalPrompts.swift in Sources */,
 				46E47CCA207E775200D6BD32 /* PlayableSessionWidgetExtension.swift in Sources */,
 				46E47C98207E775100D6BD32 /* SessionManager.swift in Sources */,
+				46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */,
 				46E47CE8207E775200D6BD32 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

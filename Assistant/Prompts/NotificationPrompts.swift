@@ -89,7 +89,7 @@ func createConfirmSetNotificationPrompt() -> Prompt { //Spelling And Grammar Che
     
     let message = createAssistantMessageItem(text: messageText)
     let confirmButton = ButtonData(title: "Confirm", action: .setDailyNotification, global: false, premium: false)
-    let cancelButton = ButtonData(title: "Cancel", action: .cancelSetDailyNotificaiton, global: false, premium: false)
+    let cancelButton = ButtonData(title: "Cancel", action: .cancelSetDailyNotification, global: false, premium: false)
     let buttonCloud = createButtonCloud(buttons: [cancelButton, confirmButton], promptType: .showSubscribe)
     buttonCloud.typeableAnswer = false
 
