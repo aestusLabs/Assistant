@@ -22,8 +22,13 @@ struct AppInfo {
     var maxAssistantTextWidth: CGFloat = 0
     var colourTheme: ColourTheme = .light
     
+    var appType: AppTypes = .assistant
    
 }
 
 
 var appInfo = AppInfo()
+
+enum AppTypes {
+    case assistant, breathe
+}

@@ -118,6 +118,8 @@
 		46E47CF6207E793000D6BD32 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */; };
 		46E47CFB207E7F5500D6BD32 /* BreatheActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */; };
 		46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFC207E946500D6BD32 /* AllAppsActions.swift */; };
+		46E47CFF207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFE207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift */; };
+		46E47D01207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D00207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +256,8 @@
 		46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
 		46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheActions.swift; sourceTree = "<group>"; };
 		46E47CFC207E946500D6BD32 /* AllAppsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAppsActions.swift; sourceTree = "<group>"; };
+		46E47CFE207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheMatchWordsWithActions.swift; sourceTree = "<group>"; };
+		46E47D00207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMatchWordsWithActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,7 +321,7 @@
 				46E47C33207E774D00D6BD32 /* AnswerFormats.swift */,
 				46E47C32207E774D00D6BD32 /* Assets.xcassets */,
 				46E47C3F207E774E00D6BD32 /* DailyNotification.swift */,
-				46E47C29207E774900D6BD32 /* FindIntentOfWords.swift */,
+				46E47D02207F097000D6BD32 /* ParseFindActionForInput */,
 				46E47C17207E774800D6BD32 /* Info */,
 				46E47C2F207E774A00D6BD32 /* Info.plist */,
 				46E47C4D207E774F00D6BD32 /* LaunchScreen.storyboard */,
@@ -530,6 +534,16 @@
 				46E47C77207E775100D6BD32 /* GetCellForItemType.swift */,
 			);
 			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		46E47D02207F097000D6BD32 /* ParseFindActionForInput */ = {
+			isa = PBXGroup;
+			children = (
+				46E47C29207E774900D6BD32 /* FindIntentOfWords.swift */,
+				46E47D00207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift */,
+				46E47CFE207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift */,
+			);
+			path = ParseFindActionForInput;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -746,6 +760,7 @@
 				46E47CB5207E775200D6BD32 /* PromptType.swift in Sources */,
 				46E47CD3207E775200D6BD32 /* BreatheSessionTableViewCell.swift in Sources */,
 				46E47C97207E775100D6BD32 /* ChatManager.swift in Sources */,
+				46E47CFF207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift in Sources */,
 				46E47CF6207E793000D6BD32 /* Session+CoreDataClass.swift in Sources */,
 				46E47CE0207E775200D6BD32 /* PageViewController.swift in Sources */,
 				46E47CD8207E775200D6BD32 /* ChildChatViewController.swift in Sources */,
@@ -759,6 +774,7 @@
 				46E47CE6207E775200D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift in Sources */,
 				46E47CE7207E775200D6BD32 /* TableViewChatVCExtension.swift in Sources */,
 				46E47C93207E775100D6BD32 /* CreatePromptFor.swift in Sources */,
+				46E47D01207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift in Sources */,
 				46E47C89207E775100D6BD32 /* ParseUserInput.swift in Sources */,
 				46E47CB7207E775200D6BD32 /* TitleDividerTableViewCell.swift in Sources */,
 				46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */,
