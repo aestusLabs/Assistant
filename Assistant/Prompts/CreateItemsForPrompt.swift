@@ -321,6 +321,18 @@ func createHydrateTotalsCompactWidget() -> HydrateTotalsCompactWidgetData{
     return widget
 }
 
+// ------------------
+
+// MARK: HydrateIntervalsAtGlance
+
+class HydrateIntervalsAtAGlanceWidget: Item {
+    
+}
+func createHydrateIntervalsAtAGlanceWidget() -> HydrateIntervalsAtAGlanceWidget {
+    let widget = HydrateIntervalsAtAGlanceWidget()
+    widget.type = .hydrateIntervalsAtGlanceWidget
+    return widget
+}
 
 
 

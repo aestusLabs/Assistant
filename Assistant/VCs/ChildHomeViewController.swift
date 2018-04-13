@@ -32,6 +32,19 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     lazy var coreDataStack = CoreDataStack(modelName: "BreatheHistory")
 
     
+    func getPromptForApp() -> Prompt {
+        if appInfo.appType == .assistant {
+            return homePrompt.createHydrateHome()
+        } else if appInfo.appType == .breathe {
+            return homePrompt.createBreathePrompt()
+        } else if appInfo.appType == .hydrate {
+            return homePrompt.createHydrateHome()
+        }
+        
+        // This should never be hit
+        return homePrompt.createBreathePrompt()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +83,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         user.updateValuesFromDefaults()
         managedContext = coreDataStack.managedContext
         setUpTableView()
-        prompt = homePrompt.createHydrateHome()
+        prompt = getPromptForApp() //homePrompt.createHydrateHome()
         addHomePromptToTableView(segments: prompt.itemSegments)
         setUpColours()
         //add(promptSegments: prompt!.itemSegments, isChat: false, tv: tableView)
@@ -94,28 +107,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         
     }
     
-    @objc func handleOptionsLoaded(notification: Notification) {
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.options = SubscriptionService.shared.options
-            if let subscriptions = self?.options {
-                            if subscriptions.isEmpty == false {
-                                print(subscriptions.first!.product.localizedTitle)
-                                print(subscriptions.first!.formattedPrice)
-                                
-                            }
-                
-                        }
-//            self?.tableView.reloadData()
-        }
-    }
-    
-    @objc func handlePurchaseSuccessfull(notification: Notification) {
-        DispatchQueue.main.async { [weak self] in
-//            self?.tableView.reloadData()
-        }
-    }
-    
+ 
     @objc func refreshColours() {
         setUpColours()
         tableView.reloadData()
@@ -151,10 +143,11 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         
         chatManager.currentVC = .home
         itemsShown = []
-        prompt = homePrompt.createHydrateHome()
+        prompt = getPromptForApp() //homePrompt.createHydrateHome()
         addHomePromptToTableView(segments: prompt.itemSegments )
-        getLast3ItemsFromCD()
-
+        if appInfo.appType == .breathe {
+            getLast3ItemsFromCD()
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(transitionToChat), name: NSNotification.Name(rawValue: "switchToChatVC"), object: nil)
                NotificationCenter.default.addObserver(self, selector: #selector(refreshColours), name: NSNotification.Name(rawValue: "refreshColours"), object: nil)
         if user.finishedOnboarding == false && user.onboardingInProgress == false{
@@ -182,144 +175,9 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         tableView.reloadData()
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    
-//    func trialSaveToCD() {
-//       let newSession = Session(context: managedContext)
-//        let date = Date() as NSDate
-//        
-//        newSession.date = date
-//        newSession.sessionType = "Deep Breathing"
-//        newSession.durationInS = 300
-//        newSession.inhaleLength = 4
-//        newSession.exhaleLength = 8
-//        newSession.fullSustainLength = 0
-//        newSession.emptySustainLength = 0
-//        newSession.cycleBreakLength = 0
-//        newSession.numberOfBreathsPerCycle = 0
-//        newSession.numberOfCycles = 0
-//        do {
-//            try managedContext.save()
-//        } catch let error as NSError {
-//            print("Error saving trial session (\(error))")
-//        }
-//    }
-    
-    func fetchAllSessionsFromCD() {
-        let fetch: NSFetchRequest<Session> = Session.fetchRequest()
-        
-        do {
-        let results = try managedContext.fetch(fetch)
-            for result in results {
-                print(" ")
-//                print(result)
-                print(result.sessionType)
-                print(" ")
-            }
-        } catch let error as NSError {
-            print("Error fetching results")
-        }
-    }
-    
-    func getLast3ItemsFromCD() {
-        var uniqueSessions: [Session] = []
-        let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
-        
-        let sort = NSSortDescriptor(key: #keyPath(Session.date),
-                                    ascending: false)
-        fetchRequest.sortDescriptors = [sort]
-        fetchRequest.fetchLimit = 10
-        do {
-            let results = try managedContext.fetch(fetchRequest)
-            for result in results {
-                print(result.sessionType)
-//                if uniqueSessions.contains(result) == false {
-//                    uniqueSessions.append(result)
-//                }
-                var addBool = true
-                var arrayOfSameCounts: [Int] = []
-                for session in uniqueSessions {
-                    var sameCount = 0
-                    if session.sessionType! == result.sessionType {
-                       sameCount += 1
-                    }
-                    if session.durationInS == result.durationInS {
-                        sameCount += 1
-                    }
-                    if session.inhaleLength == result.inhaleLength {
-                        sameCount += 1
-                    }
-                    if session.exhaleLength == result.exhaleLength {
-                        sameCount += 1
-                    }
-                    if session.fullSustainLength == result.fullSustainLength {
-                        sameCount += 1
-                    }
-                    if session.emptySustainLength == result.emptySustainLength {
-                        sameCount += 1
-                    }
-                    if session.cycleBreakLength == result.cycleBreakLength {
-                        sameCount += 1
-                    }
-                    if session.numberOfBreathsPerCycle == result.numberOfBreathsPerCycle {
-                        sameCount += 1
-                    }
-                    if session.numberOfCycles == result.numberOfCycles {
-                        sameCount += 1
-                    }
-                    arrayOfSameCounts.append(sameCount)
-                }
-                if arrayOfSameCounts.contains(9) == false{
-                        uniqueSessions.append(result)
-                }
-            }
-        } catch let error as NSError {
-            print("Error fetching")
-        }
-//        print(uniqueSessions)
-        
-        var threeRecomendations: [Session] = []
-        var max = 2
-        if uniqueSessions.count < 3 {
-            max = uniqueSessions.count - 1
-        }
-        if max != -1 {
-            for x in 0...max {
-                threeRecomendations.append(uniqueSessions[x])
-            }
-        }
-            var itemCount = 0
-            var tempArray: [Item] = []
-            for item in itemsShown {
-                if item.type != .passableSession {
-                    tempArray.append(item)
-                } else {
-                    if threeRecomendations.isEmpty == false {
-                        
-                    tempArray.append(createPassableSession(sessionType: myConvert.sessionTypeFrom(string: threeRecomendations[0].sessionType!), inhale: Int(threeRecomendations[0].inhaleLength), exhale: Int(threeRecomendations[0].exhaleLength), fullSustain: Int(threeRecomendations[0].fullSustainLength), emptySustain: Int(threeRecomendations[itemCount].emptySustainLength), totalLengthInSeconds: Int(threeRecomendations[0].durationInS), numberOfBreathsPerCycle: Int(threeRecomendations[0].numberOfBreathsPerCycle), breakLengthForCycle: Int(threeRecomendations[0].cycleBreakLength), totalCycles: Int(threeRecomendations[0].numberOfCycles), secondsElapsed: 0, startOfLastBreath: 0))
-                        threeRecomendations.removeFirst()
-                    } else {
-                        tempArray.append(item)
-                    }
 
-                }
-            }
-        print(tempArray)
-        
-        itemsShown = tempArray
-        
-        tableView.reloadData()
-        
-    }
+    
+  
     
     
     // Premium Funcs
@@ -388,45 +246,4 @@ extension ChildHomeViewController {
 }
 
 
-//class ChildHomeViewController: ParentViewController, NewPageObservation {
-////    var parentPageViewController: PageViewController!
-//    var tableViewVC : ParentViewController!
-//    var prompt: Prompt? = nil
-//    func getParentPageViewController(parentRef: PageViewController) {
-//        parentPageViewController = parentRef
-//    }
-//
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        prompt = homePrompt.createPrompt()
-//       currentPrompt = prompt!
-//
-//
-//        add(promptSegments: prompt!.itemSegments, isChat: false, tv: tableView)
-//        // Do any additional setup after loading the view.
-//
-//
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//    override func viewDidAppear(_ animated: Bool) {
-//        chatManager.currentVC = .home
-//    }
-//
-//
-//    /*
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//    }
-//    */
-//
-//}
 

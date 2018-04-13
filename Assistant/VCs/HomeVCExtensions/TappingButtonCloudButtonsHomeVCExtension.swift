@@ -41,20 +41,30 @@ extension ChildHomeViewController {
                 for item in itemsShown {
                     if item.type == .hydrateTotalsWidget {
                         row = count
+                        let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
+                        let totalsWidget = cell as! HydrateShowTotalsWidgetTableViewCell
+                        totalsWidget.updateProgressBars()
+                    } else if item.type == .hydrateIntervalsAtGlanceWidget {
+                        row = count
+                        let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
+                        let intervalsWidget = cell as! HydrateDayAtGlanceTableViewCell
+                            intervalsWidget.colourCircles()
                     }
                     count += 1
                 }
-                let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
-                let totalsWidget = cell as! HydrateShowTotalsWidgetTableViewCell
-                totalsWidget.updateProgressBars()
-            } else if cell.buttons[sender.tag].action != .goToSettings && cell.buttons[sender.tag].action != .showAllGlobalCommands && cell.buttons[sender.tag].action != .goToHistory {
+                
+                
+            } else if action != .goToSettings && action != .showAllGlobalCommands && action != .goToHistory {
                 transitionToChat()
-            } else if cell.buttons[sender.tag].action == .showAllGlobalCommands {
+                
+            } else if action == .showAllGlobalCommands {
                 let commandsVC = storyboard!.instantiateViewController(withIdentifier: "CommandsVC") as! CommandsViewController
                 present(commandsVC, animated: true, completion: nil)
-            } else if cell.buttons[sender.tag].action == .goToHistory {
+                
+            } else if action == .goToHistory {
                 let historyVC = storyboard!.instantiateViewController(withIdentifier: "HistoryVC") as! HistoryViewController
                 present(historyVC, animated: true, completion: nil)
+                
             } else {
                 let settingsVC = storyboard!.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsViewController
                 present(settingsVC, animated: true, completion: nil)
@@ -64,79 +74,7 @@ extension ChildHomeViewController {
         
 //        print("Tapped in cloud button \(sender.tag)")
         }
-//
-//        chatBarTextField.text = ""
-//
-//        if let cell =  sender.superview?.superview?.superview?.superview as? ButtonCloudTableViewCell {
-//
-//
-//            cell.displayInUserMessageMode(animate: true)
-//
-//
-//            let indexPath = tableView.indexPath(for: cell)
-//
-//            cell.userMessageLabel.text = sender.titleLabel?.text
-//            cell.userMessageBackground.isHidden = false
-//
-//            let item = itemsShown[indexPath!.row]
-//            let buttonData = item as! ButtonCloudData
-//            buttonData.inputText = cell.userMessageLabel.text!
-//            buttonData.collapsed = true
-//
-//
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//
-//
-//
-//
-//
-//
-//            if cell.buttons[sender.tag].action == .selectedExercise && indexPath?.row != itemsShown.count - 1 {
-//                chatManager.pendingQueue = []
-//                print("Seleced Exercise")
-//
-//            }
-//            let action = cell.buttons[sender.tag].action
-//            print(sender.tag)
-//
-//            let allButtons = buttonData.buttons + buttonData.userInputButtonSuggestions
-//
-//            if allButtons[sender.tag].global {
-//                chatManager.pendingQueue.insert(currentPrompt.promptType, at: 0)
-//            }
-//
-//
-//            var response = ""
-//            if allButtons[sender.tag].premium && user.premium == false {
-//                chatManager.pendingQueue.insert(currentPrompt.promptType, at: 0)
-//                if let assistantResponse = triageAction(action: .premiumButton, userInput: (sender.titleLabel?.text!)!) {
-//                    response = assistantResponse
-//                }
-//
-//                cell.userMessageBackground.backgroundColor = getColourFor.userMessagePremium()
-//            } else {
-//                cell.userMessageBackground.backgroundColor = getColourFor.userMessage()
-//                if let assistantResponse = triageAction(action: action, userInput: (sender.titleLabel?.text!)!) {
-//                    response = assistantResponse
-//                }
-//            }
-//
-//            let responseMessage = createAssistantMessageItem(text: response)
-//            var number = 1 // this is to know which row is the last shown button cloud row
-//            if response != "" {
-//                addItemsToTableView(segments: [[responseMessage]])
-//                number = 2
-//            }
-//
-//            if indexPath?.row == itemsShown.count - number || cell.buttons[sender.tag].action == .selectedExercise {
-//                _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { (view) in
-//                    self.changeto()
-//
-//                })
-//
-//            }
-//        }
+
     }
     
 }

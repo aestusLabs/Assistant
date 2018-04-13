@@ -100,7 +100,7 @@ func createPromptFor(promptType: PromptType) -> Prompt {
     
     switch promptType {
         case .home:
-            prompt = homePrompt.createPrompt() //homePrompt.createPrompt()
+            prompt = homePrompt.createBreathePrompt() //homePrompt.createPrompt()
         case .guidedPurposeOfSession:
             prompt = otherPrompts.guidedPurposeOfSession()
         case .settings:

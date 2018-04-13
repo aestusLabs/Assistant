@@ -31,5 +31,5 @@ enum ItemType {
     
     
     // MARK: Hydrate
-    case hydrateTotalsWidget
+    case hydrateTotalsWidget, hydrateIntervalsAtGlanceWidget
 }

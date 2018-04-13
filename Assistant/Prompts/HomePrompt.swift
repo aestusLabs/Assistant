@@ -11,7 +11,7 @@ struct HomePrompt {
     
   
     
-    func createPrompt() -> Prompt {//Spelling And Grammar Checked
+    func createBreathePrompt() -> Prompt {//Spelling And Grammar Checked
         
         if user.finishedOnboarding == false {
             let message = createAssistantMessageItem(text: "This is the Home screen.")
@@ -133,7 +133,19 @@ struct HomePrompt {
         let addInputButton = ButtonData(title: "Input Amount", action: .showInputAddWaterPrompt, global: false, premium: false)
         
         let addCloud = createButtonCloud(buttons: [add250mlButton, add500mlButton, add750mlButton, add1000mlButton, addInputButton], promptType: .hydrateHome)
-        return Prompt(promptType: .hydrateHome, itemSegments: [[welcomeMessage, totalsWidget], [addMessage, addCloud]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
+        
+        let intervalsAtGlanceMessage = createAssistantMessageItem(text: "Here is how you’re doing today at a glance.")
+        let intervalsAtGlanceWidget = createHydrateIntervalsAtAGlanceWidget()
+        
+        
+        let otherThings = createAssistantMessageItem(text: "Here are some things you may want to do:")
+        let changeGoalButton = ButtonData(title: "Change Goal", action: .changeHydrateGoal, global: false, premium: false)
+        let changeAddPreciousIntervalButton = ButtonData(title: "Add To Previous Interval", action: .addWaterToPreviousInterval, global: false, premium: false)
+        let stopNotificationsButton = ButtonData(title: "Mute Notifications For Rest Of Day", action: .muteHydrateReminderNotifications, global: false, premium: false)
+        let otherCloud = createButtonCloud(buttons: [changeGoalButton, changeAddPreciousIntervalButton, stopNotificationsButton], promptType: .hydrateHome)
+        
+        
+        return Prompt(promptType: .hydrateHome, itemSegments: [[welcomeMessage, totalsWidget], [addMessage, addCloud], [intervalsAtGlanceMessage, intervalsAtGlanceWidget]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
     }
 }
 let homePrompt = HomePrompt()

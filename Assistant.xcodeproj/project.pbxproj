@@ -129,6 +129,10 @@
 		46E47D12208086B900D6BD32 /* HydrateActionsHomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D11208086B900D6BD32 /* HydrateActionsHomeExtension.swift */; };
 		46E47D142080873800D6BD32 /* HydrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D132080873800D6BD32 /* HydrateManager.swift */; };
 		46E47D162080890B00D6BD32 /* HydrateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D152080890B00D6BD32 /* HydrateActions.swift */; };
+		46E47D1820811DB000D6BD32 /* SubscriptionHomeVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1720811DB000D6BD32 /* SubscriptionHomeVCExtension.swift */; };
+		46E47D1A20811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1920811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift */; };
+		46E47D1D20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1B20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift */; };
+		46E47D1E20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,6 +280,10 @@
 		46E47D11208086B900D6BD32 /* HydrateActionsHomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateActionsHomeExtension.swift; sourceTree = "<group>"; };
 		46E47D132080873800D6BD32 /* HydrateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateManager.swift; sourceTree = "<group>"; };
 		46E47D152080890B00D6BD32 /* HydrateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateActions.swift; sourceTree = "<group>"; };
+		46E47D1720811DB000D6BD32 /* SubscriptionHomeVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionHomeVCExtension.swift; sourceTree = "<group>"; };
+		46E47D1920811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheSessionsFromCDExtension.swift; sourceTree = "<group>"; };
+		46E47D1B20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateDayAtGlanceTableViewCell.swift; sourceTree = "<group>"; };
+		46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HydrateDayAtGlanceTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -547,6 +555,8 @@
 				46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */,
 				46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */,
 				46E47D11208086B900D6BD32 /* HydrateActionsHomeExtension.swift */,
+				46E47D1920811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift */,
+				46E47D1720811DB000D6BD32 /* SubscriptionHomeVCExtension.swift */,
 			);
 			path = HomeVCExtensions;
 			sourceTree = "<group>";
@@ -585,6 +595,8 @@
 				46E47D0A2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.xib */,
 				46E47D0D2080630E00D6BD32 /* HydrateTotalsCompactView.xib */,
 				46E47D0F208065AA00D6BD32 /* HydrateTotalsCompact.swift */,
+				46E47D1B20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift */,
+				46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */,
 			);
 			path = HydrateCells;
 			sourceTree = "<group>";
@@ -727,6 +739,7 @@
 				46E47CD2207E775200D6BD32 /* CalendarMonthTableViewCell.xib in Resources */,
 				46E47CB6207E775200D6BD32 /* LaunchScreen.storyboard in Resources */,
 				46E47CA3207E775100D6BD32 /* Full Sustain.mp3 in Resources */,
+				46E47D1E20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib in Resources */,
 				46E47CB8207E775200D6BD32 /* ShowCommandsTableViewCell.xib in Resources */,
 				46E47CA2207E775100D6BD32 /* Exhale.mp3 in Resources */,
 			);
@@ -768,7 +781,9 @@
 				46E47CD0207E775200D6BD32 /* IntegrationToggleWidgetTableViewCell.swift in Sources */,
 				46E47C96207E775100D6BD32 /* Subscription.swift in Sources */,
 				46E47CCB207E775200D6BD32 /* SettingsButtonTableViewCell.swift in Sources */,
+				46E47D1D20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift in Sources */,
 				46E47CF1207E787000D6BD32 /* BreatheHistory.xcdatamodeld in Sources */,
+				46E47D1820811DB000D6BD32 /* SubscriptionHomeVCExtension.swift in Sources */,
 				46E47CD6207E775200D6BD32 /* ButtonCloudTableViewCell.swift in Sources */,
 				46E47CE5207E775200D6BD32 /* TappingButtonCloudChatVCExtension.swift in Sources */,
 				46E47CD7207E775200D6BD32 /* ToggleTableViewCell.swift in Sources */,
@@ -839,6 +854,7 @@
 				46E47CCA207E775200D6BD32 /* PlayableSessionWidgetExtension.swift in Sources */,
 				46E47C98207E775100D6BD32 /* SessionManager.swift in Sources */,
 				46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */,
+				46E47D1A20811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift in Sources */,
 				46E47CE8207E775200D6BD32 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

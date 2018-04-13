@@ -39,6 +39,8 @@ struct GetCellForItemType {
             return commandWidget(currentItem: item)
         } else if item.type == .hydrateTotalsWidget {
             return hydrateTotalsWidget()
+        } else if item.type == .hydrateIntervalsAtGlanceWidget {
+            return hydrateIntervalsAtGlanceWidget()
         }
         
         
@@ -230,6 +232,11 @@ struct GetCellForItemType {
     func hydrateTotalsWidget() -> HydrateShowTotalsWidgetTableViewCell {
         let cell = Bundle.main.loadNibNamed("HydrateShowTotalsWidgetTableViewCell", owner: self, options: nil)?.first as! HydrateShowTotalsWidgetTableViewCell
         // TODO: Take data from hydratemanager
+        return cell
+    }
+    
+    func hydrateIntervalsAtGlanceWidget() -> HydrateDayAtGlanceTableViewCell {
+        let cell = Bundle.main.loadNibNamed("HydrateDayAtGlanceTableViewCell", owner: self, options: nil)?.first as! HydrateDayAtGlanceTableViewCell
         return cell
     }
 }

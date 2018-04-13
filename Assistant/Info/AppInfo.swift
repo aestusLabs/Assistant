@@ -30,5 +30,5 @@ struct AppInfo {
 var appInfo = AppInfo()
 
 enum AppTypes {
-    case assistant, breathe
+    case assistant, breathe, hydrate
 }

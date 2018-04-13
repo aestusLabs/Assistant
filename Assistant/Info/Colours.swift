@@ -26,6 +26,9 @@ struct ColourByObject {
     func hydrateAppColour() -> UIColor {
         return specificColour.hydrateAppColour
     }
+    func hydrateUnderGoalColour() -> UIColor {
+        return specificColour.hydrateUnderGoalColour
+    }
     
     func shadow() -> CGColor {
         if user.colourScheme == .light {
@@ -111,10 +114,17 @@ struct ColourByObject {
     }
     
      func appColour() -> UIColor {
+        
+        if appInfo.appType == .breathe {
+            return specificColour.breatheAppColour
+        } else {
+            return specificColour.hydrateAppColour
+        }
+        
         if user.colourScheme == .light {
-            return specificColour.appColour
+            return specificColour.breatheAppColour
         } else { //if user.colourScheme == .dark
-            return specificColour.appColourDark
+            return specificColour.breatheAppColourDark
         }
     }
     
@@ -182,8 +192,8 @@ struct ColourByObject {
 }
 let getColourFor = ColourByObject()
 struct SpecificColour {
-    let appColour = UIColor(red: 0.992156863, green: 0.6, blue: 0.733333333, alpha: 1.0)
-    let appColourDark = UIColor(red: 1.0, green: 0.4, blue: 0.607843137, alpha: 1.0)
+    let breatheAppColour = UIColor(red: 0.992156863, green: 0.6, blue: 0.733333333, alpha: 1.0)
+    let breatheAppColourDark = UIColor(red: 1.0, green: 0.4, blue: 0.607843137, alpha: 1.0)
 
     let white = UIColor.white
     let lightGrey = UIColor(red: 0.933333333, green: 0.933333333, blue: 0.933333333, alpha: 1.0)
@@ -197,6 +207,7 @@ struct SpecificColour {
     let almostBlack = UIColor(red: 0.203921569, green: 0.203921569, blue: 0.203921569, alpha: 1.0)
  
     let hydrateAppColour = UIColor(red: 0.035294118, green: 0.792156863, blue: 1.0, alpha: 1.0)
+    let hydrateUnderGoalColour = UIColor(red: 0.988235294, green: 0.380392157, blue: 0.4, alpha: 1.0)
 }
 let specificColour = SpecificColour()
 

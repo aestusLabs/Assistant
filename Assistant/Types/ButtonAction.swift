@@ -12,6 +12,9 @@ enum ButtonAction {
     // Hydrate Only
     case addWater
     case showInputAddWaterPrompt
+    case addWaterToPreviousInterval
+    case changeHydrateGoal
+    case muteHydrateReminderNotifications
     
     // Breathe Only
     case breakLengthPerCycle
