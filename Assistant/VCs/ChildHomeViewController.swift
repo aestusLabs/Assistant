@@ -12,7 +12,7 @@ import StoreKit
 class ChildHomeViewController: UIViewController, NewPageObservation, UITableViewDelegate, UITableViewDataSource {
     //    var parentPageViewController: PageViewController!
 //    var tableViewVC : ParentViewController!
-    var prompt: Prompt = homePrompt.createPrompt()
+    var prompt: Prompt = homePrompt.createHydrateHome()
     var parentPageViewController: PageViewController!
     func getParentPageViewController(parentRef: PageViewController) {
         parentPageViewController = parentRef
@@ -70,6 +70,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         user.updateValuesFromDefaults()
         managedContext = coreDataStack.managedContext
         setUpTableView()
+        prompt = homePrompt.createHydrateHome()
         addHomePromptToTableView(segments: prompt.itemSegments)
         setUpColours()
         //add(promptSegments: prompt!.itemSegments, isChat: false, tv: tableView)
@@ -150,7 +151,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         
         chatManager.currentVC = .home
         itemsShown = []
-        prompt = homePrompt.createPrompt()
+        prompt = homePrompt.createHydrateHome()
         addHomePromptToTableView(segments: prompt.itemSegments )
         getLast3ItemsFromCD()
 

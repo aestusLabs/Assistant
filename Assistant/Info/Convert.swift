@@ -30,6 +30,23 @@ struct Convert {
         }
     }
     
+    func liquidAmount(userInput: String) -> Int {
+        var letters = ""
+        var numbers = ""
+        for char in userInput {
+            if let number = Int(String(char)) {
+                numbers += String(char)
+            } else {
+                letters += String(char)
+            }
+        }
+        var returnNumber = Int(numbers)!
+        if letters == "l" || letters == "litre" || letters == "litres" || letters == "liter" || letters == "liters" {
+            returnNumber *= 1000
+        }
+        return returnNumber
+    }
+    
     func time(userInput: String) -> Int { // return in seconds
         var time = 0
         let components = userInput.components(separatedBy: " ")

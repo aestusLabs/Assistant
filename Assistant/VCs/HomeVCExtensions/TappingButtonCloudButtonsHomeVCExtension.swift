@@ -33,7 +33,21 @@ extension ChildHomeViewController {
         if chatManager.currentVC == .home {
 //            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "switchToChatVC"), object: nil)
             
-            if cell.buttons[sender.tag].action != .goToSettings && cell.buttons[sender.tag].action != .showAllGlobalCommands && cell.buttons[sender.tag].action != .goToHistory {
+            let action = cell.buttons[sender.tag].action
+            let input = cell.buttons[sender.tag].title
+            if action == .addWater {
+                var row = 0
+                var count = 0
+                for item in itemsShown {
+                    if item.type == .hydrateTotalsWidget {
+                        row = count
+                    }
+                    count += 1
+                }
+                let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
+                let totalsWidget = cell as! HydrateShowTotalsWidgetTableViewCell
+                totalsWidget.updateProgressBars()
+            } else if cell.buttons[sender.tag].action != .goToSettings && cell.buttons[sender.tag].action != .showAllGlobalCommands && cell.buttons[sender.tag].action != .goToHistory {
                 transitionToChat()
             } else if cell.buttons[sender.tag].action == .showAllGlobalCommands {
                 let commandsVC = storyboard!.instantiateViewController(withIdentifier: "CommandsVC") as! CommandsViewController

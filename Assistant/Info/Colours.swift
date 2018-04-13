@@ -23,6 +23,10 @@ import UIKit
 
 struct ColourByObject {
     
+    func hydrateAppColour() -> UIColor {
+        return specificColour.hydrateAppColour
+    }
+    
     func shadow() -> CGColor {
         if user.colourScheme == .light {
             return UIColor.lightGray.cgColor
@@ -191,7 +195,8 @@ struct SpecificColour {
     let black = UIColor(red: 0.11372549, green: 0.11372549, blue: 0.11372549, alpha: 1.0)
     let slightlyDarkerThanAlmostBlack = UIColor(red: 0.184313725, green: 0.184313725, blue: 0.184313725, alpha: 1.0)
     let almostBlack = UIColor(red: 0.203921569, green: 0.203921569, blue: 0.203921569, alpha: 1.0)
-    
+ 
+    let hydrateAppColour = UIColor(red: 0.035294118, green: 0.792156863, blue: 1.0, alpha: 1.0)
 }
 let specificColour = SpecificColour()
 

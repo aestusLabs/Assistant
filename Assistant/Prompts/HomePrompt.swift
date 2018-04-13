@@ -121,6 +121,20 @@ struct HomePrompt {
         
         return Prompt(promptType: .home, itemSegments: [ welcomeArray, [quickStart, testRecommend, firstRecomend, secondRecomend], [learnMoreMessage, learnButtonCloud],   [navigateMessage, navButtons]], userInputUnrecognizedString: "This is your home screen. It's available at all times by swiping from the left side of your screen.", category: .home, answerFormat: [], action: .none)
     }
+    
+    func createHydrateHome() -> Prompt {
+           let welcomeMessage = createAssistantMessageItem(text: "Hello \(user.name), I hope you're having a good day.")
+            let totalsWidget = createHydrateTotalsCompactWidget()
+        let addMessage = createAssistantMessageItem(text: "Add water:")
+        let add250mlButton = ButtonData(title: "250ml", action: .addWater, global: false, premium: false)
+        let add500mlButton = ButtonData(title: "500ml", action: .addWater, global: false, premium: false)
+        let add750mlButton = ButtonData(title: "750ml", action: .addWater, global: false, premium: false)
+        let add1000mlButton = ButtonData(title: "1000ml", action: .addWater, global: false, premium: false)
+        let addInputButton = ButtonData(title: "Input Amount", action: .showInputAddWaterPrompt, global: false, premium: false)
+        
+        let addCloud = createButtonCloud(buttons: [add250mlButton, add500mlButton, add750mlButton, add1000mlButton, addInputButton], promptType: .hydrateHome)
+        return Prompt(promptType: .hydrateHome, itemSegments: [[welcomeMessage, totalsWidget], [addMessage, addCloud]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
+    }
 }
 let homePrompt = HomePrompt()
 

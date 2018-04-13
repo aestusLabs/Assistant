@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HydrateTotalsCompact" customModule="Assistant" customModuleProvider="target">
+            <connections>
+                <outlet property="cardBackground" destination="AUo-nX-4Bg" id="3jm-pW-6h6"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="jiG-og-plU"/>
+                <outlet property="intervalLabel" destination="2vF-bh-NRN" id="Foz-D3-ls1"/>
+                <outlet property="intervalProgressBar" destination="ta1-lu-2nH" id="8dG-Bf-20f"/>
+                <outlet property="totalLabel" destination="MkH-pC-Ifj" id="MKf-a3-KuZ"/>
+                <outlet property="totalProgressBar" destination="Y6L-1d-O69" id="0VC-SP-Mip"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUo-nX-4Bg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WaterDrop" translatesAutoresizingMaskIntoConstraints="NO" id="rmN-bQ-y0i">
+                            <rect key="frame" x="8" y="18.5" width="80" height="107"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="EZe-9X-ved"/>
+                                <constraint firstAttribute="height" constant="107" id="cxy-FG-fVy"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vF-bh-NRN">
+                            <rect key="frame" x="106" y="20" width="185" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ta1-lu-2nH">
+                            <rect key="frame" x="108" y="49" width="247" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="X41-VF-EIE"/>
+                            </constraints>
+                        </progressView>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y6L-1d-O69">
+                            <rect key="frame" x="108" y="96" width="247" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="Rcq-hP-AxM"/>
+                            </constraints>
+                        </progressView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkH-pC-Ifj">
+                            <rect key="frame" x="106" y="67" width="122" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="MkH-pC-Ifj" firstAttribute="leading" secondItem="rmN-bQ-y0i" secondAttribute="trailing" constant="18" id="I8a-Zh-qyk"/>
+                        <constraint firstItem="2vF-bh-NRN" firstAttribute="leading" secondItem="rmN-bQ-y0i" secondAttribute="trailing" constant="18" id="Pgb-D6-Iif"/>
+                        <constraint firstAttribute="trailing" secondItem="ta1-lu-2nH" secondAttribute="trailing" constant="20" id="RBc-bQ-HQV"/>
+                        <constraint firstAttribute="trailing" secondItem="Y6L-1d-O69" secondAttribute="trailing" constant="20" id="S29-rw-6bY"/>
+                        <constraint firstItem="ta1-lu-2nH" firstAttribute="top" secondItem="2vF-bh-NRN" secondAttribute="bottom" id="Szk-IE-RQM"/>
+                        <constraint firstItem="ta1-lu-2nH" firstAttribute="leading" secondItem="rmN-bQ-y0i" secondAttribute="trailing" constant="20" id="X8P-IC-IRm"/>
+                        <constraint firstItem="2vF-bh-NRN" firstAttribute="top" secondItem="AUo-nX-4Bg" secondAttribute="top" constant="20" id="bTf-ZH-YFJ"/>
+                        <constraint firstItem="MkH-pC-Ifj" firstAttribute="top" secondItem="2vF-bh-NRN" secondAttribute="bottom" constant="18" id="cmL-G1-6U5"/>
+                        <constraint firstItem="rmN-bQ-y0i" firstAttribute="centerY" secondItem="AUo-nX-4Bg" secondAttribute="centerY" id="fEV-Yd-Ou4"/>
+                        <constraint firstItem="Y6L-1d-O69" firstAttribute="leading" secondItem="rmN-bQ-y0i" secondAttribute="trailing" constant="20" id="fje-rF-6TW"/>
+                        <constraint firstItem="rmN-bQ-y0i" firstAttribute="leading" secondItem="AUo-nX-4Bg" secondAttribute="leading" constant="8" id="hyV-Dy-x3c"/>
+                        <constraint firstAttribute="height" constant="144" id="t5b-sa-6wL"/>
+                        <constraint firstItem="Y6L-1d-O69" firstAttribute="top" secondItem="MkH-pC-Ifj" secondAttribute="bottom" id="u9K-Ht-KPf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.26496666870000002" green="0.73891943579999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AUo-nX-4Bg" secondAttribute="trailing" id="0kG-rn-bZl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AUo-nX-4Bg" secondAttribute="bottom" id="6ee-rB-Yvl"/>
+                <constraint firstItem="AUo-nX-4Bg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="eJx-o1-FZt"/>
+                <constraint firstItem="AUo-nX-4Bg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hWb-rW-Vsv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-7.5" y="-301"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="WaterDrop" width="202" height="271"/>
+    </resources>
+</document>

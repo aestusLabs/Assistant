@@ -9,6 +9,7 @@
 import Foundation
 enum PromptType {
     case error, test
+    case hydrateHome
     case home
     
     case showAllGlobalCommands

@@ -308,6 +308,22 @@ func createCommandWidget(title: String, bodyItems: [String], isExpanded: Bool) -
 }
 
 
+// ---------------
+
+// MARK: HydrateTotalsWidget
+class HydrateTotalsCompactWidgetData: Item {
+    
+}
+
+func createHydrateTotalsCompactWidget() -> HydrateTotalsCompactWidgetData{
+    let widget = HydrateTotalsCompactWidgetData()
+    widget.type = .hydrateTotalsWidget
+    return widget
+}
+
+
+
+
 //func createTestingView() -> ViewForTesting {
 //    let item = ViewForTesting()
 //    item.type = .test

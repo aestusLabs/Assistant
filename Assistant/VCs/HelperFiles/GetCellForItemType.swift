@@ -37,6 +37,8 @@ struct GetCellForItemType {
             return settingsButton(currentItem: item)
         } else if item.type == .commandWidget {
             return commandWidget(currentItem: item)
+        } else if item.type == .hydrateTotalsWidget {
+            return hydrateTotalsWidget()
         }
         
         
@@ -223,6 +225,12 @@ struct GetCellForItemType {
         }
         return cell
         
+    }
+    
+    func hydrateTotalsWidget() -> HydrateShowTotalsWidgetTableViewCell {
+        let cell = Bundle.main.loadNibNamed("HydrateShowTotalsWidgetTableViewCell", owner: self, options: nil)?.first as! HydrateShowTotalsWidgetTableViewCell
+        // TODO: Take data from hydratemanager
+        return cell
     }
 }
 let getCellForItemType = GetCellForItemType()

@@ -9,6 +9,10 @@
 import Foundation
 enum ButtonAction {
     
+    // Hydrate Only
+    case addWater
+    case showInputAddWaterPrompt
+    
     // Breathe Only
     case breakLengthPerCycle
     case emptySustain

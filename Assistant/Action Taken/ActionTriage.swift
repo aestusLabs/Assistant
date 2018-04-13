@@ -10,6 +10,18 @@ import Foundation
 import UIKit
 import UserNotifications
 
+
+func triageHydrateActions(action: ButtonAction, userInput: String) -> String? {
+    let actions = HydrateActions()
+    
+    switch action {
+    case .addWater:
+        actions.addWater(userInput: userInput)
+    default:
+        print("Not a hydrate action")
+    }
+    return nil
+}
 func triageBreathActions(action: ButtonAction, userInput: String) -> String? {
     let actions = Actions()
     switch action {
@@ -161,6 +173,11 @@ func triageAction(action: ButtonAction, userInput: String) -> String?{
         actions.showHowAppWorks()
     default:
         print("No action match")
+    }
+    
+    let hydrateAction = triageHydrateActions(action: action, userInput: userInput)
+    if let stringToReturn = hydrateAction {
+        return stringToReturn
     }
     
     let breatheAction = triageBreathActions(action: action, userInput: userInput)

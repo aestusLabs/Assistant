@@ -120,6 +120,15 @@
 		46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFC207E946500D6BD32 /* AllAppsActions.swift */; };
 		46E47CFF207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47CFE207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift */; };
 		46E47D01207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D00207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift */; };
+		46E47D06207FBA8200D6BD32 /* WorkTimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D04207FBA8200D6BD32 /* WorkTimerTableViewCell.swift */; };
+		46E47D07207FBA8200D6BD32 /* WorkTimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D05207FBA8200D6BD32 /* WorkTimerTableViewCell.xib */; };
+		46E47D0B2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D092080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.swift */; };
+		46E47D0C2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D0A2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.xib */; };
+		46E47D0E2080630E00D6BD32 /* HydrateTotalsCompactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D0D2080630E00D6BD32 /* HydrateTotalsCompactView.xib */; };
+		46E47D10208065AA00D6BD32 /* HydrateTotalsCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D0F208065AA00D6BD32 /* HydrateTotalsCompact.swift */; };
+		46E47D12208086B900D6BD32 /* HydrateActionsHomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D11208086B900D6BD32 /* HydrateActionsHomeExtension.swift */; };
+		46E47D142080873800D6BD32 /* HydrateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D132080873800D6BD32 /* HydrateManager.swift */; };
+		46E47D162080890B00D6BD32 /* HydrateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D152080890B00D6BD32 /* HydrateActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -258,6 +267,15 @@
 		46E47CFC207E946500D6BD32 /* AllAppsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAppsActions.swift; sourceTree = "<group>"; };
 		46E47CFE207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheMatchWordsWithActions.swift; sourceTree = "<group>"; };
 		46E47D00207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMatchWordsWithActions.swift; sourceTree = "<group>"; };
+		46E47D04207FBA8200D6BD32 /* WorkTimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimerTableViewCell.swift; sourceTree = "<group>"; };
+		46E47D05207FBA8200D6BD32 /* WorkTimerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkTimerTableViewCell.xib; sourceTree = "<group>"; };
+		46E47D092080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateShowTotalsWidgetTableViewCell.swift; sourceTree = "<group>"; };
+		46E47D0A2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HydrateShowTotalsWidgetTableViewCell.xib; sourceTree = "<group>"; };
+		46E47D0D2080630E00D6BD32 /* HydrateTotalsCompactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HydrateTotalsCompactView.xib; sourceTree = "<group>"; };
+		46E47D0F208065AA00D6BD32 /* HydrateTotalsCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateTotalsCompact.swift; sourceTree = "<group>"; };
+		46E47D11208086B900D6BD32 /* HydrateActionsHomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateActionsHomeExtension.swift; sourceTree = "<group>"; };
+		46E47D132080873800D6BD32 /* HydrateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateManager.swift; sourceTree = "<group>"; };
+		46E47D152080890B00D6BD32 /* HydrateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +411,7 @@
 			children = (
 				46E47C2C207E774900D6BD32 /* ChatManager.swift */,
 				46E47C2D207E774900D6BD32 /* SessionManager.swift */,
+				46E47D132080873800D6BD32 /* HydrateManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -475,6 +494,8 @@
 				46E47C6E207E775100D6BD32 /* PointsTableViewCell.swift */,
 				46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */,
 				46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */,
+				46E47D082080620D00D6BD32 /* HydrateCells */,
+				46E47D03207FBA2600D6BD32 /* WorkCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -499,6 +520,7 @@
 				46E47C84207E775100D6BD32 /* ActionTriage.swift */,
 				46E47CFC207E946500D6BD32 /* AllAppsActions.swift */,
 				46E47CFA207E7F5500D6BD32 /* BreatheActions.swift */,
+				46E47D152080890B00D6BD32 /* HydrateActions.swift */,
 			);
 			path = "Action Taken";
 			sourceTree = "<group>";
@@ -524,6 +546,7 @@
 			children = (
 				46E47C73207E775100D6BD32 /* TappingSessionWidgetHomeVCExtension.swift */,
 				46E47C75207E775100D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift */,
+				46E47D11208086B900D6BD32 /* HydrateActionsHomeExtension.swift */,
 			);
 			path = HomeVCExtensions;
 			sourceTree = "<group>";
@@ -544,6 +567,26 @@
 				46E47CFE207F07AB00D6BD32 /* BreatheMatchWordsWithActions.swift */,
 			);
 			path = ParseFindActionForInput;
+			sourceTree = "<group>";
+		};
+		46E47D03207FBA2600D6BD32 /* WorkCells */ = {
+			isa = PBXGroup;
+			children = (
+				46E47D04207FBA8200D6BD32 /* WorkTimerTableViewCell.swift */,
+				46E47D05207FBA8200D6BD32 /* WorkTimerTableViewCell.xib */,
+			);
+			path = WorkCells;
+			sourceTree = "<group>";
+		};
+		46E47D082080620D00D6BD32 /* HydrateCells */ = {
+			isa = PBXGroup;
+			children = (
+				46E47D092080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.swift */,
+				46E47D0A2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.xib */,
+				46E47D0D2080630E00D6BD32 /* HydrateTotalsCompactView.xib */,
+				46E47D0F208065AA00D6BD32 /* HydrateTotalsCompact.swift */,
+			);
+			path = HydrateCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,9 +702,11 @@
 				46E47CA1207E775100D6BD32 /* Inhale.mp3 in Resources */,
 				46E47CCD207E775200D6BD32 /* AssistantMessageTableViewCell.xib in Resources */,
 				46E47CA0207E775100D6BD32 /* Inhale 3.mp3 in Resources */,
+				46E47D0E2080630E00D6BD32 /* HydrateTotalsCompactView.xib in Resources */,
 				46E47CA5207E775100D6BD32 /* acceptHappyA.mp3 in Resources */,
 				46E47CBD207E775200D6BD32 /* TitleDividerTableViewCell.xib in Resources */,
 				46E47BDF207E761900D6BD32 /* Main.storyboard in Resources */,
+				46E47D0C2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.xib in Resources */,
 				46E47CCF207E775200D6BD32 /* PointsTableViewCell.xib in Resources */,
 				46E47C99207E775100D6BD32 /* MessageBackgroundSmall.png in Resources */,
 				46E47CA6207E775100D6BD32 /* acceptHappyB.mp3 in Resources */,
@@ -677,6 +722,7 @@
 				46E47CC2207E775200D6BD32 /* WeekSelectionTableViewCell.xib in Resources */,
 				46E47C9F207E775100D6BD32 /* EmptySustain.mp3 in Resources */,
 				46E47CCC207E775200D6BD32 /* PlayableSessionTableViewCell.xib in Resources */,
+				46E47D07207FBA8200D6BD32 /* WorkTimerTableViewCell.xib in Resources */,
 				46E47CBB207E775200D6BD32 /* ToggleTableViewCell.xib in Resources */,
 				46E47CD2207E775200D6BD32 /* CalendarMonthTableViewCell.xib in Resources */,
 				46E47CB6207E775200D6BD32 /* LaunchScreen.storyboard in Resources */,
@@ -742,6 +788,7 @@
 				46E47CE3207E775200D6BD32 /* ChatBarChatVCExtension.swift in Sources */,
 				46E47CD5207E775200D6BD32 /* PointsTableViewCell.swift in Sources */,
 				46E47C8B207E775100D6BD32 /* OnboardingPrompts.swift in Sources */,
+				46E47D0B2080625600D6BD32 /* HydrateShowTotalsWidgetTableViewCell.swift in Sources */,
 				46E47CC0207E775200D6BD32 /* AssistantMessageTableViewCell.swift in Sources */,
 				46E47C8C207E775100D6BD32 /* Paths.swift in Sources */,
 				46E47CDF207E775200D6BD32 /* HistoryViewController.swift in Sources */,
@@ -755,6 +802,7 @@
 				46E47B9B207E74A600D6BD32 /* AppDelegate.swift in Sources */,
 				46E47CC4207E775200D6BD32 /* CalendarMonthTableViewCell.swift in Sources */,
 				46E47C8F207E775100D6BD32 /* OtherPrompts.swift in Sources */,
+				46E47D142080873800D6BD32 /* HydrateManager.swift in Sources */,
 				46E47CA8207E775100D6BD32 /* WordContextList.swift in Sources */,
 				46E47CAD207E775100D6BD32 /* Constraints.swift in Sources */,
 				46E47CB5207E775200D6BD32 /* PromptType.swift in Sources */,
@@ -765,9 +813,11 @@
 				46E47CE0207E775200D6BD32 /* PageViewController.swift in Sources */,
 				46E47CD8207E775200D6BD32 /* ChildChatViewController.swift in Sources */,
 				46E47CEF207E787000D6BD32 /* CoreDataStack.swift in Sources */,
+				46E47D12208086B900D6BD32 /* HydrateActionsHomeExtension.swift in Sources */,
 				46E47CDE207E775200D6BD32 /* GetCellForItemType.swift in Sources */,
 				46E47CE2207E775200D6BD32 /* TappingSessionWidgetChatVCExtension.swift in Sources */,
 				46E47C9E207E775100D6BD32 /* AnswerFormats.swift in Sources */,
+				46E47D162080890B00D6BD32 /* HydrateActions.swift in Sources */,
 				46E47C8E207E775100D6BD32 /* NotificationPrompts.swift in Sources */,
 				46E47CB2207E775100D6BD32 /* SessionType.swift in Sources */,
 				46E47CDD207E775200D6BD32 /* ChildHomeViewController.swift in Sources */,
@@ -775,12 +825,14 @@
 				46E47CE7207E775200D6BD32 /* TableViewChatVCExtension.swift in Sources */,
 				46E47C93207E775100D6BD32 /* CreatePromptFor.swift in Sources */,
 				46E47D01207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift in Sources */,
+				46E47D06207FBA8200D6BD32 /* WorkTimerTableViewCell.swift in Sources */,
 				46E47C89207E775100D6BD32 /* ParseUserInput.swift in Sources */,
 				46E47CB7207E775200D6BD32 /* TitleDividerTableViewCell.swift in Sources */,
 				46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */,
 				46E47CCE207E775200D6BD32 /* UserMessageTableViewCell.swift in Sources */,
 				46E47CB9207E775200D6BD32 /* HistoryItemTableViewCell.swift in Sources */,
 				46E47CE9207E775200D6BD32 /* ActionTriage.swift in Sources */,
+				46E47D10208065AA00D6BD32 /* HydrateTotalsCompact.swift in Sources */,
 				46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */,
 				46E47CBE207E775200D6BD32 /* ShowKeyboardTableViewCell.swift in Sources */,
 				46E47C8A207E775100D6BD32 /* GlobalPrompts.swift in Sources */,
