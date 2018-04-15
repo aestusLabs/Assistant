@@ -32,7 +32,7 @@ struct Actions {
     
     // MARK: Onboarding
     func showOnboarding() {
-        chatManager.pendingQueue.append(contentsOf: paths.onboardingPromptTypes)
+        chatManager.pendingQueue.append(contentsOf: paths.getOnboardingPath())
     }
     
     func finishOnboarding() {

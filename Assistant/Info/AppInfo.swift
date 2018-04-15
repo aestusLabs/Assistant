@@ -22,7 +22,8 @@ struct AppInfo {
     var maxAssistantTextWidth: CGFloat = 0
     var colourTheme: ColourTheme = .light
     
-    var appType: AppTypes = .assistant
+    var appType: AppTypes = .hydrate
+    
    
 }
 

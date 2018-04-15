@@ -17,6 +17,13 @@ func triageHydrateActions(action: ButtonAction, userInput: String) -> String? {
     switch action {
     case .addWater:
         actions.addWater(userInput: userInput)
+    case .setMeasurementUnits:
+        actions.setMeasurementUnits(userInput: userInput)
+    case .setDailyHydrationGoal:
+        actions.setDailyGoal(userInput: userInput)
+    case .setHydrateStartTime :
+        actions.setDailyStartTime(userInput: userInput)
+        
     default:
         print("Not a hydrate action")
     }

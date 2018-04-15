@@ -23,6 +23,10 @@ func createPromptFor(promptType: PromptType) -> Prompt {
         return learningPrompt
     }
     
+    if let hydrateOnboardingPrompt =  hydrateOnboardingPrompts.hydrateOnboardingPromptFor(promptType: promptType) {
+        return hydrateOnboardingPrompt
+    }
+    
 //    // MARK: Onboarding Prompts
 //    switch promptType {
 //        case .welcome:

@@ -144,8 +144,78 @@ struct HomePrompt {
         let stopNotificationsButton = ButtonData(title: "Mute Notifications For Rest Of Day", action: .muteHydrateReminderNotifications, global: false, premium: false)
         let otherCloud = createButtonCloud(buttons: [changeGoalButton, changeAddPreciousIntervalButton, stopNotificationsButton], promptType: .hydrateHome)
         
+        let navigateMessage = createAssistantMessageItem(text: "If you want to change some settings or look at our history:")
         
-        return Prompt(promptType: .hydrateHome, itemSegments: [[welcomeMessage, totalsWidget], [addMessage, addCloud], [intervalsAtGlanceMessage, intervalsAtGlanceWidget]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
+        var howAppWorksButton = ButtonData(title: "How App Works", action: .showHowAppWorks, global: false, premium: false)
+        
+        var commandsButton = ButtonData()
+        commandsButton.title = "View All Commands"
+        commandsButton.action = .showAllGlobalCommands
+        var settingsButton = ButtonData()
+        settingsButton.title = "Settings"
+        settingsButton.action = .goToSettings
+        var historyButton = ButtonData()
+        historyButton.title = "History"
+        historyButton.action = .goToHistory
+        var onboardingButton = ButtonData()
+        onboardingButton.title = "Onboarding"
+        onboardingButton.action = .goToOnboarding
+        var addNotification = ButtonData()
+        addNotification.title = "Turn On Daily Reminder"
+        addNotification.action = .showDailyNotificationChooseDays
+        var testButton = ButtonData(title: "Test Prompt", action: .showTestPrompt, global: false, premium: false)
+        
+        let navButtons = createButtonCloud(buttons: [howAppWorksButton, commandsButton, settingsButton, historyButton, onboardingButton, addNotification, testButton], promptType: .home)
+        
+        
+        return Prompt(promptType: .hydrateHome, itemSegments: [[welcomeMessage, totalsWidget], [addMessage, addCloud], [intervalsAtGlanceMessage, intervalsAtGlanceWidget], [navigateMessage, navButtons]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
+    }
+    
+    func hydrateGoodMorningPrompt() -> Prompt{
+        let titleDivider = createTitleDivider(text: "Good Morning")
+        let goalMessage = createAssistantMessageItem(text: "Here is your goal for the day. (You can tap to change it.)")
+        let remindersMessage = createAssistantMessageItem(text: "I will remind you to drink water throughout the day. (If you are under pace.")
+        let turnOffButton = ButtonData(title: "Turn Off Today's Reminders", action: .muteHydrateReminderNotifications, global: false, premium: false)
+        let reminderCloud = createButtonCloud(buttons: [turnOffButton], promptType: .hydrateHomeGoodMorning)
+     
+        let wakeUpMessage = createAssistantMessageItem(text: "What time did you wake up?")
+        
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let currentHour = calendar.component(.hour, from: currentDate)
+        
+        var times: [Int] = [currentHour - 3, currentHour - 2, currentHour - 1, currentHour]
+       
+        
+        var tempArray: [Int] = []
+        for time in times {
+            if time >= 0 {
+                tempArray.append(time)
+            }
+        }
+        times = tempArray
+        
+        var timesWithTimeCodes: [String] = []
+        for time in times {
+            if time >= 12 {
+                timesWithTimeCodes.append("\(time - 12)pm")
+            } else {
+                timesWithTimeCodes.append("\(time)am")
+            }
+        }
+        
+        var buttons: [ButtonData] = []
+        for time in timesWithTimeCodes {
+            buttons.append(ButtonData(title: time, action: .setHydrateStartTime, global: false, premium: false))
+        }
+        let startNowButton = ButtonData(title: "Start Now", action: .setHydrateStartTime, global: false, premium: false)
+        let inputStartButton = ButtonData(title: "Input Start Time", action: .showInputStartTimePrompt, global: false, premium: false)
+        buttons.insert(inputStartButton, at: 0)
+        buttons.append(startNowButton)
+        let wakeUpTimeCloud = createButtonCloud(buttons: buttons, promptType: .hydrateHomeGoodMorning)
+        
+        return Prompt(promptType: .hydrateHomeGoodMorning, itemSegments: [[titleDivider, goalMessage, remindersMessage, reminderCloud,wakeUpMessage, wakeUpTimeCloud ]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .varied)
+        
     }
 }
 let homePrompt = HomePrompt()

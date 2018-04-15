@@ -133,6 +133,8 @@
 		46E47D1A20811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1920811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift */; };
 		46E47D1D20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1B20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift */; };
 		46E47D1E20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */; };
+		46E47D2020814B9A00D6BD32 /* HydrateOnboardingPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1F20814B9A00D6BD32 /* HydrateOnboardingPrompts.swift */; };
+		46E47D22208414CB00D6BD32 /* Dately.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D21208414CB00D6BD32 /* Dately.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +286,8 @@
 		46E47D1920811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheSessionsFromCDExtension.swift; sourceTree = "<group>"; };
 		46E47D1B20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateDayAtGlanceTableViewCell.swift; sourceTree = "<group>"; };
 		46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HydrateDayAtGlanceTableViewCell.xib; sourceTree = "<group>"; };
+		46E47D1F20814B9A00D6BD32 /* HydrateOnboardingPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateOnboardingPrompts.swift; sourceTree = "<group>"; };
+		46E47D21208414CB00D6BD32 /* Dately.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dately.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +365,7 @@
 				46E47C2A207E774900D6BD32 /* Subscription.swift */,
 				46E47C31207E774B00D6BD32 /* SubscriptionService.swift */,
 				46E47C41207E774F00D6BD32 /* Types */,
+				46E47D21208414CB00D6BD32 /* Dately.swift */,
 				46E47C4E207E775000D6BD32 /* Updated VCs */,
 				46E47C3E207E774E00D6BD32 /* WordContextList.swift */,
 			);
@@ -401,6 +406,7 @@
 			children = (
 				46E47C1E207E774800D6BD32 /* GlobalPrompts.swift */,
 				46E47C1F207E774800D6BD32 /* OnboardingPrompts.swift */,
+				46E47D1F20814B9A00D6BD32 /* HydrateOnboardingPrompts.swift */,
 				46E47C20207E774800D6BD32 /* Paths.swift */,
 				46E47C21207E774800D6BD32 /* CreateItemsForPrompt.swift */,
 				46E47C22207E774800D6BD32 /* NotificationPrompts.swift */,
@@ -791,10 +797,12 @@
 				46E47CB4207E775200D6BD32 /* BreathParts.swift in Sources */,
 				46E47CE1207E775200D6BD32 /* AddItemsToChatVCExtension.swift in Sources */,
 				46E47CC7207E775200D6BD32 /* PendingItemCell.swift in Sources */,
+				46E47D2020814B9A00D6BD32 /* HydrateOnboardingPrompts.swift in Sources */,
 				46E47CB0207E775100D6BD32 /* PromptCategory.swift in Sources */,
 				46E47C92207E775100D6BD32 /* Prompt.swift in Sources */,
 				46E47CAB207E775100D6BD32 /* UserSkillLevel.swift in Sources */,
 				46E47CB3207E775200D6BD32 /* WordContext.swift in Sources */,
+				46E47D22208414CB00D6BD32 /* Dately.swift in Sources */,
 				46E47CB1207E775100D6BD32 /* ButtonAction.swift in Sources */,
 				46E47CBF207E775200D6BD32 /* WeekSelectionTableViewCell.swift in Sources */,
 				46E47CF0207E787000D6BD32 /* HealthKitSetUpAssistant.swift in Sources */,

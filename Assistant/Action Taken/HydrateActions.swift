@@ -15,4 +15,26 @@ struct HydrateActions {
         print("It wor98y98ked \(hydrateManager.interval1Total)")
         
     }
+    
+    func setMeasurementUnits(userInput: String) {
+        if userInput == "Metric" {
+            hydrateManager.metric = true
+        } else {
+            hydrateManager.metric = false
+        }
+    }
+    
+    func setDailyGoal(userInput: String) {
+        hydrateManager.dailyGoal =  myConvert.liquidAmount(userInput: userInput) 
+    }
+    
+    func setDailyStartTime(userInput: String) {
+        let parsedComponents = timeParser.parseTime(text: userInput)
+        if let hour = parsedComponents.hour {
+            hydrateManager.dailyStartTimeHour = hour
+        }
+        if let minutes = parsedComponents.minute {
+            hydrateManager.dailyStartTimeMinute = minutes
+        }
+    }
 }

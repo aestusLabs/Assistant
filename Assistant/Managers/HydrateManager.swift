@@ -17,10 +17,15 @@ struct HydrateManager {
     var interval3Goal = 1250
     var interval4Total = 0
     var interval4Goal = 1250
-    var totalForDay = 5000
+    var dailyGoal = 5000
     var currentInterval = 1
     var hoursSinceStart = 0
     var metric = true
+    
+    var dailyStartTimeHour = 8
+    var dailyStartTimeMinute = 0
+    
+    var lastDayStarted = Date().yesterday
     
     func getCurrentIntervalsTotal() -> Int{
         if currentInterval == 1 {
@@ -46,8 +51,12 @@ struct HydrateManager {
         }
     }
     
+    func getCurrentInterval() {
+//        let currentDate
+    }
+    
     mutating func addWater(amount: Int) {
-        totalForDay += amount
+        dailyGoal += amount
         if currentInterval == 1 {
             interval1Total += amount
         } else if currentInterval == 2 {
@@ -60,3 +69,21 @@ struct HydrateManager {
     }
 }
 var hydrateManager = HydrateManager()
+
+extension Date {
+    var yesterday: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
+    }
+    var tomorrow: Date {
+        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
+    }
+    var noon: Date {
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
+    }
+    var month: Int {
+        return Calendar.current.component(.month,  from: self)
+    }
+    var isLastDayOfMonth: Bool {
+        return tomorrow.month != month
+    }
+}

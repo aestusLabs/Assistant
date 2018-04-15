@@ -10,7 +10,16 @@ import Foundation
 enum PromptType {
     case error, test
     case hydrateHome
+    case hydrateHomeGoodMorning
     case home
+    
+    case hydrateSelectDailyGoal // shows options in onboarding
+    case selectMeasurementUnits // user is presented metric and imperial
+    case explainHydrateIntervals 
+    case explainWaterDangers
+    case enterWaterAlreadyConsumed
+    case showHydrateSetStartOfDay // Gets user to set the start of the first interval
+    
     
     case showAllGlobalCommands
     case showAllGlobalCommandsList

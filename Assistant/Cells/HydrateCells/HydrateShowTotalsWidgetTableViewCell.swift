@@ -55,7 +55,7 @@ class HydrateShowTotalsWidgetTableViewCell: UITableViewCell {
     func updateProgressBars() {
         
         intervalProgressBar.progress =  Float(hydrateManager.getCurrentIntervalsTotal()) / Float(hydrateManager.getCurrentIntervalsGoal())
-        totalProgressBar.progress = (Float(hydrateManager.interval1Total) + Float(hydrateManager.interval2Total) + Float(hydrateManager.interval3Total) + Float(hydrateManager.interval4Total)) / Float(hydrateManager.totalForDay)
+        totalProgressBar.progress = (Float(hydrateManager.interval1Total) + Float(hydrateManager.interval2Total) + Float(hydrateManager.interval3Total) + Float(hydrateManager.interval4Total)) / Float(hydrateManager.dailyGoal)
         UIView.animate(withDuration: 1.0) {
             self.intervalProgressBar.layoutIfNeeded()
             self.totalProgressBar.layoutIfNeeded()

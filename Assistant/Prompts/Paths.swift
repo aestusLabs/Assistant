@@ -9,7 +9,18 @@
 import Foundation
 struct Path {
     let onboarding = [onboardingPrompts.welcomeToApp(), onboardingPrompts.name(), onboardingPrompts.howFamiliar(), onboardingPrompts.readingSpeed(), onboardingPrompts.explainVCs()]
-    let onboardingPromptTypes: [PromptType] = [.welcome, .setName, .setfamiliarity, .showHealthWarning, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
+    
+    func getOnboardingPath() -> [PromptType]  {
+        if appInfo.appType == .breathe {
+            return [.welcome, .setName, .setfamiliarity, .showHealthWarning, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
+        } else {
+            return [.welcome, .setName,  .explainHydrateIntervals, .selectMeasurementUnits, .hydrateSelectDailyGoal, .explainWaterDangers, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
+        }
+    }
+//    let onboardingPromptTypes: [PromptType] = [.welcome, .setName, .setfamiliarity, .showHealthWarning, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
+    
+//    let hydrateOnboardingPromptTypes: [PromptType] = [.welcome, .setName,  .explainHydrateIntervals, .selectMeasurementUnits, .hydrateSelectDailyGoal, .enterWaterAlreadyConsumed, .explainWaterDangers, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
+    
     
     
     func newSession(session: SessionType) -> [PromptType] {

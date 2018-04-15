@@ -54,6 +54,15 @@ extension ChildHomeViewController {
                 }
                 
                 
+            } else if action == .setHydrateStartTime {
+                
+                itemsShown = []
+               prompt = getPromptForApp()
+                
+                addHomePromptToTableView(segments: prompt.itemSegments )
+                
+                
+                
             } else if action != .goToSettings && action != .showAllGlobalCommands && action != .goToHistory {
                 transitionToChat()
                 

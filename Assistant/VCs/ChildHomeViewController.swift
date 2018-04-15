@@ -38,6 +38,16 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         } else if appInfo.appType == .breathe {
             return homePrompt.createBreathePrompt()
         } else if appInfo.appType == .hydrate {
+            print(Date())
+            print(Date().yesterday)
+            
+            
+            if  dately.isSameDay(dateOne: hydrateManager.lastDayStarted, dateTwo: Date()) == false{
+                hydrateManager.lastDayStarted = Date()
+                return homePrompt.hydrateGoodMorningPrompt()
+            }
+      
+            
             return homePrompt.createHydrateHome()
         }
         
@@ -83,8 +93,8 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
         user.updateValuesFromDefaults()
         managedContext = coreDataStack.managedContext
         setUpTableView()
-        prompt = getPromptForApp() //homePrompt.createHydrateHome()
-        addHomePromptToTableView(segments: prompt.itemSegments)
+//        prompt = getPromptForApp() //homePrompt.createHydrateHome()
+//        addHomePromptToTableView(segments: prompt.itemSegments)
         setUpColours()
         //add(promptSegments: prompt!.itemSegments, isChat: false, tv: tableView)
         // Do any additional setup after loading the view.
@@ -152,7 +162,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
                NotificationCenter.default.addObserver(self, selector: #selector(refreshColours), name: NSNotification.Name(rawValue: "refreshColours"), object: nil)
         if user.finishedOnboarding == false && user.onboardingInProgress == false{
             user.onboardingInProgress = true
-            chatManager.pendingQueue.append(contentsOf: paths.onboardingPromptTypes)
+            chatManager.pendingQueue.append(contentsOf: paths.getOnboardingPath())
             
             transitionToChat()
         }

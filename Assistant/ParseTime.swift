@@ -226,6 +226,6 @@ let timeParser = ParseTime()
 
 
 // can't do 2 49pm,"four 52 in the afternoon"
-
+// pass it over and convert all word numbers to numbers
 
 

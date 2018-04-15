@@ -16,6 +16,15 @@ enum ButtonAction {
     case changeHydrateGoal
     case muteHydrateReminderNotifications
     
+    case showCalculateDailyHydrationGoalPrompt
+    case setDailyHydrationGoal
+    
+    case setMeasurementUnits // sets metric or imperial in hydrateAssistant
+    case setHydrateStartTime // Sets the start of the first interval
+    
+    case showInputStartTimePrompt // TODO: This is unimplmented
+    
+    
     // Breathe Only
     case breakLengthPerCycle
     case emptySustain
