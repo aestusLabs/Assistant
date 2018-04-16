@@ -135,6 +135,8 @@
 		46E47D1E20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */; };
 		46E47D2020814B9A00D6BD32 /* HydrateOnboardingPrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D1F20814B9A00D6BD32 /* HydrateOnboardingPrompts.swift */; };
 		46E47D22208414CB00D6BD32 /* Dately.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D21208414CB00D6BD32 /* Dately.swift */; };
+		46E47D252084174E00D6BD32 /* CompactInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D232084174E00D6BD32 /* CompactInformationTableViewCell.swift */; };
+		46E47D262084174E00D6BD32 /* CompactInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D242084174E00D6BD32 /* CompactInformationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +290,8 @@
 		46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HydrateDayAtGlanceTableViewCell.xib; sourceTree = "<group>"; };
 		46E47D1F20814B9A00D6BD32 /* HydrateOnboardingPrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateOnboardingPrompts.swift; sourceTree = "<group>"; };
 		46E47D21208414CB00D6BD32 /* Dately.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dately.swift; sourceTree = "<group>"; };
+		46E47D232084174E00D6BD32 /* CompactInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactInformationTableViewCell.swift; sourceTree = "<group>"; };
+		46E47D242084174E00D6BD32 /* CompactInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactInformationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,6 +512,8 @@
 				46E47C6E207E775100D6BD32 /* PointsTableViewCell.swift */,
 				46E47C6F207E775100D6BD32 /* ButtonCloudTableViewCell.swift */,
 				46E47C70207E775100D6BD32 /* ToggleTableViewCell.swift */,
+				46E47D232084174E00D6BD32 /* CompactInformationTableViewCell.swift */,
+				46E47D242084174E00D6BD32 /* CompactInformationTableViewCell.xib */,
 				46E47D082080620D00D6BD32 /* HydrateCells */,
 				46E47D03207FBA2600D6BD32 /* WorkCells */,
 			);
@@ -738,6 +744,7 @@
 				46E47CC5207E775200D6BD32 /* ShowKeyboardTableViewCell.xib in Resources */,
 				46E47CC9207E775200D6BD32 /* PendingItemCell.xib in Resources */,
 				46E47CC2207E775200D6BD32 /* WeekSelectionTableViewCell.xib in Resources */,
+				46E47D262084174E00D6BD32 /* CompactInformationTableViewCell.xib in Resources */,
 				46E47C9F207E775100D6BD32 /* EmptySustain.mp3 in Resources */,
 				46E47CCC207E775200D6BD32 /* PlayableSessionTableViewCell.xib in Resources */,
 				46E47D07207FBA8200D6BD32 /* WorkTimerTableViewCell.xib in Resources */,
@@ -859,6 +866,7 @@
 				46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */,
 				46E47CBE207E775200D6BD32 /* ShowKeyboardTableViewCell.swift in Sources */,
 				46E47C8A207E775100D6BD32 /* GlobalPrompts.swift in Sources */,
+				46E47D252084174E00D6BD32 /* CompactInformationTableViewCell.swift in Sources */,
 				46E47CCA207E775200D6BD32 /* PlayableSessionWidgetExtension.swift in Sources */,
 				46E47C98207E775100D6BD32 /* SessionManager.swift in Sources */,
 				46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */,

@@ -39,13 +39,17 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
             return homePrompt.createBreathePrompt()
         } else if appInfo.appType == .hydrate {
             print(Date())
-            print(Date().yesterday)
-            
-            
-            if  dately.isSameDay(dateOne: hydrateManager.lastDayStarted, dateTwo: Date()) == false{
+            print(hydrateManager.lastDayStarted)
+
+            if dately.isSecondDateWithin18HoursOfFirstDate(firstDate: hydrateManager.lastDayStarted, secondDate: Date() ) == false{
                 hydrateManager.lastDayStarted = Date()
                 return homePrompt.hydrateGoodMorningPrompt()
             }
+            
+//            if  dately.isSameDay(dateOne: hydrateManager.lastDayStarted, dateTwo: Date()) == false{
+//                hydrateManager.lastDayStarted = Date()
+//                return homePrompt.hydrateGoodMorningPrompt()
+//            }
       
             
             return homePrompt.createHydrateHome()

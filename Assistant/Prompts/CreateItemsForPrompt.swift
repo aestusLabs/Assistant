@@ -334,6 +334,20 @@ func createHydrateIntervalsAtAGlanceWidget() -> HydrateIntervalsAtAGlanceWidget 
     return widget
 }
 
+// ---------------------------------------------------------------
+// MARK: CompactInformationWidget
+class CompactInformationData: Item {
+    var mainLabelText = ""
+    var subLabelText = ""
+}
+func createCompactInformationData(mainText: String, subText: String) -> CompactInformationData {
+    let widget = CompactInformationData()
+    widget.type = .compactInformation
+    widget.mainLabelText = mainText
+    widget.subLabelText = subText
+    return widget
+}
+
 
 
 //func createTestingView() -> ViewForTesting {

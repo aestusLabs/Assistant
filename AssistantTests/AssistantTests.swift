@@ -22,8 +22,7 @@ class AssistantTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+       XCTAssert(dately.isSecondDateWithin24HoursOfFirstDate(firstDate: Date().noon, secondDate: Date()))
     }
     
     func testPerformanceExample() {

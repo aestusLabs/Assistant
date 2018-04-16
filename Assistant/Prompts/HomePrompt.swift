@@ -174,6 +174,11 @@ struct HomePrompt {
     func hydrateGoodMorningPrompt() -> Prompt{
         let titleDivider = createTitleDivider(text: "Good Morning")
         let goalMessage = createAssistantMessageItem(text: "Here is your goal for the day. (You can tap to change it.)")
+        var totalUnits = "ml"
+        if hydrateManager.metric == false {
+            totalUnits = "oz"
+        }
+        let compactInfoWidget = createCompactInformationData(mainText: "\(hydrateManager.dailyGoal)\(totalUnits)", subText: "Today's Goal")
         let remindersMessage = createAssistantMessageItem(text: "I will remind you to drink water throughout the day. (If you are under pace.")
         let turnOffButton = ButtonData(title: "Turn Off Today's Reminders", action: .muteHydrateReminderNotifications, global: false, premium: false)
         let reminderCloud = createButtonCloud(buttons: [turnOffButton], promptType: .hydrateHomeGoodMorning)
@@ -214,7 +219,7 @@ struct HomePrompt {
         buttons.append(startNowButton)
         let wakeUpTimeCloud = createButtonCloud(buttons: buttons, promptType: .hydrateHomeGoodMorning)
         
-        return Prompt(promptType: .hydrateHomeGoodMorning, itemSegments: [[titleDivider, goalMessage, remindersMessage, reminderCloud,wakeUpMessage, wakeUpTimeCloud ]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .varied)
+        return Prompt(promptType: .hydrateHomeGoodMorning, itemSegments: [[titleDivider, goalMessage, compactInfoWidget, remindersMessage, reminderCloud,wakeUpMessage, wakeUpTimeCloud ]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .varied)
         
     }
 }

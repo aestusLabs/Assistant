@@ -25,7 +25,7 @@ struct HydrateManager {
     var dailyStartTimeHour = 8
     var dailyStartTimeMinute = 0
     
-    var lastDayStarted = Date().yesterday
+    var lastDayStarted = Date().twoDaysAgo
     
     func getCurrentIntervalsTotal() -> Int{
         if currentInterval == 1 {
@@ -70,20 +70,4 @@ struct HydrateManager {
 }
 var hydrateManager = HydrateManager()
 
-extension Date {
-    var yesterday: Date {
-        return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
-    }
-    var tomorrow: Date {
-        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
-    }
-    var noon: Date {
-        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
-    }
-    var month: Int {
-        return Calendar.current.component(.month,  from: self)
-    }
-    var isLastDayOfMonth: Bool {
-        return tomorrow.month != month
-    }
-}
+

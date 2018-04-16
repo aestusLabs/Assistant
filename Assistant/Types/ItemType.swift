@@ -25,6 +25,7 @@ enum ItemType {
     case commandWidget
     
     case launchKeyboard
+    case compactInformation
     
     case changeButton // after a user makes selection the text goes to the tableview as a userMessage, it is followed by a change button
     case test

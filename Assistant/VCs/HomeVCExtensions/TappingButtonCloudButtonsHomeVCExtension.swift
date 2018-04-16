@@ -57,6 +57,9 @@ extension ChildHomeViewController {
             } else if action == .setHydrateStartTime {
                 
                 itemsShown = []
+                print(Date())
+                print(hydrateManager.lastDayStarted)
+                
                prompt = getPromptForApp()
                 
                 addHomePromptToTableView(segments: prompt.itemSegments )
