@@ -23,6 +23,14 @@ class AssistantTests: XCTestCase {
     
     func testExample() {
        XCTAssert(dately.isSecondDateWithin24HoursOfFirstDate(firstDate: Date().noon, secondDate: Date()))
+        
+        let datePlus4hours = Calendar.current.date(byAdding: .hour, value: 4, to: Date())!
+                let datePlus7hours = Calendar.current.date(byAdding: .hour, value: 7, to: Date())!
+                let datePlus11hours = Calendar.current.date(byAdding: .hour, value: 7, to: Date())!
+        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: Date()), 1)
+        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: datePlus4hours), 2)
+        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: datePlus7hours), 3)
+        
     }
     
     func testPerformanceExample() {

@@ -29,12 +29,39 @@ struct HydrateActions {
     }
     
     func setDailyStartTime(userInput: String) {
+        let currentDateYear = Calendar.current.component(.year, from: Date())
+        let currentDateMonth = Calendar.current.component(.month, from: Date())
+        let currentDateDay = Calendar.current.component(.day, from: Date())
+        let currentDateHour = Calendar.current.component(.hour, from: Date())
+        let currentDateMinute = Calendar.current.component(.minute, from: Date())
         let parsedComponents = timeParser.parseTime(text: userInput)
-        if let hour = parsedComponents.hour {
-            hydrateManager.dailyStartTimeHour = hour
+        
+        
+        
+        var components = DateComponents()
+        components.year = currentDateYear
+        components.month = currentDateMonth
+        components.day = currentDateDay
+        components.hour = parsedComponents.hour
+        components.minute = parsedComponents.minute
+        if userInput == "Start Now" {
+            components.hour = currentDateHour
+            components.minute = currentDateMinute
         }
-        if let minutes = parsedComponents.minute {
-            hydrateManager.dailyStartTimeMinute = minutes
-        }
+        
+        let newStartDate = Calendar.current.date(from: components)
+//        if let hour = parsedComponents.hour {
+//            hydrateManager.dailyStartTimeHour = hour
+//        }
+//        if let minutes = parsedComponents.minute {
+//            hydrateManager.dailyStartTimeMinute = minutes
+//        }
+        hydrateManager.lastDayStarted = newStartDate!
+        
+        let defaults = UserDefaults.standard
+        defaults.setValue(hydrateManager.lastDayStarted, forKey: "lastDayStarted")
+        defaults.setValue(hydrateManager.metric, forKey: "metricBool")
+        
+        
     }
 }

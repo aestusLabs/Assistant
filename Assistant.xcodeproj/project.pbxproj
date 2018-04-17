@@ -137,6 +137,9 @@
 		46E47D22208414CB00D6BD32 /* Dately.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D21208414CB00D6BD32 /* Dately.swift */; };
 		46E47D252084174E00D6BD32 /* CompactInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D232084174E00D6BD32 /* CompactInformationTableViewCell.swift */; };
 		46E47D262084174E00D6BD32 /* CompactInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E47D242084174E00D6BD32 /* CompactInformationTableViewCell.xib */; };
+		46E47D292084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D272084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld */; };
+		46E47D2C2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */; };
+		46E47D2D2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +295,9 @@
 		46E47D21208414CB00D6BD32 /* Dately.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dately.swift; sourceTree = "<group>"; };
 		46E47D232084174E00D6BD32 /* CompactInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactInformationTableViewCell.swift; sourceTree = "<group>"; };
 		46E47D242084174E00D6BD32 /* CompactInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompactInformationTableViewCell.xib; sourceTree = "<group>"; };
+		46E47D282084F8BE00D6BD32 /* HydrateHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HydrateHistory.xcdatamodel; sourceTree = "<group>"; };
+		46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HydrateDay+CoreDataClass.swift"; sourceTree = "<group>"; };
+		46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HydrateDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +328,8 @@
 		46E47B8E207E74A600D6BD32 = {
 			isa = PBXGroup;
 			children = (
+				46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */,
+				46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */,
 				46E47CF4207E792F00D6BD32 /* Session+CoreDataClass.swift */,
 				46E47CF3207E792E00D6BD32 /* Session+CoreDataProperties.swift */,
 				46E47B99207E74A600D6BD32 /* Assistant */,
@@ -346,6 +354,7 @@
 			children = (
 				46E47B9A207E74A600D6BD32 /* AppDelegate.swift */,
 				46E47CEC207E786F00D6BD32 /* BreatheHistory.xcdatamodeld */,
+				46E47D272084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld */,
 				46E47CEA207E786E00D6BD32 /* CoreDataStack.swift */,
 				46E47CEB207E786E00D6BD32 /* HealthKitSetUpAssistant.swift */,
 				46E47CF7207E7AC000D6BD32 /* VCs */,
@@ -787,6 +796,7 @@
 				46E47C8D207E775100D6BD32 /* CreateItemsForPrompt.swift in Sources */,
 				46E47C9C207E775100D6BD32 /* SubscriptionService.swift in Sources */,
 				46E47C91207E775100D6BD32 /* LearningPrompts.swift in Sources */,
+				46E47D2D2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift in Sources */,
 				46E47CC8207E775200D6BD32 /* ShowCommandsTableViewCell.swift in Sources */,
 				46E47C85207E775100D6BD32 /* UserInfo.swift in Sources */,
 				46E47C88207E775100D6BD32 /* Convert.swift in Sources */,
@@ -813,6 +823,7 @@
 				46E47CB1207E775100D6BD32 /* ButtonAction.swift in Sources */,
 				46E47CBF207E775200D6BD32 /* WeekSelectionTableViewCell.swift in Sources */,
 				46E47CF0207E787000D6BD32 /* HealthKitSetUpAssistant.swift in Sources */,
+				46E47D292084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld in Sources */,
 				46E47C90207E775100D6BD32 /* HomePrompt.swift in Sources */,
 				46E47C94207E775100D6BD32 /* SessionPrompts.swift in Sources */,
 				46E47CE3207E775200D6BD32 /* ChatBarChatVCExtension.swift in Sources */,
@@ -845,6 +856,7 @@
 				46E47CEF207E787000D6BD32 /* CoreDataStack.swift in Sources */,
 				46E47D12208086B900D6BD32 /* HydrateActionsHomeExtension.swift in Sources */,
 				46E47CDE207E775200D6BD32 /* GetCellForItemType.swift in Sources */,
+				46E47D2C2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift in Sources */,
 				46E47CE2207E775200D6BD32 /* TappingSessionWidgetChatVCExtension.swift in Sources */,
 				46E47C9E207E775100D6BD32 /* AnswerFormats.swift in Sources */,
 				46E47D162080890B00D6BD32 /* HydrateActions.swift in Sources */,
@@ -1159,6 +1171,16 @@
 			);
 			currentVersion = 46E47CED207E786F00D6BD32 /* BreatheHistory.xcdatamodel */;
 			path = BreatheHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		46E47D272084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46E47D282084F8BE00D6BD32 /* HydrateHistory.xcdatamodel */,
+			);
+			currentVersion = 46E47D282084F8BE00D6BD32 /* HydrateHistory.xcdatamodel */;
+			path = HydrateHistory.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

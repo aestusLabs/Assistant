@@ -53,7 +53,7 @@ extension ChildHomeViewController {
                     count += 1
                 }
                 
-                
+                updateHydrateCD()
             } else if action == .setHydrateStartTime {
                 
                 itemsShown = []

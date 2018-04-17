@@ -20,6 +20,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     var itemsShown: [Item] = []
     var spacerHeight: CGFloat = 29
     var managedContext: NSManagedObjectContext!
+    var hydrateManagedContext: NSManagedObjectContext!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,7 +31,8 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     
     @IBOutlet weak var chatBarLabel: UILabel!
     lazy var coreDataStack = CoreDataStack(modelName: "BreatheHistory")
-
+lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
+    
     
     func getPromptForApp() -> Prompt {
         if appInfo.appType == .assistant {
@@ -94,8 +96,10 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
 
         
         
+
         user.updateValuesFromDefaults()
         managedContext = coreDataStack.managedContext
+        hydrateManagedContext = hydrateCoreDataStack.managedContext
         setUpTableView()
 //        prompt = getPromptForApp() //homePrompt.createHydrateHome()
 //        addHomePromptToTableView(segments: prompt.itemSegments)
@@ -154,7 +158,12 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     }
     override func viewDidAppear(_ animated: Bool) {
         
+        if appInfo.appType == .hydrate || appInfo.appType == .assistant {
+            updateHydrateDefaultValues()
+            updateHydrateManagerFromCDValues()
+        }
         
+        printAllHydrateCDObjects()
         chatManager.currentVC = .home
         itemsShown = []
         prompt = getPromptForApp() //homePrompt.createHydrateHome()
@@ -254,6 +263,8 @@ extension ChildHomeViewController {
  @objc   func transitionToChat() {
         parentPageViewController.goToNextPage()
     }
+    
+    
     
     
  

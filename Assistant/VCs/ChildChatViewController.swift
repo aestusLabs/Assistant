@@ -80,7 +80,9 @@ class ChildChatViewController: UIViewController, NewPageObservation, UITextField
     var unintelligableInput = false
     
     var managedContext: NSManagedObjectContext!
+    var hydrateManagedContext: NSManagedObjectContext!
     lazy var coreDataStack = CoreDataStack(modelName: "BreatheHistory")
+    lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
 
     
     override func viewDidLoad() {
@@ -88,6 +90,7 @@ class ChildChatViewController: UIViewController, NewPageObservation, UITextField
         self.chatBarTextField.delegate = self
 //        showNextLabel.isHidden = true
         managedContext = coreDataStack.managedContext
+        hydrateManagedContext = hydrateCoreDataStack.managedContext
 
         
         
