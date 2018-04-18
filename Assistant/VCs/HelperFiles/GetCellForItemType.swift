@@ -235,6 +235,7 @@ struct GetCellForItemType {
         let cell = Bundle.main.loadNibNamed("HydrateShowTotalsWidgetTableViewCell", owner: self, options: nil)?.first as! HydrateShowTotalsWidgetTableViewCell
         // TODO: Take data from hydratemanager
         cell.updateProgressBars()
+        cell.updateLabels()
         return cell
     }
     

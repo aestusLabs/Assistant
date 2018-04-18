@@ -91,7 +91,7 @@ struct HydrateManager {
     }
     
     mutating func addWater(amount: Int) {
-        dailyGoal += amount
+//        dailyTotal += amount
 //         currentInterval = getCurrentInterval(dateToCheck: Date())
         if currentInterval == 1 {
             interval1Total += amount
@@ -106,7 +106,13 @@ struct HydrateManager {
         }
     }
     
-   
+    func getUnits() -> String{
+        if metric {
+            return "ml"
+        } else {
+            return "oz"
+        }
+    }
     
 }
 var hydrateManager = HydrateManager()

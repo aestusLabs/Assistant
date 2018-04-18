@@ -44,6 +44,7 @@ extension ChildHomeViewController {
                         let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
                         let totalsWidget = cell as! HydrateShowTotalsWidgetTableViewCell
                         totalsWidget.updateProgressBars()
+                        totalsWidget.updateLabels()
                     } else if item.type == .hydrateIntervalsAtGlanceWidget {
                         row = count
                         let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
@@ -54,6 +55,7 @@ extension ChildHomeViewController {
                 }
                 
                 updateHydrateCD()
+                
             } else if action == .setHydrateStartTime {
                 
                 itemsShown = []

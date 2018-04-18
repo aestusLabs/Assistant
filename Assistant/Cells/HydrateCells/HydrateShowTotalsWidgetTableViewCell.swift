@@ -16,6 +16,18 @@ class HydrateShowTotalsWidgetTableViewCell: UITableViewCell {
     
     @IBOutlet weak var totalProgressBar: UIProgressView!
     
+    @IBOutlet weak var currentIntervalTotal: UILabel!
+    
+    @IBOutlet weak var dayTotal: UILabel!
+    
+    @IBOutlet weak var currentIntervalGoal: UILabel!
+    
+    @IBOutlet weak var dayGoal: UILabel!
+    
+    @IBOutlet weak var currentInterval: UILabel!
+    
+    
+    
     
     
     override func awakeFromNib() {
@@ -26,6 +38,8 @@ class HydrateShowTotalsWidgetTableViewCell: UITableViewCell {
         makeProgressBarsLookGood()
 
     }
+    
+
     
     func makeProgressBarsLookGood() {
         intervalProgressBar.progressTintColor = getColourFor.hydrateAppColour()
@@ -61,6 +75,13 @@ class HydrateShowTotalsWidgetTableViewCell: UITableViewCell {
             self.totalProgressBar.layoutIfNeeded()
         }
         // TODO: Change colour if over goal
+    }
+    func updateLabels() {
+        dayTotal.text = "\(hydrateManager.getDaysTotal())\(hydrateManager.getUnits())"
+        dayGoal.text = "\(hydrateManager.dailyGoal)\(hydrateManager.getUnits())"
+        currentIntervalTotal.text = "\(hydrateManager.getCurrentIntervalsTotal())\(hydrateManager.getUnits())"
+        currentIntervalGoal.text = "\(hydrateManager.getCurrentIntervalsGoal())\(hydrateManager.getUnits())"
+            currentInterval.text = "Interval \(hydrateManager.getCurrentInterval(dateToCheck: Date()))"
     }
     
 }
