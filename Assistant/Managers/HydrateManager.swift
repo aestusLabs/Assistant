@@ -32,6 +32,14 @@ struct HydrateManager {
     
     var lastDayStarted = Date().twoDaysAgo
     
+    mutating func zeroOutHydrationManager() {
+        interval4Total = 0
+        interval3Total = 0
+        interval2Total = 0
+        interval1Total = 0
+        extraIntervalTotal = 0
+    }
+    
     mutating func getCurrentIntervalsTotal() -> Int{
 //        currentInterval = getCurrentInterval(dateToCheck: Date())
         if currentInterval == 1 {
@@ -114,6 +122,10 @@ struct HydrateManager {
         }
     }
     
+    func calculateIntervalGoals(dailyGoal: Int) -> Int{
+        return (dailyGoal / 4)
+        
+    }
 }
 var hydrateManager = HydrateManager()
 

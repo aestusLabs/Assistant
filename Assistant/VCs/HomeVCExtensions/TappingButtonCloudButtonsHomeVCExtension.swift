@@ -35,38 +35,15 @@ extension ChildHomeViewController {
             
             let action = cell.buttons[sender.tag].action
             let input = cell.buttons[sender.tag].title
-            if action == .addWater {
-                var row = 0
-                var count = 0
-                for item in itemsShown {
-                    if item.type == .hydrateTotalsWidget {
-                        row = count
-                        let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
-                        let totalsWidget = cell as! HydrateShowTotalsWidgetTableViewCell
-                        totalsWidget.updateProgressBars()
-                        totalsWidget.updateLabels()
-                    } else if item.type == .hydrateIntervalsAtGlanceWidget {
-                        row = count
-                        let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
-                        let intervalsWidget = cell as! HydrateDayAtGlanceTableViewCell
-                            intervalsWidget.colourCircles()
-                    }
-                    count += 1
-                }
-                
-                updateHydrateCD()
-                
-            } else if action == .setHydrateStartTime {
-                
-                itemsShown = []
-                print(Date())
-                print(hydrateManager.lastDayStarted)
-                
-               prompt = getPromptForApp()
-                
-                addHomePromptToTableView(segments: prompt.itemSegments )
-                
-                
+//            if action == .addWater {
+//               updateVCForAddWater()
+//
+//            } else if action == .setHydrateStartTime {
+//
+//
+//
+//
+            if hydrateActionsSeeIfNeedToUpdateVC(action: action){
                 
             } else if action != .goToSettings && action != .showAllGlobalCommands && action != .goToHistory {
                 transitionToChat()

@@ -9,6 +9,10 @@
 import Foundation
 import CoreData
 extension ChildHomeViewController {
+    
+ 
+    
+    
     func actOnHydration(action: ButtonAction, userInput: String) -> Bool {
         if action == .addWater {
             return true
@@ -124,6 +128,16 @@ extension ChildHomeViewController {
     
     func updateHydrateDefaultValues() {
         let defaults = UserDefaults.standard
+        
+        if let dailyGoal = defaults.object(forKey: "hydrateDailyGoal") as? Int{
+            hydrateManager.dailyGoal = dailyGoal
+            hydrateManager.interval1Goal = hydrateManager.getCurrentIntervalsGoal()
+            hydrateManager.interval2Goal = hydrateManager.getCurrentIntervalsGoal()
+            hydrateManager.interval3Goal = hydrateManager.getCurrentIntervalsGoal()
+            hydrateManager.interval4Goal = hydrateManager.getCurrentIntervalsGoal()
+            
+        }
+        
         if let lastDayStarted = defaults.object(forKey: "lastDayStarted") as? Date {
             hydrateManager.lastDayStarted = lastDayStarted
         }
@@ -167,4 +181,52 @@ extension ChildHomeViewController {
             print("Fetch error: \(error) description: \(error.userInfo)")
         }
     }
+    
+    func hydrateActionsSeeIfNeedToUpdateVC(action: ButtonAction) -> Bool{
+        switch action {
+        case .addWater:
+            updateVCForAddWater()
+            return true
+        case .setHydrateStartTime:
+            updateVCForSetHyrdateStartTime()
+            return true
+
+        default:
+            return false
+        }
+    }
+   
+       private func updateVCForAddWater() {
+            var row = 0
+            var count = 0
+            for item in itemsShown {
+                if item.type == .hydrateTotalsWidget {
+                    row = count
+                    let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
+                    let totalsWidget = cell as! HydrateShowTotalsWidgetTableViewCell
+                    totalsWidget.updateProgressBars()
+                    totalsWidget.updateLabels()
+                } else if item.type == .hydrateIntervalsAtGlanceWidget {
+                    row = count
+                    let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
+                    let intervalsWidget = cell as! HydrateDayAtGlanceTableViewCell
+                    intervalsWidget.colourCircles()
+                }
+                count += 1
+            }
+            
+            updateHydrateCD()
+        }
+    
+    private func updateVCForSetHyrdateStartTime() {
+        hydrateManager.zeroOutHydrationManager()
+        
+        itemsShown = []
+    
+        prompt = getPromptForApp()
+    
+        addHomePromptToTableView(segments: prompt.itemSegments )
+    
+    }
+    
 }

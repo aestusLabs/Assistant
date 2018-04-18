@@ -25,7 +25,9 @@ struct HydrateActions {
     }
     
     func setDailyGoal(userInput: String) {
-        hydrateManager.dailyGoal =  myConvert.liquidAmount(userInput: userInput) 
+        hydrateManager.dailyGoal =  myConvert.liquidAmount(userInput: userInput)
+        let defaults = UserDefaults.standard
+        defaults.setValue(hydrateManager.dailyGoal, forKey: "hydrateDailyGoal")
     }
     
     func setDailyStartTime(userInput: String) {
@@ -64,4 +66,5 @@ struct HydrateActions {
         
         
     }
+  
 }

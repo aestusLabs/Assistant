@@ -31,7 +31,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     
     @IBOutlet weak var chatBarLabel: UILabel!
     lazy var coreDataStack = CoreDataStack(modelName: "BreatheHistory")
-lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
+    lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
     
     
     func getPromptForApp() -> Prompt {
@@ -40,20 +40,10 @@ lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
         } else if appInfo.appType == .breathe {
             return homePrompt.createBreathePrompt()
         } else if appInfo.appType == .hydrate {
-            print(Date())
-            print(hydrateManager.lastDayStarted)
-
             if dately.isSecondDateWithin18HoursOfFirstDate(firstDate: hydrateManager.lastDayStarted, secondDate: Date() ) == false{
                 hydrateManager.lastDayStarted = Date()
                 return homePrompt.hydrateGoodMorningPrompt()
             }
-            
-//            if  dately.isSameDay(dateOne: hydrateManager.lastDayStarted, dateTwo: Date()) == false{
-//                hydrateManager.lastDayStarted = Date()
-//                return homePrompt.hydrateGoodMorningPrompt()
-//            }
-      
-            
             return homePrompt.createHydrateHome()
         }
         
@@ -64,31 +54,13 @@ lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        prompt =
-//        currentPrompt = prompt!
+        
+        addNotificationObservers()
+        
         
         options = SubscriptionService.shared.options
 
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(handleOptionsLoaded(notification:)),
-                                               name: SubscriptionService.optionsLoadedNotification,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(handlePurchaseSuccessfull(notification:)),
-                                               name: SubscriptionService.purchaseSuccessfulNotification,
-                                               object: nil)
-//        if let subscriptions = options {
-//            if subscriptions.isEmpty == false {
-//                print(subscriptions.first!.product.localizedTitle)
-//                print(subscriptions.first!.formattedPrice)
-//            }
-//
-//        }
-        
-//        handleOptionsLoaded(notification: <#T##Notification#>)
-        
-        
+    
         if SubscriptionService.shared.currentSessionId != nil &&
             SubscriptionService.shared.hasReceiptData {
             user.premium = true
@@ -101,28 +73,55 @@ lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
         managedContext = coreDataStack.managedContext
         hydrateManagedContext = hydrateCoreDataStack.managedContext
         setUpTableView()
-//        prompt = getPromptForApp() //homePrompt.createHydrateHome()
-//        addHomePromptToTableView(segments: prompt.itemSegments)
+
         setUpColours()
-        //add(promptSegments: prompt!.itemSegments, isChat: false, tv: tableView)
-        // Do any additional setup after loading the view.
+  
         setUpChatBarButton()
-        
-        
-        
-//        askUserPermissionToShowNotifications()
-//        setDailyNotification()
-//        trialSaveToCD()
-        //fetchAllSessionsFromCD()
-//        print(itemsShown)
-        
-   
-//        print(itemsShown)
+
         _ = Timer.scheduledTimer(withTimeInterval: 10, repeats: false, block: { (view) in
             print("Hit 10s")
             print(self.options?.first)
         })
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if appInfo.appType == .hydrate || appInfo.appType == .assistant {
+            updateHydrateDefaultValues()
+            if dately.isSecondDateWithin18HoursOfFirstDate(firstDate: hydrateManager.lastDayStarted, secondDate: Date()) {
+                updateHydrateManagerFromCDValues()
+            }
+        }
+        
+        printAllHydrateCDObjects()
+        chatManager.currentVC = .home
+        itemsShown = []
+        prompt = getPromptForApp()
+        addHomePromptToTableView(segments: prompt.itemSegments )
+        if appInfo.appType == .breathe {
+            getLast3ItemsFromCD()
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(transitionToChat), name: NSNotification.Name(rawValue: "switchToChatVC"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshColours), name: NSNotification.Name(rawValue: "refreshColours"), object: nil)
+        if user.finishedOnboarding == false && user.onboardingInProgress == false{
+            user.onboardingInProgress = true
+            chatManager.pendingQueue.append(contentsOf: paths.getOnboardingPath())
+            
+            transitionToChat()
+        }
+    }
+    
+    func addNotificationObservers() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleOptionsLoaded(notification:)),
+                                               name: SubscriptionService.optionsLoadedNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handlePurchaseSuccessfull(notification:)),
+                                               name: SubscriptionService.purchaseSuccessfulNotification,
+                                               object: nil)
     }
     
  
@@ -156,30 +155,7 @@ lazy var hydrateCoreDataStack = CoreDataStack(modelName: "HydrateHistory")
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewDidAppear(_ animated: Bool) {
-        
-        if appInfo.appType == .hydrate || appInfo.appType == .assistant {
-            updateHydrateDefaultValues()
-            updateHydrateManagerFromCDValues()
-        }
-        
-        printAllHydrateCDObjects()
-        chatManager.currentVC = .home
-        itemsShown = []
-        prompt = getPromptForApp() //homePrompt.createHydrateHome()
-        addHomePromptToTableView(segments: prompt.itemSegments )
-        if appInfo.appType == .breathe {
-            getLast3ItemsFromCD()
-        }
-        NotificationCenter.default.addObserver(self, selector: #selector(transitionToChat), name: NSNotification.Name(rawValue: "switchToChatVC"), object: nil)
-               NotificationCenter.default.addObserver(self, selector: #selector(refreshColours), name: NSNotification.Name(rawValue: "refreshColours"), object: nil)
-        if user.finishedOnboarding == false && user.onboardingInProgress == false{
-            user.onboardingInProgress = true
-            chatManager.pendingQueue.append(contentsOf: paths.getOnboardingPath())
-            
-            transitionToChat()
-        }
-    }
+    
     func setUpTableView() {
         view.addSubview(tableView)
         tableView.dataSource = self
