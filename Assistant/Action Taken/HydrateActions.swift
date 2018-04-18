@@ -13,7 +13,8 @@ struct HydrateActions {
         let amountToAdd = myConvert.liquidAmount(userInput: userInput)
         hydrateManager.addWater(amount: amountToAdd)
         print("It wor98y98ked \(hydrateManager.interval1Total)")
-        
+        hydrateDrinkReminderNotificationFunctions.cancelUneededHydrateDrinkReminders()
+
     }
     
     func setMeasurementUnits(userInput: String) {
@@ -64,7 +65,8 @@ struct HydrateActions {
         defaults.setValue(hydrateManager.lastDayStarted, forKey: "lastDayStarted")
         defaults.setValue(hydrateManager.metric, forKey: "metricBool")
         
-        
+     hydrateDrinkReminderNotificationFunctions.setHydrateDrinkReminders(dayStartTime: Date())
+        hydrateDrinkReminderNotificationFunctions.cancelUneededHydrateDrinkReminders()
     }
   
 }

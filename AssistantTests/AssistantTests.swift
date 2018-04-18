@@ -39,8 +39,23 @@ class AssistantTests: XCTestCase {
         let startDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!
         let mockCurrentDate = Calendar.current.date(byAdding: .hour, value: 4, to: startDate)!
 
-        XCTAssertEqual(seeWhichNotificationsShouldFire(currentDate: mockCurrentDate, startOfDay: startDate), ["firstInterval1HoursElapsed", "firstInterval2HoursElapsed", "firstInterval2AndHalfHoursElapsed", "firstInterval2AndThreeQuarterHoursElapsed","secondInterval1HourElapsed"])
+        XCTAssertEqual(hydrateDrinkReminderNotificationFunctions.seeWhichNotificationsShouldFire(currentDate: mockCurrentDate, startOfDay: startDate), ["firstInterval1HoursElapsed", "firstInterval2HoursElapsed", "firstInterval2AndHalfHoursElapsed", "firstInterval2AndThreeQuarterHoursElapsed","secondInterval1HourElapsed"])
     }
+    
+    
+    func testCompareTotalToIntervals() {
+        var mockHydrateManager = HydrateManager()
+        mockHydrateManager.interval4Goal = 1000
+        mockHydrateManager.interval3Goal = 1000
+        mockHydrateManager.interval2Goal = 1000
+        mockHydrateManager.interval1Goal = 1000
+        
+        mockHydrateManager.interval1Total = 2500
+        print(mockHydrateManager.getDaysTotal())
+        
+        XCTAssertEqual(hydrateDrinkReminderNotificationFunctions.compareTotalToIntervals(manager: mockHydrateManager), [1,2])
+    }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

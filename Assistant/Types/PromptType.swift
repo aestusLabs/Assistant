@@ -17,6 +17,7 @@ enum PromptType {
     case selectMeasurementUnits // user is presented metric and imperial
     case explainHydrateIntervals 
     case explainWaterDangers
+    case explainHydrateNotifcations
     case enterWaterAlreadyConsumed
     case showHydrateSetStartOfDay // Gets user to set the start of the first interval
     

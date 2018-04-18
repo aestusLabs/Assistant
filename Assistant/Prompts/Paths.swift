@@ -14,7 +14,7 @@ struct Path {
         if appInfo.appType == .breathe {
             return [.welcome, .setName, .setfamiliarity, .showHealthWarning, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
         } else {
-            return [.welcome, .setName,  .explainHydrateIntervals, .selectMeasurementUnits, .hydrateSelectDailyGoal, .explainWaterDangers, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
+            return [ .welcome, .setName,  .explainHydrateIntervals, .explainHydrateNotifcations,  .selectMeasurementUnits, .hydrateSelectDailyGoal, .explainWaterDangers, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]
         }
     }
 //    let onboardingPromptTypes: [PromptType] = [.welcome, .setName, .setfamiliarity, .showHealthWarning, .checkReadingSpeedOK, .howToChangeAnswer, .explainVCs]

@@ -46,6 +46,12 @@ class IntegrationToggleWidgetTableViewCell: UITableViewCell {
     }
     
         @objc func toggledIntegrationWidget(sender: UISwitch) {
+            
+            let widget = sender.superview?.superview?.superview as! IntegrationToggleWidgetTableViewCell
+            if widget.widgetLabel.text == "Notifications" {
+                askUserPermissionToShowNotifications()
+            } else {
+            
             HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
     
                 guard authorized else {
@@ -64,6 +70,7 @@ class IntegrationToggleWidgetTableViewCell: UITableViewCell {
                 user.healthIntegration = true
                 user.saveToDefaults()
                 print("HealthKit Successfully Authorized.")
+            }
             }
     
         }

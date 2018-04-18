@@ -26,6 +26,8 @@ struct HydrateOnboardingPrompts {
             
         case .explainWaterDangers:
             prompt = hydrateOnboardingPrompts.waterDangers()
+        case .explainHydrateNotifcations:
+            prompt = hydrateOnboardingPrompts.notifications()
         default:
             print("Not an Hydrate onboarding prompt")
         }
@@ -39,7 +41,7 @@ struct HydrateOnboardingPrompts {
         let maintainMessage = createAssistantMessageItem(text: "Namely that you should maintain your hydration throughout the day.")
         
         let intervalsMessage = createAssistantMessageItem(text: "So even though you select a daily goal. You also have 4 interval goals per day.")
-        let descriptionMessage = createAssistantMessageItem(text: "Each interval is 4 hours long and there are 4 of them.")
+        let descriptionMessage = createAssistantMessageItem(text: "Each interval is 3 hours long and there are 4 of them.")
         let defaultMessage = createAssistantMessageItem(text: "By default each interval goal is a quarter of your daily goal.")
         let continueButton = ButtonData(title: "Continue", action: .continueWhatYouWereDoing, global: false, premium: false)
         let cloud = createButtonCloud(buttons: [continueButton], promptType: .explainHydrateIntervals)
@@ -107,6 +109,20 @@ struct HydrateOnboardingPrompts {
         let continueButton = ButtonData(title: "Got It", action: .continueWhatYouWereDoing, global: false, premium: false)
         let cloud = createButtonCloud(buttons: [continueButton], promptType: .explainWaterDangers)
         return Prompt(promptType: .explainWaterDangers, itemSegments: [[titleDivider, message], [doctorMessage, cloud]], userInputUnrecognizedString: "", category: .onboarding, answerFormat: [], action: .continueWhatYouWereDoing)
+    }
+    
+    func notifications() -> Prompt {
+        let titleDivider = createTitleDivider(text: "Notifications")
+        let message = createAssistantMessageItem(text: "Notificiations are a big part of Hydrate.")
+        let whyMessage = createAssistantMessageItem(text: "While you can use Hydrate without enabling notifications, the thing that makes Hydrate special is how its unique reminders system.")
+        let systemMessage = createAssistantMessageItem(text: "It will remind you every morning to launch the app.")
+        let remindersMessage = createAssistantMessageItem(text: "Once you do it will then remind you to drink thoughout the day.")
+        let uniqueMessage = createAssistantMessageItem(text: "Which doesn't sound unique at all. The unique part is if you are above the current intervals goal it won't remind you.")
+        let lastMessage = createAssistantMessageItem(text: "So it reminds you when you need to drink and doesn't when you don't.")
+        let notificationsIntegrationWidget = createIntegrationWidget(text: "Notifications", image: #imageLiteral(resourceName: "Bell"), isToggled: false)
+        let continueButton = ButtonData(title: "Got It", action: .continueWhatYouWereDoing, global: false, premium: false)
+        let cloud = createButtonCloud(buttons: [continueButton], promptType: .explainHydrateNotifcations)
+        return Prompt(promptType: .explainHydrateNotifcations, itemSegments: [[titleDivider, message], [whyMessage], [systemMessage], [remindersMessage], [uniqueMessage], [lastMessage, notificationsIntegrationWidget, cloud]], userInputUnrecognizedString: "", category: .onboarding, answerFormat: [], action: .continueWhatYouWereDoing)
     }
 }
 let hydrateOnboardingPrompts = HydrateOnboardingPrompts()
