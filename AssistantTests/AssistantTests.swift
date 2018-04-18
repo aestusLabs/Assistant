@@ -27,10 +27,19 @@ class AssistantTests: XCTestCase {
         let datePlus4hours = Calendar.current.date(byAdding: .hour, value: 4, to: Date())!
                 let datePlus7hours = Calendar.current.date(byAdding: .hour, value: 7, to: Date())!
                 let datePlus11hours = Calendar.current.date(byAdding: .hour, value: 7, to: Date())!
-        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: Date()), 1)
-        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: datePlus4hours), 2)
-        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: datePlus7hours), 3)
+        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: Date()), 3)
+        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: datePlus4hours), 4)
+        XCTAssertEqual(hydrateManager.getCurrentInterval(dateToCheck: datePlus7hours), 5)
         
+        XCTAssert(dately.isDateBeforeDateTwo(date: Date(), dateTwo: datePlus4hours))
+        
+    }
+    
+    func testHydrateDrinkReminderChooseNotificationsToRemove() {
+        let startDate = Calendar.current.date(bySettingHour: 9, minute: 0, second: 0, of: Date())!
+        let mockCurrentDate = Calendar.current.date(byAdding: .hour, value: 4, to: startDate)!
+
+        XCTAssertEqual(seeWhichNotificationsShouldFire(currentDate: mockCurrentDate, startOfDay: startDate), ["firstInterval1HoursElapsed", "firstInterval2HoursElapsed", "firstInterval2AndHalfHoursElapsed", "firstInterval2AndThreeQuarterHoursElapsed","secondInterval1HourElapsed"])
     }
     
     func testPerformanceExample() {

@@ -11,6 +11,14 @@ import Foundation
 // TODO: Date From Components (Look at Hydrate Actions for start of day)
 struct Dately { // Dates Made Easy
     
+    func isDateBeforeDateTwo(date: Date, dateTwo: Date) -> Bool {
+        if date <= dateTwo {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func isSameDay(dateOne: Date, dateTwo: Date) -> Bool {
         let calendar = Calendar.current
         let dateOneYear = calendar.component(.year, from: dateOne)

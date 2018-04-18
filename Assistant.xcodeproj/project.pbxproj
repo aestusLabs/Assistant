@@ -140,6 +140,7 @@
 		46E47D292084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D272084F8BE00D6BD32 /* HydrateHistory.xcdatamodeld */; };
 		46E47D2C2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */; };
 		46E47D2D2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */; };
+		46F836872087A8B9002E4955 /* HydrateDrinkReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F836862087A8B9002E4955 /* HydrateDrinkReminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +299,7 @@
 		46E47D282084F8BE00D6BD32 /* HydrateHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HydrateHistory.xcdatamodel; sourceTree = "<group>"; };
 		46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HydrateDay+CoreDataClass.swift"; sourceTree = "<group>"; };
 		46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HydrateDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		46F836862087A8B9002E4955 /* HydrateDrinkReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateDrinkReminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +366,7 @@
 				46E47C33207E774D00D6BD32 /* AnswerFormats.swift */,
 				46E47C32207E774D00D6BD32 /* Assets.xcassets */,
 				46E47C3F207E774E00D6BD32 /* DailyNotification.swift */,
+				46F836862087A8B9002E4955 /* HydrateDrinkReminder.swift */,
 				46E47D02207F097000D6BD32 /* ParseFindActionForInput */,
 				46E47C17207E774800D6BD32 /* Info */,
 				46E47C2F207E774A00D6BD32 /* Info.plist */,
@@ -860,6 +863,7 @@
 				46E47CE2207E775200D6BD32 /* TappingSessionWidgetChatVCExtension.swift in Sources */,
 				46E47C9E207E775100D6BD32 /* AnswerFormats.swift in Sources */,
 				46E47D162080890B00D6BD32 /* HydrateActions.swift in Sources */,
+				46F836872087A8B9002E4955 /* HydrateDrinkReminder.swift in Sources */,
 				46E47C8E207E775100D6BD32 /* NotificationPrompts.swift in Sources */,
 				46E47CB2207E775100D6BD32 /* SessionType.swift in Sources */,
 				46E47CDD207E775200D6BD32 /* ChildHomeViewController.swift in Sources */,
