@@ -26,7 +26,7 @@ extension ChildHomeViewController {
         
         let date = Date() as NSDate
         let dayFetch: NSFetchRequest<HydrateDay> = HydrateDay.fetchRequest()
-        dayFetch.predicate = NSPredicate(format: "date == %@", currentDay as NSDate) //NSPredicate(format: "%K == %Q", #keyPath(HydrateDay.date), currentDay)
+        dayFetch.predicate = NSPredicate(format: "date == %@", currentDay as NSDate)
         
         do {
             let results = try hydrateManagedContext.fetch(dayFetch)
@@ -51,35 +51,6 @@ extension ChildHomeViewController {
                     
                 }
                 
-//                hydrateDay = results.first!
-//
-//                print(hydrateDay.date)
-//                print(hydrateDay.intervalOneTotal)
-//
-//
-//                hydrateDay.intervalOneTotal = Int16(hydrateManager.interval1Total)
-//                print(hydrateDay.date)
-//                print(hydrateDay.intervalOneTotal)
-                
-//                hydrateDay.setValue(hydrateManager.getDaysTotal(), forKey: "dayTotal")
-//                hydrateDay.setValue(hydrateManager.interval1Total, forKey: "intervalOneTotal")
-//                hydrateDay.setValue(hydrateManager.interval2Total, forKey: "intervalTwoTotal")
-//                hydrateDay.setValue(hydrateManager.interval3Total, forKey: "intervalThreeTotal")
-//                hydrateDay.setValue(hydrateManager.interval4Total, forKey: "intervalFourTotal")
-
-                
-                //                hydrateDay.date = currentDay
-//
-//                hydrateDay.dayGoal = Int16(hydrateManager.dailyGoal)
-//                hydrateDay.dayTotal = Int16(hydrateManager.getDaysTotal())
-//                hydrateDay.intervalOneGoal = Int16(hydrateManager.interval1Goal)
-//                hydrateDay.intervalOneTotal = Int16(hydrateManager.interval1Total)
-//                hydrateDay.intervalTwoGoal = Int16(hydrateManager.interval2Goal)
-//                hydrateDay.intervalTwoTotal = Int16(hydrateManager.interval2Total)
-//                hydrateDay.intervalThreeGoal = Int16(hydrateManager.interval3Goal)
-//                hydrateDay.intervalThreeTotal = Int16(hydrateManager.interval3Total)
-//                hydrateDay.intervalFourGoal = Int16(hydrateManager.interval4Goal)
-//                hydrateDay.intervalFourTotal = Int16(hydrateManager.interval4Total)
                 try hydrateManagedContext.save()
             } else {
                 var hydrateDay = HydrateDay(context: hydrateManagedContext)
@@ -196,7 +167,7 @@ extension ChildHomeViewController {
         }
     }
    
-       private func updateVCForAddWater() {
+        func updateVCForAddWater() {
             var row = 0
             var count = 0
             for item in itemsShown {
@@ -209,8 +180,10 @@ extension ChildHomeViewController {
                 } else if item.type == .hydrateIntervalsAtGlanceWidget {
                     row = count
                     let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0))
-                    let intervalsWidget = cell as! HydrateDayAtGlanceTableViewCell
-                    intervalsWidget.colourCircles()
+                    if let intervalsWidget = cell as? HydrateDayAtGlanceTableViewCell {
+                            intervalsWidget.colourCircles()
+                    }
+                    
                 }
                 count += 1
             }

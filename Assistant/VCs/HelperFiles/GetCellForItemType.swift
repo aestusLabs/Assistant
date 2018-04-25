@@ -43,6 +43,8 @@ struct GetCellForItemType {
             return hydrateIntervalsAtGlanceWidget()
         } else if item.type == .compactInformation {
             return compactInformationWidget(currentItem: item)
+        } else if item.type == .changeableCalendar {
+            return changeableCalendarWidget()
         }
         
         
@@ -248,6 +250,10 @@ struct GetCellForItemType {
         let cell = Bundle.main.loadNibNamed("CompactInformationTableViewCell", owner: self, options: nil)?.first as! CompactInformationTableViewCell
         cell.mainLabel.text = infoData.mainLabelText
         cell.subLabel.text = infoData.subLabelText
+        return cell
+    }
+    func changeableCalendarWidget() -> TransformingCalendarTableViewCell {
+        let cell = Bundle.main.loadNibNamed("TransformingCalendarTableViewCell", owner: self, options: nil)?.first as! TransformingCalendarTableViewCell
         return cell
     }
 }

@@ -348,7 +348,15 @@ func createCompactInformationData(mainText: String, subText: String) -> CompactI
     return widget
 }
 
+class ChangeableCalendarData: Item {
+    
+}
 
+func createChangeableCalendarWidget() -> ChangeableCalendarData{
+    let widget = ChangeableCalendarData()
+    widget.type = .changeableCalendar
+    return widget
+}
 
 //func createTestingView() -> ViewForTesting {
 //    let item = ViewForTesting()

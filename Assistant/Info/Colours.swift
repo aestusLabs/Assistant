@@ -23,6 +23,10 @@ import UIKit
 
 struct ColourByObject {
     
+    func lightGrey() -> UIColor {
+        return specificColour.lightGrey
+    }
+    
     func hydrateAppColour() -> UIColor {
         return specificColour.hydrateAppColour
     }

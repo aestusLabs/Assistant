@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 import StoreKit
+import UserNotifications
+
 class ChildHomeViewController: UIViewController, NewPageObservation, UITableViewDelegate, UITableViewDataSource {
     //    var parentPageViewController: PageViewController!
 //    var tableViewVC : ParentViewController!
@@ -54,7 +56,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        printPendingNotifications()
         addNotificationObservers()
         
         
@@ -92,6 +94,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
             if dately.isSecondDateWithin18HoursOfFirstDate(firstDate: hydrateManager.lastDayStarted, secondDate: Date()) {
                 updateHydrateManagerFromCDValues()
             }
+            updateVCForAddWater()	
         }
         
         printAllHydrateCDObjects()
@@ -124,6 +127,15 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
                                                object: nil)
     }
     
+    func printPendingNotifications() {
+        let center = UNUserNotificationCenter.current()
+        center.getPendingNotificationRequests(completionHandler: { requests in
+            for request in requests {
+                print(request)
+            }
+            
+        })
+    }
  
     @objc func refreshColours() {
         setUpColours()

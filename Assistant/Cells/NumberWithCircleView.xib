@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NumberWithCircleView" customModule="Assistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETu-DO-LLE" customClass="Circle" customModule="Assistant" customModuleProvider="target">
+                    <rect key="frame" x="16" y="16" width="168" height="168"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdS-AL-bdh">
+                            <rect key="frame" x="0.0" y="0.0" width="168" height="168"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="SdS-AL-bdh" firstAttribute="top" secondItem="ETu-DO-LLE" secondAttribute="top" id="5uR-G4-KRh"/>
+                        <constraint firstItem="SdS-AL-bdh" firstAttribute="leading" secondItem="ETu-DO-LLE" secondAttribute="leading" id="6io-oZ-Cky"/>
+                        <constraint firstAttribute="trailing" secondItem="SdS-AL-bdh" secondAttribute="trailing" id="MzR-58-XQQ"/>
+                        <constraint firstAttribute="bottom" secondItem="SdS-AL-bdh" secondAttribute="bottom" id="mkf-nL-DCb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ETu-DO-LLE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="EJ8-rw-1Tp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ETu-DO-LLE" secondAttribute="trailing" constant="16" id="Wu1-C8-hTB"/>
+                <constraint firstItem="ETu-DO-LLE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="e01-fn-LTx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ETu-DO-LLE" secondAttribute="bottom" constant="16" id="vZy-X8-DJF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="circleView" destination="ETu-DO-LLE" id="mdh-Ia-ufz"/>
+                <outlet property="numberLabel" destination="SdS-AL-bdh" id="nYH-lV-fyL"/>
+            </connections>
+            <point key="canvasLocation" x="-32" y="-179"/>
+        </view>
+    </objects>
+</document>

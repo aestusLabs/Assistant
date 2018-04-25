@@ -141,6 +141,20 @@
 		46E47D2C2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */; };
 		46E47D2D2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */; };
 		46F836872087A8B9002E4955 /* HydrateDrinkReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F836862087A8B9002E4955 /* HydrateDrinkReminder.swift */; };
+		46F836C5208A7013002E4955 /* TransformingCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F836C3208A7013002E4955 /* TransformingCalendarTableViewCell.swift */; };
+		46F836C6208A7013002E4955 /* TransformingCalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F836C4208A7013002E4955 /* TransformingCalendarTableViewCell.xib */; };
+		46F836CA208A7144002E4955 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F836C9208A7144002E4955 /* CalendarWeekView.swift */; };
+		46F836CC208A7161002E4955 /* CalendarWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F836CB208A7161002E4955 /* CalendarWeekView.xib */; };
+		46F836CE208AAFE2002E4955 /* CalendarMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F836CD208AAFE2002E4955 /* CalendarMonthView.swift */; };
+		46F836D0208AB007002E4955 /* CalendarMonthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F836CF208AB007002E4955 /* CalendarMonthView.xib */; };
+		46F836D2208AC30E002E4955 /* NumberWithCircleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46F836D1208AC30E002E4955 /* NumberWithCircleView.xib */; };
+		46F836D4208AC4C6002E4955 /* NumberWithCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F836D3208AC4C6002E4955 /* NumberWithCircleView.swift */; };
+		46FC591F208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FC591D208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.swift */; };
+		46FC5920208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FC591E208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.xib */; };
+		46FC59522090EFC7000A62AB /* CalendarCollectionViewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FC59512090EFC7000A62AB /* CalendarCollectionViewView.xib */; };
+		46FC59542090F05E000A62AB /* CalendarCollectionViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FC59532090F05E000A62AB /* CalendarCollectionViewView.swift */; };
+		46FC59572090F639000A62AB /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FC59552090F638000A62AB /* CollectionViewCell.xib */; };
+		46FC59582090F639000A62AB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FC59562090F639000A62AB /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -300,6 +314,20 @@
 		46E47D2A2084FAAF00D6BD32 /* HydrateDay+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HydrateDay+CoreDataClass.swift"; sourceTree = "<group>"; };
 		46E47D2B2084FAAF00D6BD32 /* HydrateDay+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HydrateDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		46F836862087A8B9002E4955 /* HydrateDrinkReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrateDrinkReminder.swift; sourceTree = "<group>"; };
+		46F836C3208A7013002E4955 /* TransformingCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingCalendarTableViewCell.swift; sourceTree = "<group>"; };
+		46F836C4208A7013002E4955 /* TransformingCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformingCalendarTableViewCell.xib; sourceTree = "<group>"; };
+		46F836C9208A7144002E4955 /* CalendarWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
+		46F836CB208A7161002E4955 /* CalendarWeekView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarWeekView.xib; sourceTree = "<group>"; };
+		46F836CD208AAFE2002E4955 /* CalendarMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMonthView.swift; sourceTree = "<group>"; };
+		46F836CF208AB007002E4955 /* CalendarMonthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarMonthView.xib; sourceTree = "<group>"; };
+		46F836D1208AC30E002E4955 /* NumberWithCircleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberWithCircleView.xib; sourceTree = "<group>"; };
+		46F836D3208AC4C6002E4955 /* NumberWithCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWithCircleView.swift; sourceTree = "<group>"; };
+		46FC591D208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAndCircleCollectionViewCell.swift; sourceTree = "<group>"; };
+		46FC591E208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberAndCircleCollectionViewCell.xib; sourceTree = "<group>"; };
+		46FC59512090EFC7000A62AB /* CalendarCollectionViewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewView.xib; sourceTree = "<group>"; };
+		46FC59532090F05E000A62AB /* CalendarCollectionViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewView.swift; sourceTree = "<group>"; };
+		46FC59552090F638000A62AB /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		46FC59562090F639000A62AB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,6 +554,20 @@
 				46E47C6A207E775100D6BD32 /* BreatheSessionTableViewCell.xib */,
 				46E47D232084174E00D6BD32 /* CompactInformationTableViewCell.swift */,
 				46E47D242084174E00D6BD32 /* CompactInformationTableViewCell.xib */,
+				46F836C3208A7013002E4955 /* TransformingCalendarTableViewCell.swift */,
+				46F836C4208A7013002E4955 /* TransformingCalendarTableViewCell.xib */,
+				46FC59532090F05E000A62AB /* CalendarCollectionViewView.swift */,
+				46FC59512090EFC7000A62AB /* CalendarCollectionViewView.xib */,
+				46F836C9208A7144002E4955 /* CalendarWeekView.swift */,
+				46F836CB208A7161002E4955 /* CalendarWeekView.xib */,
+				46F836CD208AAFE2002E4955 /* CalendarMonthView.swift */,
+				46F836CF208AB007002E4955 /* CalendarMonthView.xib */,
+				46FC591D208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.swift */,
+				46FC591E208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.xib */,
+				46FC59562090F639000A62AB /* CollectionViewCell.swift */,
+				46FC59552090F638000A62AB /* CollectionViewCell.xib */,
+				46F836D3208AC4C6002E4955 /* NumberWithCircleView.swift */,
+				46F836D1208AC30E002E4955 /* NumberWithCircleView.xib */,
 				46E47D082080620D00D6BD32 /* HydrateCells */,
 				46E47D03207FBA2600D6BD32 /* WorkCells */,
 			);
@@ -735,10 +777,14 @@
 				46E47CBA207E775200D6BD32 /* SettingsButtonTableViewCell.xib in Resources */,
 				46E47CC3207E775200D6BD32 /* ButtonCloudTableViewCell.xib in Resources */,
 				46E47CA4207E775100D6BD32 /* Exhale 3.mp3 in Resources */,
+				46FC5920208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.xib in Resources */,
 				46E47CA1207E775100D6BD32 /* Inhale.mp3 in Resources */,
 				46E47CCD207E775200D6BD32 /* AssistantMessageTableViewCell.xib in Resources */,
+				46F836C6208A7013002E4955 /* TransformingCalendarTableViewCell.xib in Resources */,
 				46E47CA0207E775100D6BD32 /* Inhale 3.mp3 in Resources */,
+				46FC59572090F639000A62AB /* CollectionViewCell.xib in Resources */,
 				46E47D0E2080630E00D6BD32 /* HydrateTotalsCompactView.xib in Resources */,
+				46FC59522090EFC7000A62AB /* CalendarCollectionViewView.xib in Resources */,
 				46E47CA5207E775100D6BD32 /* acceptHappyA.mp3 in Resources */,
 				46E47CBD207E775200D6BD32 /* TitleDividerTableViewCell.xib in Resources */,
 				46E47BDF207E761900D6BD32 /* Main.storyboard in Resources */,
@@ -753,8 +799,11 @@
 				46E47CC1207E775200D6BD32 /* UserMessageTableViewCell.xib in Resources */,
 				46E47CD4207E775200D6BD32 /* HistoryItemTableViewCell.xib in Resources */,
 				46E47C9A207E775100D6BD32 /* Info.plist in Resources */,
+				46F836D2208AC30E002E4955 /* NumberWithCircleView.xib in Resources */,
 				46E47CC5207E775200D6BD32 /* ShowKeyboardTableViewCell.xib in Resources */,
+				46F836CC208A7161002E4955 /* CalendarWeekView.xib in Resources */,
 				46E47CC9207E775200D6BD32 /* PendingItemCell.xib in Resources */,
+				46F836D0208AB007002E4955 /* CalendarMonthView.xib in Resources */,
 				46E47CC2207E775200D6BD32 /* WeekSelectionTableViewCell.xib in Resources */,
 				46E47D262084174E00D6BD32 /* CompactInformationTableViewCell.xib in Resources */,
 				46E47C9F207E775100D6BD32 /* EmptySustain.mp3 in Resources */,
@@ -805,6 +854,7 @@
 				46E47C88207E775100D6BD32 /* Convert.swift in Sources */,
 				46E47C9B207E775100D6BD32 /* ParseTime.swift in Sources */,
 				46E47CD0207E775200D6BD32 /* IntegrationToggleWidgetTableViewCell.swift in Sources */,
+				46FC59542090F05E000A62AB /* CalendarCollectionViewView.swift in Sources */,
 				46E47C96207E775100D6BD32 /* Subscription.swift in Sources */,
 				46E47CCB207E775200D6BD32 /* SettingsButtonTableViewCell.swift in Sources */,
 				46E47D1D20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift in Sources */,
@@ -820,9 +870,11 @@
 				46E47D2020814B9A00D6BD32 /* HydrateOnboardingPrompts.swift in Sources */,
 				46E47CB0207E775100D6BD32 /* PromptCategory.swift in Sources */,
 				46E47C92207E775100D6BD32 /* Prompt.swift in Sources */,
+				46F836CE208AAFE2002E4955 /* CalendarMonthView.swift in Sources */,
 				46E47CAB207E775100D6BD32 /* UserSkillLevel.swift in Sources */,
 				46E47CB3207E775200D6BD32 /* WordContext.swift in Sources */,
 				46E47D22208414CB00D6BD32 /* Dately.swift in Sources */,
+				46FC59582090F639000A62AB /* CollectionViewCell.swift in Sources */,
 				46E47CB1207E775100D6BD32 /* ButtonAction.swift in Sources */,
 				46E47CBF207E775200D6BD32 /* WeekSelectionTableViewCell.swift in Sources */,
 				46E47CF0207E787000D6BD32 /* HealthKitSetUpAssistant.swift in Sources */,
@@ -845,6 +897,7 @@
 				46E47C86207E775100D6BD32 /* Colours.swift in Sources */,
 				46E47B9B207E74A600D6BD32 /* AppDelegate.swift in Sources */,
 				46E47CC4207E775200D6BD32 /* CalendarMonthTableViewCell.swift in Sources */,
+				46F836D4208AC4C6002E4955 /* NumberWithCircleView.swift in Sources */,
 				46E47C8F207E775100D6BD32 /* OtherPrompts.swift in Sources */,
 				46E47D142080873800D6BD32 /* HydrateManager.swift in Sources */,
 				46E47CA8207E775100D6BD32 /* WordContextList.swift in Sources */,
@@ -870,6 +923,7 @@
 				46E47CE6207E775200D6BD32 /* DayOfWeekSelectionWidgetChatVCExtension.swift in Sources */,
 				46E47CE7207E775200D6BD32 /* TableViewChatVCExtension.swift in Sources */,
 				46E47C93207E775100D6BD32 /* CreatePromptFor.swift in Sources */,
+				46F836C5208A7013002E4955 /* TransformingCalendarTableViewCell.swift in Sources */,
 				46E47D01207F07E400D6BD32 /* GeneralMatchWordsWithActions.swift in Sources */,
 				46E47D06207FBA8200D6BD32 /* WorkTimerTableViewCell.swift in Sources */,
 				46E47C89207E775100D6BD32 /* ParseUserInput.swift in Sources */,
@@ -877,6 +931,7 @@
 				46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */,
 				46E47CCE207E775200D6BD32 /* UserMessageTableViewCell.swift in Sources */,
 				46E47CB9207E775200D6BD32 /* HistoryItemTableViewCell.swift in Sources */,
+				46FC591F208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.swift in Sources */,
 				46E47CE9207E775200D6BD32 /* ActionTriage.swift in Sources */,
 				46E47D10208065AA00D6BD32 /* HydrateTotalsCompact.swift in Sources */,
 				46E47CF5207E793000D6BD32 /* Session+CoreDataProperties.swift in Sources */,
@@ -886,6 +941,7 @@
 				46E47CCA207E775200D6BD32 /* PlayableSessionWidgetExtension.swift in Sources */,
 				46E47C98207E775100D6BD32 /* SessionManager.swift in Sources */,
 				46E47CFD207E946500D6BD32 /* AllAppsActions.swift in Sources */,
+				46F836CA208A7144002E4955 /* CalendarWeekView.swift in Sources */,
 				46E47D1A20811E3B00D6BD32 /* BreatheSessionsFromCDExtension.swift in Sources */,
 				46E47CE8207E775200D6BD32 /* SettingsViewController.swift in Sources */,
 			);

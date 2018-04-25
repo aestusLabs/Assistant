@@ -123,6 +123,7 @@ struct HomePrompt {
     }
     
     func createHydrateHome() -> Prompt {
+        let changeAbleTestWidget = createChangeableCalendarWidget()
            let welcomeMessage = createAssistantMessageItem(text: "Hello \(user.name), I hope you're having a good day.")
             let totalsWidget = createHydrateTotalsCompactWidget()
         let addMessage = createAssistantMessageItem(text: "Add water:")
@@ -168,7 +169,7 @@ struct HomePrompt {
         let navButtons = createButtonCloud(buttons: [howAppWorksButton, commandsButton, settingsButton, historyButton, onboardingButton, addNotification, testButton], promptType: .home)
         
         
-        return Prompt(promptType: .hydrateHome, itemSegments: [[welcomeMessage, totalsWidget], [addMessage, addCloud], [intervalsAtGlanceMessage, intervalsAtGlanceWidget], [navigateMessage, navButtons]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
+        return Prompt(promptType: .hydrateHome, itemSegments: [[changeAbleTestWidget, welcomeMessage, totalsWidget], [addMessage, addCloud], [intervalsAtGlanceMessage, intervalsAtGlanceWidget], [navigateMessage, navButtons]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
     }
     
     func hydrateGoodMorningPrompt() -> Prompt{

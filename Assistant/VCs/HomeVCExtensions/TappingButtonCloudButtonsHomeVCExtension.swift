@@ -31,19 +31,12 @@ extension ChildHomeViewController {
         triageAction(action: cell.buttons[sender.tag].action, userInput: cell.buttons[sender.tag].title)
         
         if chatManager.currentVC == .home {
-//            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "switchToChatVC"), object: nil)
+
             
             let action = cell.buttons[sender.tag].action
             let input = cell.buttons[sender.tag].title
-//            if action == .addWater {
-//               updateVCForAddWater()
-//
-//            } else if action == .setHydrateStartTime {
-//
-//
-//
-//
-            if hydrateActionsSeeIfNeedToUpdateVC(action: action){
+
+            if  hydrateActionsSeeIfNeedToUpdateVC(action: action) {
                 
             } else if action != .goToSettings && action != .showAllGlobalCommands && action != .goToHistory {
                 transitionToChat()
@@ -61,9 +54,7 @@ extension ChildHomeViewController {
                 present(settingsVC, animated: true, completion: nil)
             }
             
-        } //else if chatManager.currentVC == .chat {
-        
-//        print("Tapped in cloud button \(sender.tag)")
+        } 
         }
 
     }

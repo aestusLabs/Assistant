@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="TransformingCalendarTableViewCell" customModule="Assistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="142.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iK6-rw-ZQu">
+                        <rect key="frame" x="16" y="0.0" width="288" height="134.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-So-VLL">
+                                <rect key="frame" x="0.0" y="83.5" width="288" height="35"/>
+                                <color key="backgroundColor" red="0.98431372640000003" green="0.23137255009999999" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fue-7U-dyy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cw-rC-PQU">
+                                <rect key="frame" x="16" y="16" width="66.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekk-i4-VXp">
+                                <rect key="frame" x="24" y="47.5" width="40.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ekk-i4-VXp" firstAttribute="top" secondItem="9Cw-rC-PQU" secondAttribute="bottom" id="993-Vo-d91"/>
+                            <constraint firstItem="9Cw-rC-PQU" firstAttribute="top" secondItem="iK6-rw-ZQu" secondAttribute="top" constant="16" id="9Vh-fo-Jwn"/>
+                            <constraint firstItem="9Cw-rC-PQU" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" constant="16" id="Fmo-En-vtH"/>
+                            <constraint firstAttribute="trailing" secondItem="i8G-So-VLL" secondAttribute="trailing" id="gQV-Uk-bEo"/>
+                            <constraint firstItem="Ekk-i4-VXp" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" constant="24" id="mtZ-7U-PVh"/>
+                            <constraint firstItem="i8G-So-VLL" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" id="pEp-uF-Vn4"/>
+                            <constraint firstAttribute="bottom" secondItem="i8G-So-VLL" secondAttribute="bottom" constant="16" id="rHv-lm-Rom"/>
+                            <constraint firstItem="i8G-So-VLL" firstAttribute="top" secondItem="Ekk-i4-VXp" secondAttribute="bottom" constant="16" id="yY5-uw-OMd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iK6-rw-ZQu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="07P-oj-NSF"/>
+                    <constraint firstAttribute="bottom" secondItem="iK6-rw-ZQu" secondAttribute="bottom" constant="8" id="Yqs-pm-qkP"/>
+                    <constraint firstAttribute="trailing" secondItem="iK6-rw-ZQu" secondAttribute="trailing" constant="16" id="ou5-Fz-Zlg"/>
+                    <constraint firstItem="iK6-rw-ZQu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uh6-FG-PGi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="calendarView" destination="i8G-So-VLL" id="6l9-b5-btX"/>
+                <outlet property="calendarViewHeight" destination="fue-7U-dyy" id="4m5-kl-mUx"/>
+                <outlet property="cardBackground" destination="iK6-rw-ZQu" id="km3-Sn-XFi"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="-18.5"/>
+        </tableViewCell>
+    </objects>
+</document>

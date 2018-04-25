@@ -100,7 +100,7 @@ struct HydrateDrinkReminderNotificationFunctions {
         var total: TimeInterval = 0
         var amountCount = 0
         var timeIntervals: [TimeInterval] = []
-        for _ in 1...17 {
+        for _ in 1...20 {
             if amountCount == 5 {
                 amountCount = 0
             }
