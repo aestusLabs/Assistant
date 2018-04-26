@@ -20,7 +20,7 @@ enum PromptType {
     case explainHydrateNotifcations
     case enterWaterAlreadyConsumed
     case showHydrateSetStartOfDay // Gets user to set the start of the first interval
-    
+    case getUsersWeight // used for calculaing water intake needed
     
     case showAllGlobalCommands
     case showAllGlobalCommandsList

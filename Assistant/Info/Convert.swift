@@ -244,6 +244,46 @@ struct Convert {
         return .unassigned
         }
     }
+    
+    func stringToWeightInPounds(string: String) -> Double {
+        if let number = Double(string) {
+            if hydrateManager.metric  {
+                return kgToLbs(kg: number)
+            } else {
+                return number
+            }
+        }
+        var numbers = ""
+        var letters = ""
+        for char in string {
+            if let _ =  Int(String(char)) {
+                numbers += String(char)
+            } else {
+                if char != " " {
+                    letters += String(char)
+                }
+            }
+        }
+        if letters == "kg" || letters == "kgs" {
+            if let number = Double(numbers) {
+               return kgToLbs(kg: number)
+            }
+        } else {
+            if let number =  Double(numbers) {
+                return number
+            }
+        }
+        return 9999.9
+    }
+    func kgToLbs(kg: Double) -> Double {
+        return kg * 2.2
+    }
+    func ozToMls(ounces: Double) -> Int {
+        let mls = ounces * 29.57
+        print(mls)
+        
+        return Int(mls)
+    }
 }
 
 let myConvert = Convert()

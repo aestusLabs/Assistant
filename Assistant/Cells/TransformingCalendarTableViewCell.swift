@@ -17,13 +17,14 @@ class TransformingCalendarTableViewCell: UITableViewCell {
     
     
     let weekCalendar: CalendarWeekView = CalendarWeekView.instanceFromNib() 
-    let monthCalendar = CalendarCollectionViewView.instanceFromNib() //CalendarMonthView.instanceFromNib()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         makeCardFrom(view: cardBackground)
 //            showWeekView()
         showMonthView()
+        
+  
     }
     
 
@@ -41,14 +42,34 @@ class TransformingCalendarTableViewCell: UITableViewCell {
         calendarView.addConstraints([topConstraint, leftConstraint, rightConstraint, bottomConstraint])
     }
     func showMonthView() {
+        let monthCalendar = CalendarCollectionViewView.instanceFromNib() //CalendarMonthView.instanceFromNib()
 
         
 //        monthCalendar.collectionView.setItemsInRow(items: 7)
         
-       
+      
         calendarView.addSubview(monthCalendar)
         addConstraintsToCalendar(subview: monthCalendar)
-         calendarViewHeight.constant = monthCalendar.collectionView.collectionViewLayout.collectionViewContentSize.height
+        monthCalendar.collectionView.layoutIfNeeded()
+//        self.calendarViewHeight.constant = monthCalendar.collectionView.collectionViewLayout.collectionViewContentSize.height + 10
+        //        calendarView.layoutIfNeeded()
+//        self.layoutIfNeeded()
+
+        
+        print(monthCalendar.collectionView.frame.height)
+        print(monthCalendar.collectionView.collectionViewLayout.collectionViewContentSize.height)
+//        print(calendarViewHeight.constant)
+        
+        let _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (view) in
+            print(monthCalendar.collectionView.collectionViewLayout.collectionViewContentSize.height)
+//            self.calendarViewHeight.constant = monthCalendar.collectionView.collectionViewLayout.collectionViewContentSize.height + 10
+//                    self.calendarView.layoutIfNeeded()
+            monthCalendar.height.constant =  monthCalendar.collectionView.collectionViewLayout.collectionViewContentSize.height + 10
+            self.layoutIfNeeded()
+            
+            
+        }
+        
 //        monthCalendar.collectionView.setItemsInRow(items: 4)
 //        monthCalendar.collectionView.setItemsInRow(items: 7)
         

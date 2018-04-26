@@ -68,5 +68,22 @@ struct HydrateActions {
      hydrateDrinkReminderNotificationFunctions.setHydrateDrinkReminders(dayStartTime: Date())
         hydrateDrinkReminderNotificationFunctions.cancelUneededHydrateDrinkReminders()
     }
+    
+    func showGiveMeYourWeightPrompt() {
+        chatManager.pendingQueue.insert(.getUsersWeight, at: 0)
+
+    }
+    func inputUserWeight(input: String) -> String{
+        let weightInPounds = myConvert.stringToWeightInPounds(string: input)
+        user.weightInLbs = weightInPounds
+        let totalOz = weightInPounds / 2
+        if hydrateManager.metric  {
+            hydrateManager.dailyGoal = Int(myConvert.ozToMls(ounces: totalOz))
+        } else {
+            hydrateManager.dailyGoal = Int(totalOz)
+        }
+        
+        return "OK I set your daily goal at \(hydrateManager.dailyGoal)\(hydrateManager.getUnits())"
+    }
   
 }

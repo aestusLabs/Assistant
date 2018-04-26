@@ -10,8 +10,12 @@ import UIKit
 
 class CalendarCollectionViewView: UIView, UICollectionViewDataSource, UICollectionViewDelegate{
 
+    @IBOutlet weak var height: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
-   
+    var numberOfItems = 30
+    let firstDayOfMonth = Date().firstDayOfTheMonth.weekday - 1 + 5
+    var dayCount = 1
+
     let columnLayout = ColumnFlowLayout(
         cellsPerRow: 7,
         minimumInteritemSpacing: 10,
@@ -22,14 +26,21 @@ class CalendarCollectionViewView: UIView, UICollectionViewDataSource, UICollecti
         super.awakeFromNib()
         print("Awoken")
         
+        print(firstDayOfMonth)
+        numberOfItems += firstDayOfMonth
+        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         collectionView?.collectionViewLayout = columnLayout
-//        collectionView?.contentInsetAdjustmentBehavior = .always
+        collectionView?.contentInsetAdjustmentBehavior = .always
         self.collectionView.register(UINib.init(nibName: "NumberAndCircleCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "numberAndCircleCell")
-        //        collectionView.setItemsInRow(items: 3)
+        print(collectionView.collectionViewLayout.collectionViewContentSize.height)
         
-        //        height.constant = collectionView.collectionViewLayout.collectionViewContentSize.height
+        //        collectionView.setItemsInRow(items: 3)
+
+   
+        self.layoutIfNeeded()
+        height.constant = collectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -37,12 +48,19 @@ class CalendarCollectionViewView: UIView, UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return numberOfItems
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "numberAndCircleCell", for: indexPath as IndexPath) as! NumberAndCircleCollectionViewCell
         
+        if indexPath.item < firstDayOfMonth {
+            cell.label.text = ""
+            cell.circleView.isHidden = true
+        } else {
+            cell.label.text = "\(dayCount)"
+            dayCount += 1
+        }
         return cell
     }
     class func instanceFromNib() -> CalendarCollectionViewView {

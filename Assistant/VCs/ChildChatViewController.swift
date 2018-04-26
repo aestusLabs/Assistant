@@ -54,7 +54,7 @@ class ChildChatViewController: UIViewController, NewPageObservation, UITextField
     
     var itemsShown: [Item] = [] // History of all items shown (When a prompt segment is added to the view they go in this array
     var promptTypesShown: [PromptType] = []
-    var currentPrompt: Prompt = createPromptFor(promptType: .whatCanIHelpWith)
+    var currentPrompt: Prompt = createPromptFor(promptType: .getUsersWeight) //createPromptFor(promptType: .whatCanIHelpWith)
     var pendingCell = PendingItemCell() // this is so I can stop the animation
 
 

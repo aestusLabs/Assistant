@@ -23,6 +23,7 @@ enum ButtonAction {
     case setHydrateStartTime // Sets the start of the first interval
     
     case showInputStartTimePrompt // TODO: This is unimplmented
+    case inputUserWeight
     
     
     // Breathe Only

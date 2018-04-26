@@ -13,6 +13,8 @@ struct ParseUserInput {
         if currentPrompt.promptType == .setName {
             
             return [ButtonData(title: userInput, action: .setName, global: false, premium: false)]
+        } else if currentPrompt.promptType == .getUsersWeight {
+            return [ButtonData(title: userInput, action: .inputUserWeight, global: false, premium: false)]
         }
         
 // MARK: Get the context of the word

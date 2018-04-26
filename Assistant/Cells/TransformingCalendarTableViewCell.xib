@@ -23,11 +23,8 @@
                         <rect key="frame" x="16" y="0.0" width="288" height="134.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-So-VLL">
-                                <rect key="frame" x="0.0" y="83.5" width="288" height="35"/>
+                                <rect key="frame" x="16" y="83.5" width="256" height="35"/>
                                 <color key="backgroundColor" red="0.98431372640000003" green="0.23137255009999999" blue="0.2588235438" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="fue-7U-dyy"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cw-rC-PQU">
                                 <rect key="frame" x="16" y="16" width="66.5" height="31.5"/>
@@ -47,9 +44,9 @@
                             <constraint firstItem="Ekk-i4-VXp" firstAttribute="top" secondItem="9Cw-rC-PQU" secondAttribute="bottom" id="993-Vo-d91"/>
                             <constraint firstItem="9Cw-rC-PQU" firstAttribute="top" secondItem="iK6-rw-ZQu" secondAttribute="top" constant="16" id="9Vh-fo-Jwn"/>
                             <constraint firstItem="9Cw-rC-PQU" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" constant="16" id="Fmo-En-vtH"/>
-                            <constraint firstAttribute="trailing" secondItem="i8G-So-VLL" secondAttribute="trailing" id="gQV-Uk-bEo"/>
+                            <constraint firstAttribute="trailing" secondItem="i8G-So-VLL" secondAttribute="trailing" constant="16" id="gQV-Uk-bEo"/>
                             <constraint firstItem="Ekk-i4-VXp" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" constant="24" id="mtZ-7U-PVh"/>
-                            <constraint firstItem="i8G-So-VLL" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" id="pEp-uF-Vn4"/>
+                            <constraint firstItem="i8G-So-VLL" firstAttribute="leading" secondItem="iK6-rw-ZQu" secondAttribute="leading" constant="16" id="pEp-uF-Vn4"/>
                             <constraint firstAttribute="bottom" secondItem="i8G-So-VLL" secondAttribute="bottom" constant="16" id="rHv-lm-Rom"/>
                             <constraint firstItem="i8G-So-VLL" firstAttribute="top" secondItem="Ekk-i4-VXp" secondAttribute="bottom" constant="16" id="yY5-uw-OMd"/>
                         </constraints>
@@ -65,7 +62,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="calendarView" destination="i8G-So-VLL" id="6l9-b5-btX"/>
-                <outlet property="calendarViewHeight" destination="fue-7U-dyy" id="4m5-kl-mUx"/>
                 <outlet property="cardBackground" destination="iK6-rw-ZQu" id="km3-Sn-XFi"/>
             </connections>
             <point key="canvasLocation" x="32" y="-18.5"/>

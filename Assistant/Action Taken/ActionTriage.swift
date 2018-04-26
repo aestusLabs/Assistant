@@ -23,6 +23,10 @@ func triageHydrateActions(action: ButtonAction, userInput: String) -> String? {
         actions.setDailyGoal(userInput: userInput)
     case .setHydrateStartTime :
         actions.setDailyStartTime(userInput: userInput)
+    case .showCalculateDailyHydrationGoalPrompt:
+        actions.showGiveMeYourWeightPrompt()
+    case .inputUserWeight:
+       return  actions.inputUserWeight(input: userInput)
         
     default:
         print("Not a hydrate action")

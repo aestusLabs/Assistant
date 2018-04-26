@@ -20,6 +20,7 @@ struct UserInfo {
     var onboardingInProgress = false
     var notificationDays : [Day] = []
     var notificationTime: String = ""
+    var weightInLbs: Double = 0.0
     
     func saveToDefaults() {
         let defaults = UserDefaults.standard

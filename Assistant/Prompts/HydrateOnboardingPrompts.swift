@@ -28,6 +28,8 @@ struct HydrateOnboardingPrompts {
             prompt = hydrateOnboardingPrompts.waterDangers()
         case .explainHydrateNotifcations:
             prompt = hydrateOnboardingPrompts.notifications()
+        case .getUsersWeight:
+            prompt = getWeight()
         default:
             print("Not an Hydrate onboarding prompt")
         }
@@ -123,6 +125,14 @@ struct HydrateOnboardingPrompts {
         let continueButton = ButtonData(title: "Got It", action: .continueWhatYouWereDoing, global: false, premium: false)
         let cloud = createButtonCloud(buttons: [continueButton], promptType: .explainHydrateNotifcations)
         return Prompt(promptType: .explainHydrateNotifcations, itemSegments: [[titleDivider, message], [whyMessage], [systemMessage], [remindersMessage], [uniqueMessage], [lastMessage, notificationsIntegrationWidget, cloud]], userInputUnrecognizedString: "", category: .onboarding, answerFormat: [], action: .continueWhatYouWereDoing)
+    }
+    func getWeight() -> Prompt {
+        let titleDivider = createTitleDivider(text: "Your Weight")
+        let message = createAssistantMessageItem(text: "I need your weight so I can calculate your daily water needs.")
+        let pleaseMessage = createAssistantMessageItem(text: "Please use the keyboard to input it now.")
+        let keyboardPopUp = createLaunchKeyboardItem()
+        return Prompt(promptType: .getUsersWeight, itemSegments: [[titleDivider, message], [pleaseMessage, keyboardPopUp]], userInputUnrecognizedString: "I am sorry I didn't understand.", category: .onboarding, answerFormat: [], action: .inputUserWeight)
+        
     }
 }
 let hydrateOnboardingPrompts = HydrateOnboardingPrompts()

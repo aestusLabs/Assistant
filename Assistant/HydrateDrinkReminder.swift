@@ -158,7 +158,7 @@ struct HydrateDrinkReminderNotificationFunctions {
     }
 
 
-    private func seeWhichNotificationsShouldFire(currentDate: Date, startOfDay: Date) -> [String]{
+     func seeWhichNotificationsShouldFire(currentDate: Date, startOfDay: Date) -> [String]{
 
         var notificationsToCancel: [String] = []
         let allIdentifiers = getHydrateDrinkReminderRequestIndentifiers()
@@ -205,7 +205,7 @@ struct HydrateDrinkReminderNotificationFunctions {
         return tempIDsToCancel
     }
 
-    private func compareTotalToIntervals(manager: HydrateManager) -> [Int] {
+     func compareTotalToIntervals(manager: HydrateManager) -> [Int] {
         let total = manager.getDaysTotal()
       
         
