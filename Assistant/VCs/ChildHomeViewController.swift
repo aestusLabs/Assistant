@@ -88,7 +88,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+  
         if appInfo.appType == .hydrate || appInfo.appType == .assistant {
             updateHydrateDefaultValues()
             if dately.isSecondDateWithin18HoursOfFirstDate(firstDate: hydrateManager.lastDayStarted, secondDate: Date()) {
@@ -113,6 +113,7 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
             
             transitionToChat()
         }
+        
     }
     
     func addNotificationObservers() {
