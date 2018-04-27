@@ -125,6 +125,11 @@ class ChildHomeViewController: UIViewController, NewPageObservation, UITableView
                                                selector: #selector(handlePurchaseSuccessfull(notification:)),
                                                name: SubscriptionService.purchaseSuccessfulNotification,
                                                object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(addedWaterFromSlider), name: NSNotification.Name(rawValue: "addedWater"), object: nil)
+    }
+    @objc func addedWaterFromSlider() {
+        updateVCForAddWater()
+        
     }
     
     func printPendingNotifications() {

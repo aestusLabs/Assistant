@@ -41,6 +41,7 @@ class PageViewController: UIPageViewController {
     
    
     func goToNextPage() {
+        
         guard let currentViewController = self.viewControllers?.first else { return }
         guard let nextViewController = dataSource?.pageViewController(self, viewControllerAfter: currentViewController) else { return }
         setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
@@ -55,6 +56,9 @@ class PageViewController: UIPageViewController {
         
         //        let test = 2
     }
+    
+    
+    
     
     //    func goToNextPage(){
     //        print("Hit go to")
@@ -112,9 +116,37 @@ class PageViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+        
+//        for subview in self.view.subviews {
+//            if let scrollView = subview as? UIScrollView {
+//                scrollView.delegate = self
+//                break;
+//            }
+//        }
         // Do any additional setup after loading the view.
     }
     
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if (currentIndex == 0 && scrollView.contentOffset.x < scrollView.bounds.size.width) {
+//            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0);
+//        } else if (currentIndex == 2 - 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
+//            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0);
+//        }
+//    }
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//
+//        if currentIndex == 0 {
+//            if scrollView.contentOffset.x > 500 {
+//
+//                goToNextPage()
+//            }
+//        }
+//        else if (currentIndex == 2 - 1 && scrollView.contentOffset.x >= scrollView.bounds.size.width) {
+////            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
+//            goToPreviousPage()
+//        }
+//    }
+//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

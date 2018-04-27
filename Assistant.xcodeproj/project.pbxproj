@@ -156,6 +156,8 @@
 		46FC59572090F639000A62AB /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FC59552090F638000A62AB /* CollectionViewCell.xib */; };
 		46FC59582090F639000A62AB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FC59562090F639000A62AB /* CollectionViewCell.swift */; };
 		46FC597820921C9A000A62AB /* ConvertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FC597720921C9A000A62AB /* ConvertTests.swift */; };
+		46FC597B209233D4000A62AB /* SlideToAddWaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FC5979209233D4000A62AB /* SlideToAddWaterTableViewCell.swift */; };
+		46FC597C209233D4000A62AB /* SlideToAddWaterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46FC597A209233D4000A62AB /* SlideToAddWaterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -330,6 +332,8 @@
 		46FC59552090F638000A62AB /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		46FC59562090F639000A62AB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		46FC597720921C9A000A62AB /* ConvertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertTests.swift; sourceTree = "<group>"; };
+		46FC5979209233D4000A62AB /* SlideToAddWaterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToAddWaterTableViewCell.swift; sourceTree = "<group>"; };
+		46FC597A209233D4000A62AB /* SlideToAddWaterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideToAddWaterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -666,6 +670,8 @@
 				46E47D0F208065AA00D6BD32 /* HydrateTotalsCompact.swift */,
 				46E47D1B20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.swift */,
 				46E47D1C20813FA200D6BD32 /* HydrateDayAtGlanceTableViewCell.xib */,
+				46FC5979209233D4000A62AB /* SlideToAddWaterTableViewCell.swift */,
+				46FC597A209233D4000A62AB /* SlideToAddWaterTableViewCell.xib */,
 			);
 			path = HydrateCells;
 			sourceTree = "<group>";
@@ -810,6 +816,7 @@
 				46E47CC2207E775200D6BD32 /* WeekSelectionTableViewCell.xib in Resources */,
 				46E47D262084174E00D6BD32 /* CompactInformationTableViewCell.xib in Resources */,
 				46E47C9F207E775100D6BD32 /* EmptySustain.mp3 in Resources */,
+				46FC597C209233D4000A62AB /* SlideToAddWaterTableViewCell.xib in Resources */,
 				46E47CCC207E775200D6BD32 /* PlayableSessionTableViewCell.xib in Resources */,
 				46E47D07207FBA8200D6BD32 /* WorkTimerTableViewCell.xib in Resources */,
 				46E47CBB207E775200D6BD32 /* ToggleTableViewCell.xib in Resources */,
@@ -934,6 +941,7 @@
 				46E47CDC207E775200D6BD32 /* TappingButtonCloudButtonsHomeVCExtension.swift in Sources */,
 				46E47CCE207E775200D6BD32 /* UserMessageTableViewCell.swift in Sources */,
 				46E47CB9207E775200D6BD32 /* HistoryItemTableViewCell.swift in Sources */,
+				46FC597B209233D4000A62AB /* SlideToAddWaterTableViewCell.swift in Sources */,
 				46FC591F208E4CCC000A62AB /* NumberAndCircleCollectionViewCell.swift in Sources */,
 				46E47CE9207E775200D6BD32 /* ActionTriage.swift in Sources */,
 				46E47D10208065AA00D6BD32 /* HydrateTotalsCompact.swift in Sources */,

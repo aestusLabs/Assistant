@@ -134,6 +134,7 @@ struct HomePrompt {
         let addInputButton = ButtonData(title: "Input Amount", action: .showInputAddWaterPrompt, global: false, premium: false)
         
         let addCloud = createButtonCloud(buttons: [add250mlButton, add500mlButton, add750mlButton, add1000mlButton, addInputButton], promptType: .hydrateHome)
+        let sliderAdd = createSliderAddWaterWidget() 
         
         let intervalsAtGlanceMessage = createAssistantMessageItem(text: "Here is how you’re doing today at a glance.")
         let intervalsAtGlanceWidget = createHydrateIntervalsAtAGlanceWidget()
@@ -169,7 +170,7 @@ struct HomePrompt {
         let navButtons = createButtonCloud(buttons: [howAppWorksButton, commandsButton, settingsButton, historyButton, onboardingButton, addNotification, testButton], promptType: .home)
         
         
-        return Prompt(promptType: .hydrateHome, itemSegments: [[changeAbleTestWidget, welcomeMessage, totalsWidget], [addMessage, addCloud], [intervalsAtGlanceMessage, intervalsAtGlanceWidget], [navigateMessage, navButtons]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
+        return Prompt(promptType: .hydrateHome, itemSegments: [[changeAbleTestWidget, welcomeMessage, totalsWidget], [addMessage, addCloud, sliderAdd], [intervalsAtGlanceMessage, intervalsAtGlanceWidget], [navigateMessage, navButtons]], userInputUnrecognizedString: "", category: .home, answerFormat: [], action: .none)
     }
     
     func hydrateGoodMorningPrompt() -> Prompt{

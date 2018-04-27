@@ -45,6 +45,8 @@ struct GetCellForItemType {
             return compactInformationWidget(currentItem: item)
         } else if item.type == .changeableCalendar {
             return changeableCalendarWidget()
+        } else if item.type == .sliderAddWater {
+            return sliderAddWidget()
         }
         
         
@@ -254,6 +256,10 @@ struct GetCellForItemType {
     }
     func changeableCalendarWidget() -> TransformingCalendarTableViewCell {
         let cell = Bundle.main.loadNibNamed("TransformingCalendarTableViewCell", owner: self, options: nil)?.first as! TransformingCalendarTableViewCell
+        return cell
+    }
+    func sliderAddWidget() -> SlideToAddWaterTableViewCell {
+        let cell = Bundle.main.loadNibNamed("SlideToAddWaterTableViewCell", owner: self, options: nil)?.first as! SlideToAddWaterTableViewCell
         return cell
     }
 }

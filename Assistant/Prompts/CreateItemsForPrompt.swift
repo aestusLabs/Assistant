@@ -358,6 +358,15 @@ func createChangeableCalendarWidget() -> ChangeableCalendarData{
     return widget
 }
 
+class SliderAddWaterWidget: Item {
+    
+}
+
+func createSliderAddWaterWidget() -> SliderAddWaterWidget {
+    let widget = SliderAddWaterWidget()
+    widget.type = .sliderAddWater
+    return widget
+}
 //func createTestingView() -> ViewForTesting {
 //    let item = ViewForTesting()
 //    item.type = .test
